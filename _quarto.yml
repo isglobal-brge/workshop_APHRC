@@ -46,7 +46,7 @@ website:
         href: https://github.com/isglobal-brge
         aria-label: GitHub
       - icon: linkedin
-        href: https://www.linkedin.com/company/isglobal
+        href: https://www.linkedin.com/company/barcelona-institute-for-global-health-isglobal-
         aria-label: LinkedIn
       - icon: globe
         href: https://www.isglobal.org
@@ -57,14 +57,16 @@ website:
   page-footer:
     background: dark
     center: |
-      © 2025 [ISGlobal](https://www.isglobal.org) - Barcelona Institute for Global Health<br>
+      © 2025 [ISGlobal - Barcelona Institute for Global Health](https://www.isglobal.org)<br>
       [Bioinformatics Research Group in Epidemiology (BRGE)](https://brge.isglobal.org)
 
 format:
   html:
     theme: 
       - custom.scss
-    css: styles.css
+    css: 
+      - styles.css
+      - navbar-fix.css
     toc: true
     toc-depth: 3
     toc-location: right

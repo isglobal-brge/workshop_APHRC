@@ -1,6 +1,35 @@
 // Workshop Interactive Features
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Fix navbar social icons alignment
+    const fixNavbarIcons = () => {
+        const socialLinks = document.querySelectorAll('.navbar-nav.ms-auto .nav-item.compact .nav-link');
+        socialLinks.forEach(link => {
+            // Remove any text nodes (whitespace) between elements
+            const childNodes = Array.from(link.childNodes);
+            childNodes.forEach(node => {
+                if (node.nodeType === 3) { // Text node
+                    node.remove();
+                }
+            });
+            
+            // Ensure proper structure
+            const icon = link.querySelector('i');
+            const menuText = link.querySelector('.menu-text');
+            if (menuText) {
+                menuText.style.display = 'none';
+            }
+            if (icon) {
+                link.style.cssText = 'display: flex !important; align-items: center !important; justify-content: center !important; width: 38px !important; height: 38px !important; padding: 0 !important;';
+                icon.style.cssText = 'margin: 0 !important; padding: 0 !important; font-size: 1.2rem !important;';
+            }
+        });
+    };
+    
+    // Run immediately and after a short delay to catch any Quarto modifications
+    fixNavbarIcons();
+    setTimeout(fixNavbarIcons, 100);
+    setTimeout(fixNavbarIcons, 500);
     // Back to Top Button
     const backToTopButton = document.createElement('button');
     backToTopButton.innerHTML = '<i class="bi bi-arrow-up"></i>';

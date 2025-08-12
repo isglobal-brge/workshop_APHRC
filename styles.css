@@ -533,6 +533,8 @@ a:hover {
   text-align: center;
 }
 
+/* Navbar social icon fixes moved to navbar-fix.css for higher specificity */
+
 /* Contact cards */
 .contact-card {
   background: #ffffff;

@@ -1,5 +1,10 @@
 ---
 title: "Contact"
+toc: false
+format:
+  html:
+    link-external-icon: false
+    link-external-newwindow: false
 ---
 
 ## Workshop Instructors
@@ -8,73 +13,64 @@ Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRG
 
 ::: {.container .mt-5}
 
-::: {.row .mb-5}
-::: {.col-md-6}
-::: {.card .h-100 .shadow-sm}
-::: {.card-body .p-4}
-<div class="text-center mb-4">
-<!-- Placeholder for Juan's photo -->
-<div class="instructor-photo-placeholder">
-  <i class="bi bi-person-circle" style="font-size: 8rem; color: #e47200;"></i>
+```{=html}
+<div class="contact-grid">
+  <div class="contact-card h-100">
+    <div class="contact-card__header">
+      <img src="images/juan_gonzalez.jpg" alt="Juan R González" class="contact-card__photo" onerror="this.style.display='none'">
+      <div class="contact-card__avatar" aria-hidden="true">
+        <i class="bi bi-person-circle"></i>
+      </div>
+    </div>
+    <div class="contact-card__body">
+      <h3 class="contact-card__name">Juan R González, PhD</h3>
+      <p class="contact-card__role">Group Leader, BRGE</p>
+      <p class="contact-card__bio">Dr. González leads the Bioinformatics Research Group in Epidemiology at ISGlobal. His research focuses on privacy-preserving analytics and large-scale health data methods.</p>
+
+      <div class="contact-card__meta">
+        <div>
+          <span class="contact-pill"><i class="bi bi-shield-lock"></i> Privacy</span>
+          <span class="contact-pill"><i class="bi bi-graph-up"></i> Statistics</span>
+          <span class="contact-pill"><i class="bi bi-cpu"></i> Federated</span>
+        </div>
+      </div>
+
+      <div class="contact-card__actions">
+        <a class="contact-social" href="mailto:juanr.gonzalez@isglobal.org" aria-label="Email Juan"><i class="bi bi-envelope-fill"></i></a>
+        <a class="contact-social" href="https://www.linkedin.com/in/juanrgonzalez" target="_blank" rel="noopener" aria-label="LinkedIn Juan"><i class="bi bi-linkedin"></i></a>
+        <a class="contact-social" href="https://github.com/jrgonzalez" target="_blank" rel="noopener" aria-label="GitHub Juan"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-card h-100">
+    <div class="contact-card__header">
+      <img src="images/david_sarrat.jpg" alt="David Sarrat González" class="contact-card__photo" onerror="this.style.display='none'">
+      <div class="contact-card__avatar" aria-hidden="true">
+        <i class="bi bi-person-circle"></i>
+      </div>
+    </div>
+    <div class="contact-card__body">
+      <h3 class="contact-card__name">David Sarrat González</h3>
+      <p class="contact-card__role">Research Scientist, BRGE</p>
+      <p class="contact-card__bio">David specializes in deploying federated infrastructures and building DataSHIELD tooling for collaborative health data analysis.</p>
+
+      <div class="contact-card__meta">
+        <div>
+          <span class="contact-pill"><i class="bi bi-hdd-network"></i> Infrastructure</span>
+          <span class="contact-pill"><i class="bi bi-database"></i> OMOP</span>
+          <span class="contact-pill"><i class="bi bi-code-slash"></i> R Dev</span>
+        </div>
+      </div>
+
+      <div class="contact-card__actions">
+        <a class="contact-social" href="mailto:david.sarrat@isglobal.org" aria-label="Email David"><i class="bi bi-envelope-fill"></i></a>
+        <a class="contact-social" href="https://www.linkedin.com/in/davidsarrat" target="_blank" rel="noopener" aria-label="LinkedIn David"><i class="bi bi-linkedin"></i></a>
+        <a class="contact-social" href="https://github.com/dsarrat" target="_blank" rel="noopener" aria-label="GitHub David"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-
-### Juan R González, PhD
-#### Group Leader, BRGE
-
-**Email**: [juanr.gonzalez@isglobal.org](mailto:juanr.gonzalez@isglobal.org)  
-**LinkedIn**: [Juan R González](https://www.linkedin.com/in/juanrgonzalez)  
-**GitHub**: [@jrgonzalez](https://github.com/jrgonzalez)
-
-Dr. Juan R González leads the Bioinformatics Research Group in Epidemiology at ISGlobal. With over 20 years of experience in biostatistics and computational biology, he specializes in developing methods for analyzing large-scale genomic data while preserving privacy.
-
-**Research Interests:**
-- Statistical genomics
-- Privacy-preserving data analysis
-- Federated learning in health research
-- Genetic epidemiology
-
-**Key Contributions:**
-- Co-developer of DataSHIELD infrastructure
-- Author of 150+ peer-reviewed publications
-- Leader of multiple EU-funded projects on data sharing
-:::
-:::
-:::
-
-::: {.col-md-6}
-::: {.card .h-100 .shadow-sm}
-::: {.card-body .p-4}
-<div class="text-center mb-4">
-<!-- Placeholder for David's photo -->
-<div class="instructor-photo-placeholder">
-  <i class="bi bi-person-circle" style="font-size: 8rem; color: #e47200;"></i>
-</div>
-</div>
-
-### David Sarrat González
-#### Research Scientist, BRGE
-
-**Email**: [david.sarrat@isglobal.org](mailto:david.sarrat@isglobal.org)  
-**LinkedIn**: [David Sarrat González](https://www.linkedin.com/in/davidsarrat)  
-**GitHub**: [@dsarrat](https://github.com/dsarrat)
-
-David Sarrat González is a research scientist at BRGE specializing in the implementation and deployment of federated analysis systems. He has extensive experience in developing DataSHIELD packages and supporting research networks.
-
-**Research Interests:**
-- Distributed computing in biomedicine
-- OMOP CDM implementations
-- Real-world data analytics
-- Health informatics infrastructure
-
-**Technical Expertise:**
-- R package development
-- DataSHIELD administration
-- Cloud computing for health data
-- ETL pipeline development
-:::
-:::
-:::
-:::
+```
 
 :::

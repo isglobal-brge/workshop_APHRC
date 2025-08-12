@@ -70,8 +70,9 @@ format:
     toc: true
     toc-depth: 3
     toc-location: right
-    link-external-icon: true
-    link-external-newwindow: true
+    link-external-icon: false
+    link-external-newwindow: false
+    anchor-sections: false
     smooth-scroll: true
     page-layout: full
     

@@ -5,9 +5,8 @@ format:
   html:
     link-external-icon: false
     link-external-newwindow: false
+    anchor-sections: false
 ---
-
-## Workshop Instructors
 
 Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRGE) who will be leading this workshop.
 
@@ -17,23 +16,14 @@ Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRG
 <div class="contact-grid">
   <div class="contact-card h-100">
     <div class="contact-card__header">
-      <img src="images/juan_gonzalez.jpg" alt="Juan R González" class="contact-card__photo" onerror="this.style.display='none'">
+      <img src="images/jr.jpg" alt="Juan R González" class="contact-card__photo" onerror="this.style.display='none'">
       <div class="contact-card__avatar" aria-hidden="true">
         <i class="bi bi-person-circle"></i>
       </div>
     </div>
     <div class="contact-card__body">
       <h3 class="contact-card__name">Juan R González, PhD</h3>
-      <p class="contact-card__role">Group Leader, BRGE</p>
-      <p class="contact-card__bio">Dr. González leads the Bioinformatics Research Group in Epidemiology at ISGlobal. His research focuses on privacy-preserving analytics and large-scale health data methods.</p>
-
-      <div class="contact-card__meta">
-        <div>
-          <span class="contact-pill"><i class="bi bi-shield-lock"></i> Privacy</span>
-          <span class="contact-pill"><i class="bi bi-graph-up"></i> Statistics</span>
-          <span class="contact-pill"><i class="bi bi-cpu"></i> Federated</span>
-        </div>
-      </div>
+      <p class="contact-card__role">DataSHIELD instructor</p>
 
       <div class="contact-card__actions">
         <a class="contact-social" href="mailto:juanr.gonzalez@isglobal.org" aria-label="Email Juan"><i class="bi bi-envelope-fill"></i></a>
@@ -45,28 +35,20 @@ Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRG
 
   <div class="contact-card h-100">
     <div class="contact-card__header">
-      <img src="images/david_sarrat.jpg" alt="David Sarrat González" class="contact-card__photo" onerror="this.style.display='none'">
+      <img src="images/david.jpg" alt="David Sarrat González" class="contact-card__photo" onerror="this.style.display='none'">
       <div class="contact-card__avatar" aria-hidden="true">
         <i class="bi bi-person-circle"></i>
       </div>
     </div>
     <div class="contact-card__body">
       <h3 class="contact-card__name">David Sarrat González</h3>
-      <p class="contact-card__role">Research Scientist, BRGE</p>
-      <p class="contact-card__bio">David specializes in deploying federated infrastructures and building DataSHIELD tooling for collaborative health data analysis.</p>
-
-      <div class="contact-card__meta">
-        <div>
-          <span class="contact-pill"><i class="bi bi-hdd-network"></i> Infrastructure</span>
-          <span class="contact-pill"><i class="bi bi-database"></i> OMOP</span>
-          <span class="contact-pill"><i class="bi bi-code-slash"></i> R Dev</span>
-        </div>
-      </div>
+      <p class="contact-card__role">OMOP CDM instructor</p>
 
       <div class="contact-card__actions">
         <a class="contact-social" href="mailto:david.sarrat@isglobal.org" aria-label="Email David"><i class="bi bi-envelope-fill"></i></a>
-        <a class="contact-social" href="https://www.linkedin.com/in/davidsarrat" target="_blank" rel="noopener" aria-label="LinkedIn David"><i class="bi bi-linkedin"></i></a>
-        <a class="contact-social" href="https://github.com/dsarrat" target="_blank" rel="noopener" aria-label="GitHub David"><i class="bi bi-github"></i></a>
+        <a class="contact-social" href="https://www.linkedin.com/in/davidsarratgonzalez" target="_blank" rel="noopener" aria-label="LinkedIn David"><i class="bi bi-linkedin"></i></a>
+        <a class="contact-social" href="https://github.com/davidsarratgonzalez" target="_blank" rel="noopener" aria-label="GitHub David"><i class="bi bi-github"></i></a>
+        <a class="contact-social" href="https://davidsarratgonzalez.github.io" target="_blank" rel="noopener" aria-label="David's Website"><i class="bi bi-globe"></i></a>
       </div>
     </div>
   </div>

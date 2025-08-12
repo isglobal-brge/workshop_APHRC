@@ -505,3 +505,30 @@ a:hover {
 .toc a.active {
   color: #e47200;
 }
+
+/* Center images inside navbar links */
+.navbar-nav .nav-link img {
+  display: block;
+  height: 1.25rem;
+  width: auto;
+  margin: 0 auto;
+  align-self: center;
+}
+
+/* If a nav-link contains an image, center its contents horizontally */
+.navbar-nav .nav-link:has(img) {
+  justify-content: center !important;
+}
+
+/* Center images inside dropdown items as well */
+.navbar .dropdown-menu .dropdown-item img {
+  display: block;
+  height: 1rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Ensure dropdown items with images are centered */
+.navbar .dropdown-menu .dropdown-item:has(img) {
+  text-align: center;
+}

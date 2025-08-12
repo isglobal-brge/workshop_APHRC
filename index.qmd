@@ -253,7 +253,10 @@ The workshop will be delivered through a combination of:
 
 ---
 
-::: {.text-center .mt-5}
+::: {.text-center .mt-5 .mb-5}
 <a href="about.qmd" class="btn btn-primary btn-lg">Learn More About the Workshop</a>
 <a href="schedule.qmd" class="btn btn-secondary btn-lg">View Schedule</a>
+:::
+
+::: {.mb-5}
 :::

@@ -1,0 +1,298 @@
+---
+title: "DataSHIELD + OMOP CDM Workshop"
+page-layout: custom
+toc: false
+---
+
+::: {.hero}
+# DataSHIELD + OMOP CDM Workshop
+
+**Advancing Health Data Science in Africa**
+
+A collaborative workshop by ISGlobal's Bioinformatics Research Group in Epidemiology (BRGE) for the African Population and Health Research Center (APHRC)
+:::
+
+::: {.container .mt-5}
+::: {.row g-4}
+
+::: {.col-lg-4}
+::: {.feature-card}
+<i class="bi bi-shield-check icon"></i>
+
+### Secure Data Analysis
+
+Learn how DataSHIELD enables privacy-preserving analysis of sensitive health data across multiple sites without sharing individual-level data.
+:::
+:::
+
+::: {.col-lg-4}
+::: {.feature-card}
+<i class="bi bi-database icon"></i>
+
+### OMOP CDM Integration
+
+Discover how the OMOP Common Data Model standardizes health data for collaborative research and real-world evidence generation.
+:::
+:::
+
+::: {.col-lg-4}
+::: {.feature-card}
+<i class="bi bi-globe-africa icon"></i>
+
+### African Health Context
+
+Apply these technologies to address unique health challenges and opportunities in African population health research.
+:::
+:::
+
+:::
+:::
+
+## About This Workshop
+
+::: {.content-section}
+Welcome to the DataSHIELD + OMOP CDM workshop, a comprehensive training program designed to empower researchers at the African Population and Health Research Center (APHRC) with cutting-edge tools for secure, collaborative health data analysis.
+
+::: {.row .align-items-center .mt-4}
+::: {.col-md-8}
+This workshop combines two powerful technologies:
+
+- **DataSHIELD**: A method that enables the analysis of sensitive research data without physically sharing the data itself
+- **OMOP CDM**: A common data model that standardizes the structure and content of observational health data
+
+Our goal is to provide APHRC researchers with the skills and knowledge to implement these technologies in their research, fostering collaboration while maintaining the highest standards of data privacy and security.
+:::
+
+::: {.col-md-4}
+::: {.text-center}
+<div class="placeholder-image">
+  <i class="bi bi-building" style="font-size: 8rem; color: #e47200;"></i>
+  <p class="mt-2 text-muted">APHRC Campus</p>
+</div>
+:::
+:::
+:::
+:::
+
+## About APHRC
+
+::: {.aphrc-section .my-5 .p-5 .bg-light .rounded}
+::: {.container}
+::: {.row .align-items-center}
+::: {.col-md-12 .text-center .mb-4}
+### African Population and Health Research Center
+**Leading Research Excellence in Africa**
+:::
+:::
+
+::: {.row .g-4}
+::: {.col-md-4}
+::: {.text-center}
+<div class="placeholder-image-card">
+  <i class="bi bi-graph-up-arrow" style="font-size: 5rem; color: #e47200;"></i>
+  <h5 class="mt-3">Research Excellence</h5>
+  <p class="text-muted">Conducting cutting-edge population health research across Africa</p>
+</div>
+:::
+:::
+
+::: {.col-md-4}
+::: {.text-center}
+<div class="placeholder-image-card">
+  <i class="bi bi-people-fill" style="font-size: 5rem; color: #e47200;"></i>
+  <h5 class="mt-3">Capacity Building</h5>
+  <p class="text-muted">Training the next generation of African health researchers</p>
+</div>
+:::
+:::
+
+::: {.col-md-4}
+::: {.text-center}
+<div class="placeholder-image-card">
+  <i class="bi bi-globe2" style="font-size: 5rem; color: #e47200;"></i>
+  <h5 class="mt-3">Policy Impact</h5>
+  <p class="text-muted">Translating research into actionable health policies</p>
+</div>
+:::
+:::
+:::
+
+::: {.row .mt-5}
+::: {.col-md-12}
+<div class="alert alert-info text-center">
+  <i class="bi bi-info-circle-fill"></i> APHRC is a premier research institution generating evidence to inform decision-making for improved health and development in Africa.
+</div>
+:::
+:::
+:::
+:::
+
+## Workshop Objectives
+
+::: {.content-section}
+:::: {.columns}
+::: {.column width="50%"}
+### Technical Skills
+- Set up and configure DataSHIELD environments
+- Transform health data to OMOP CDM format
+- Perform federated analyses across multiple sites
+- Implement privacy-preserving statistical methods
+:::
+
+::: {.column width="50%"}
+### Research Applications
+- Design multi-site epidemiological studies
+- Analyze real-world health data
+- Collaborate across institutions securely
+- Generate evidence for health policy
+:::
+::::
+
+## Workshop Organizers
+
+::: {.organizers-section .my-5}
+::: {.container}
+::: {.row .g-5}
+::: {.col-lg-6}
+::: {.organizer-card .h-100 .p-4 .shadow-sm .rounded}
+::: {.text-center .mb-4}
+![](images/isglobal_logo.jpg){.img-fluid width=180px}
+:::
+
+### ISGlobal - Barcelona Institute for Global Health
+
+The **Bioinformatics Research Group in Epidemiology (BRGE)** at ISGlobal specializes in developing and applying computational methods for large-scale epidemiological studies. Our team combines expertise in bioinformatics, statistics, and public health to advance precision medicine and population health research.
+
+::: {.mt-3}
+<i class="bi bi-people-fill text-isglobal-orange"></i> **Workshop Team:**
+- Juan R González, PhD - Group Leader
+- David Sarrat González - Research Scientist
+- Technical Support Team
+:::
+
+::: {.text-center .mt-3}
+![](images/brge_logo.png){.img-fluid width=150px}
+:::
+:::
+:::
+
+::: {.col-lg-6}
+::: {.organizer-card .h-100 .p-4 .shadow-sm .rounded}
+::: {.text-center .mb-4}
+![](images/aphrc_logo.png){.img-fluid width=220px}
+:::
+
+### African Population and Health Research Center
+
+APHRC is a leading Africa-based research institution that generates evidence to inform decision-making for improved health and development in Africa. The center brings together African scholars to lead the development of evidence-based policies and programs in the region.
+
+::: {.mt-3}
+<i class="bi bi-geo-alt-fill text-isglobal-orange"></i> **Location:** Nairobi, Kenya  
+<i class="bi bi-award-fill text-isglobal-orange"></i> **Focus:** Population Health Research  
+<i class="bi bi-globe-africa text-isglobal-orange"></i> **Reach:** Pan-African
+:::
+:::
+:::
+:::
+:::
+:::
+
+## Before Getting Started
+
+### Prerequisites & Requirements
+
+To get the most out of this workshop, participants should have:
+
+::: {.row}
+::: {.col-md-6}
+#### Technical Requirements
+- **Operating System**: Windows 10+, macOS 10.14+, or Ubuntu 18.04+
+- **RAM**: Minimum 8GB (16GB recommended)
+- **Storage**: At least 10GB free space
+- **Internet**: Stable broadband connection
+- **Browser**: Chrome, Firefox, or Safari (latest versions)
+:::
+
+::: {.col-md-6}
+#### Knowledge Prerequisites
+- Basic understanding of **R programming**
+- Familiarity with **RStudio interface**
+- Basic **statistical concepts**
+- Experience with **health/clinical data** (helpful but not required)
+- Understanding of **data privacy** concepts
+:::
+:::
+
+### Pre-Workshop Checklist
+
+Complete these steps **at least 3 days before** the workshop:
+
+::: {.callout-important}
+## Essential Setup Tasks
+
+1. 📊 **Install R (v4.0+) and RStudio**
+   - Download R from [CRAN](https://cran.r-project.org/)
+   - Download RStudio from [Posit](https://posit.co/download/rstudio-desktop/)
+
+2. 📦 **Install Required Packages**
+   ```r
+   # Run this script to install all necessary packages
+   source("https://raw.githubusercontent.com/isglobal-brge/workshop_APHRC/main/setup.R")
+   ```
+
+3. 🔐 **Test Server Access**
+   - You'll receive credentials via email
+   - Test connection using provided script
+   - Report any issues immediately
+
+4. 📚 **Review Pre-Reading Materials**
+   - Introduction to DataSHIELD (30 min)
+   - OMOP CDM Overview (20 min)
+   - Workshop Guide (15 min)
+:::
+
+### What We'll Provide
+
+- **Server Access**: Dedicated workshop servers with pre-loaded data
+- **Workshop Materials**: Slides, code, and exercises
+- **Sample Datasets**: African health data for practice
+- **Support Channel**: Real-time help during workshop
+- **Certificate**: Upon successful completion
+
+### Server Connection Details
+
+During the workshop, you'll connect to our demonstration servers:
+
+::: {.callout-note}
+## Server Access
+Connection details will be sent via email to registered participants. The workshop uses multiple servers to demonstrate federated analysis:
+- Demo Server 1: Primary exercises
+- Demo Server 2: Multi-site demonstrations  
+- Test Server: Practice environment
+:::
+
+::: {.callout-tip}
+## Pro Tips for Success
+
+- Join our **pre-workshop orientation session** (optional but recommended)
+- Test your setup in advance to avoid technical issues
+- Prepare questions about your specific use cases
+- Connect with other participants in our forum
+:::
+
+## Workshop Format
+
+The workshop will be delivered through a combination of:
+
+- **Interactive lectures** introducing key concepts
+- **Hands-on practical sessions** with real-world examples
+- **Group exercises** to reinforce learning
+- **Q&A sessions** for addressing specific use cases
+- **Networking opportunities** with peers and instructors
+
+---
+
+::: {.text-center .mt-5}
+<a href="about.qmd" class="btn btn-primary btn-lg">Learn More About the Workshop</a>
+<a href="schedule.qmd" class="btn btn-secondary btn-lg">View Schedule</a>
+:::

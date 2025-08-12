@@ -1,0 +1,87 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "DataSHIELD + OMOP CDM Workshop"
+  site-url: https://isglobal-brge.github.io/workshop_APHRC
+  repo-url: https://github.com/isglobal-brge/workshop_APHRC
+  
+  favicon: images/isglobal_logo.jpg
+  
+  navbar:
+    background: primary
+    logo: images/isglobal_logo.jpg
+    logo-alt: "ISGlobal - Barcelona Institute for Global Health"
+    title: false
+    
+    left:
+      - text: "Home"
+        href: index.qmd
+        icon: house-fill
+      - text: "About"
+        href: about.qmd
+        icon: info-circle-fill
+      - text: "Schedule"
+        href: schedule.qmd
+        icon: calendar3
+      - text: "Workshop"
+        href: workshop.qmd
+        icon: mortarboard-fill
+      - text: "Resources"
+        href: resources.qmd
+        icon: book-fill
+      - text: "Contact"
+        href: contact.qmd
+        icon: envelope-fill
+    
+    right:
+      - icon: github
+        href: https://github.com/isglobal-brge
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/isglobalorg
+        aria-label: Twitter
+      - icon: linkedin
+        href: https://www.linkedin.com/company/isglobal
+        aria-label: LinkedIn
+      - icon: globe
+        href: https://www.isglobal.org
+        aria-label: ISGlobal Website
+  
+  sidebar: false
+  
+  page-footer:
+    background: dark
+    left: |
+      © 2025 [ISGlobal](https://www.isglobal.org) - Barcelona Institute for Global Health<br>
+      Bioinformatics Research Group in Epidemiology (BRGE)
+    center: |
+      Workshop by [ISGlobal BRGE](https://www.isglobal.org) & [APHRC](https://aphrc.org)
+
+format:
+  html:
+    theme: 
+      - custom.scss
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: true
+    page-layout: full
+    
+    include-in-header:
+      - text: |
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    include-after-body:
+      - text: |
+          <script src="workshop-interactive.js"></script>
+    
+    code-copy: true
+    code-overflow: wrap
+    
+execute:
+  freeze: auto

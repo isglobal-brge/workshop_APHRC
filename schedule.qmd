@@ -1,0 +1,199 @@
+---
+title: "Workshop Schedule"
+---
+
+## Workshop Dates
+
+::: {.callout-important}
+## Save the Dates!
+**Workshop Dates**: [To be announced]  
+**Time Zone**: East Africa Time (EAT)  
+**Format**: Hybrid (In-person at APHRC + Virtual participation available)
+:::
+
+## Daily Schedule Overview
+
+The workshop follows a structured daily format designed to maximize learning while accommodating different time zones and work schedules.
+
+### Typical Day Structure
+
+::: {.schedule-table}
+| Time (EAT) | Duration | Session Type |
+|------------|----------|--------------|
+| 09:00 - 09:30 | 30 min | Welcome & Coffee |
+| 09:30 - 11:00 | 90 min | Morning Lecture |
+| 11:00 - 11:15 | 15 min | Break |
+| 11:15 - 12:45 | 90 min | Practical Session I |
+| 12:45 - 14:00 | 75 min | Lunch Break |
+| 14:00 - 15:30 | 90 min | Afternoon Lecture |
+| 15:30 - 15:45 | 15 min | Break |
+| 15:45 - 17:00 | 75 min | Practical Session II |
+| 17:00 - 17:30 | 30 min | Q&A and Wrap-up |
+:::
+
+## Detailed Schedule
+
+### Pre-Workshop Preparation
+
+::: {.resource-card}
+<i class="bi bi-calendar-check resource-icon"></i>
+
+**One Week Before Workshop**
+
+- Install required software (R, RStudio, Git)
+- Test connection to workshop servers
+- Review pre-reading materials
+- Complete pre-workshop survey
+:::
+
+### Day 1: Introduction to Federated Analysis
+
+::: {.schedule-table}
+| Time | Session | Description | Instructor |
+|------|---------|-------------|------------|
+| 09:00 - 09:30 | **Registration & Welcome** | Check-in, networking, coffee | All |
+| 09:30 - 11:00 | **Opening Keynote** | The Future of Collaborative Health Research in Africa | TBD |
+| 11:15 - 12:45 | **Introduction to DataSHIELD** | Core concepts, architecture, and use cases | Juan R González |
+| 14:00 - 15:30 | **Hands-on: First Steps** | Connecting to servers, basic commands | Technical Team |
+| 15:45 - 17:00 | **Lab Session** | Individual practice with support | All |
+:::
+
+### Day 2: Understanding OMOP CDM
+
+::: {.schedule-table}
+| Time | Session | Description | Instructor |
+|------|---------|-------------|------------|
+| 09:30 - 11:00 | **OMOP CDM Overview** | Structure, vocabularies, and concepts | TBD |
+| 11:15 - 12:45 | **Data Mapping Workshop** | ETL strategies and tools | Technical Team |
+| 14:00 - 15:30 | **Case Study: African Health Data** | Real examples from APHRC datasets | APHRC Team |
+| 15:45 - 17:00 | **Group Exercise** | Mapping local data to OMOP | All |
+:::
+
+### Day 3: DataSHIELD Analytics
+
+::: {.schedule-table}
+| Time | Session | Description | Instructor |
+|------|---------|-------------|------------|
+| 09:30 - 11:00 | **Statistical Methods in DataSHIELD** | Available functions and limitations | Juan R González |
+| 11:15 - 12:45 | **Practical: Descriptive Analytics** | Summary statistics, data exploration | Technical Team |
+| 14:00 - 15:30 | **Advanced Analytics** | Regression, survival analysis | TBD |
+| 15:45 - 17:00 | **Lab: Your First Analysis** | Complete analysis workflow | All |
+:::
+
+### Day 4: Advanced Topics & Integration
+
+::: {.schedule-table}
+| Time | Session | Description | Instructor |
+|------|---------|-------------|------------|
+| 09:30 - 11:00 | **Machine Learning with DataSHIELD** | Privacy-preserving ML methods | TBD |
+| 11:15 - 12:45 | **Integration Topics** | Connecting with other tools | Technical Team |
+| 14:00 - 15:30 | **Project Planning Session** | Designing your study | All |
+| 15:45 - 17:00 | **Group Project Kickoff** | Form teams, select projects | All |
+:::
+
+### Day 5: Projects & Future Directions
+
+::: {.schedule-table}
+| Time | Session | Description | Instructor |
+|------|---------|-------------|------------|
+| 09:30 - 11:00 | **Project Work Time** | Teams work on projects | With support |
+| 11:15 - 12:45 | **Troubleshooting Clinic** | One-on-one help available | Technical Team |
+| 14:00 - 15:30 | **Project Presentations** | Teams present their work | All |
+| 15:45 - 16:30 | **Future Roadmap** | What's next for DataSHIELD | Juan R González |
+| 16:30 - 17:30 | **Closing Ceremony** | Certificates, networking | All |
+:::
+
+## Special Sessions
+
+### Lightning Talks
+
+Throughout the week, participants are invited to give 5-minute lightning talks about their research interests or use cases. Sign up at registration!
+
+### Office Hours
+
+Daily office hours available:
+- **Morning**: 08:00 - 09:00 (before sessions)
+- **Evening**: 17:30 - 18:30 (after sessions)
+
+### Social Events
+
+::: {.row}
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-cup-hot icon"></i>
+
+### Welcome Reception
+**Day 1, 18:00**  
+Join us for an informal welcome reception to meet fellow participants and instructors.
+:::
+:::
+
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-people icon"></i>
+
+### Workshop Dinner
+**Day 3, 19:00**  
+Optional group dinner at a local restaurant (self-pay).
+:::
+:::
+:::
+
+## Virtual Participation
+
+For those joining virtually:
+
+- All sessions will be live-streamed via Zoom
+- Recorded sessions available within 24 hours
+- Dedicated online support channel
+- Virtual networking sessions scheduled
+- Same access to servers and materials
+
+::: {.callout-tip}
+## Time Zone Considerations
+- Primary schedule is in East Africa Time (EAT)
+- Key sessions will be recorded for asynchronous viewing
+- Support available across multiple time zones
+:::
+
+## What to Bring
+
+### In-Person Participants
+- Laptop with required software installed
+- Power adapter and chargers
+- Notebook and pen
+- Water bottle
+- Business cards for networking
+
+### Virtual Participants
+- Stable internet connection
+- Headset with microphone
+- Second monitor recommended
+- Quiet workspace
+
+## Accommodation
+
+For participants traveling to APHRC:
+
+::: {.callout-note}
+## Recommended Hotels
+Details about nearby accommodation options will be provided upon registration, including:
+- Hotels within walking distance
+- Transportation options
+- Special workshop rates
+:::
+
+## Important Reminders
+
+1. **Pre-workshop Setup**: Complete all setup requirements before Day 1
+2. **Punctuality**: Sessions start promptly at scheduled times
+3. **Participation**: Active engagement expected in all sessions
+4. **Code of Conduct**: Respectful, inclusive environment for all
+5. **Health & Safety**: Current guidelines will be followed
+
+---
+
+::: {.text-center .mt-5}
+<a href="workshop.qmd" class="btn btn-primary">View Workshop Content</a>
+<a href="resources.qmd" class="btn btn-secondary">Access Resources</a>
+:::

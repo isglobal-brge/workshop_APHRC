@@ -1,0 +1,465 @@
+/*-- scss:defaults --*/
+
+// ISGlobal Brand Colors (Official)
+$primary: #e47200;          // ISGlobal Orange
+$secondary: #333333;        // Dark Grey/Black
+$accent: #666666;           // Medium Grey
+$success: #52B788;          
+$info: #17a2b8;            
+$warning: #ffc107;         
+$danger: #dc3545;          
+$light: #f8f9fa;           
+$dark: #000000;            
+$white: #ffffff;
+
+// Additional brand colors
+$isglobal-orange: #e47200;
+$isglobal-black: #000000;
+$isglobal-dark-grey: #333333;
+$isglobal-medium-grey: #666666;
+$isglobal-light-grey: #cccccc;
+$isglobal-extra-light-grey: #f5f5f5;
+
+// Typography
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+
+$font-size-base: 1rem;
+$h1-font-size: 2.75rem;
+$h2-font-size: 2.25rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1.1rem;
+
+$headings-font-weight: 600;
+$headings-color: $isglobal-black;
+
+// Layout
+$navbar-bg: $isglobal-orange;
+$navbar-fg: $white;
+$navbar-hl: $white;
+
+$footer-bg: $isglobal-black;
+$footer-fg: $white;
+
+$body-bg: $white;
+$body-color: $isglobal-dark-grey;
+
+$link-color: $isglobal-orange;
+$link-hover-color: darken($isglobal-orange, 10%);
+
+// Components
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-sm: 0.25rem;
+
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Code blocks
+$code-bg: #f8f9fa;
+$code-color: $isglobal-dark-grey;
+
+/*-- scss:rules --*/
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Body styling
+body {
+  font-family: $font-family-sans-serif;
+  color: $body-color;
+  line-height: 1.6;
+}
+
+// Navbar customization
+.navbar {
+  background-color: $navbar-bg !important;
+  padding: 1rem 0;
+  box-shadow: $box-shadow-sm;
+  
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: $white !important;
+    
+    img {
+      height: 45px;
+      margin-right: 0.75rem;
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      color: $white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: $border-radius;
+      transition: all 0.3s ease;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: $white;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        text-decoration: none !important;
+        
+        &::after {
+          width: 80%;
+        }
+      }
+      
+      &.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        text-decoration: none !important;
+        
+        &::after {
+          width: 80%;
+        }
+      }
+      
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  border-bottom: 3px solid $isglobal-orange;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+// Cards and boxes
+.callout {
+  border-radius: $border-radius-lg;
+  border-left-width: 5px;
+  
+  &.callout-note {
+    background-color: rgba($info, 0.1);
+    border-left-color: $info;
+  }
+  
+  &.callout-warning {
+    background-color: rgba($warning, 0.1);
+    border-left-color: $warning;
+  }
+  
+  &.callout-important {
+    background-color: rgba($danger, 0.1);
+    border-left-color: $danger;
+  }
+  
+  &.callout-tip {
+    background-color: rgba($success, 0.1);
+    border-left-color: $success;
+  }
+}
+
+// Code blocks
+pre {
+  background-color: $code-bg;
+  border: 1px solid $isglobal-light-grey;
+  border-radius: $border-radius;
+  padding: 1rem;
+  
+  code {
+    color: $code-color;
+  }
+}
+
+code:not(pre code) {
+  background-color: $isglobal-extra-light-grey;
+  color: $isglobal-dark-grey;
+  padding: 0.2rem 0.4rem;
+  border-radius: $border-radius-sm;
+  font-size: 0.875em;
+}
+
+// Tables
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  
+  thead {
+    background-color: $isglobal-black;
+    color: $white;
+    
+    th {
+      padding: 0.75rem;
+      font-weight: 600;
+    }
+  }
+  
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $isglobal-extra-light-grey;
+      }
+      
+      &:hover {
+        background-color: rgba($isglobal-orange, 0.05);
+      }
+    }
+    
+    td {
+      padding: 0.75rem;
+      border-bottom: 1px solid $isglobal-light-grey;
+    }
+  }
+}
+
+// Footer
+.page-footer {
+  background-color: $footer-bg;
+  color: $footer-fg;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  
+  a {
+    color: $isglobal-orange;
+    
+    &:hover {
+      color: lighten($isglobal-orange, 10%);
+    }
+  }
+}
+
+// TOC
+.toc {
+  border-left: 3px solid $isglobal-orange;
+  padding-left: 1rem;
+  
+  .active {
+    color: $isglobal-orange;
+    font-weight: 600;
+  }
+  
+  a {
+    color: $isglobal-medium-grey;
+    
+    &:hover {
+      color: $isglobal-orange;
+      text-decoration: none;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  border-radius: $border-radius;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  &.btn-primary {
+    background-color: $isglobal-orange;
+    border-color: $isglobal-orange;
+    color: $white;
+    
+    &:hover {
+      background-color: darken($isglobal-orange, 10%);
+      border-color: darken($isglobal-orange, 10%);
+      transform: translateY(-2px);
+      box-shadow: $box-shadow;
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: $white;
+    border-color: $isglobal-black;
+    color: $isglobal-black;
+    
+    &:hover {
+      background-color: $isglobal-black;
+      border-color: $isglobal-black;
+      color: $white;
+      transform: translateY(-2px);
+      box-shadow: $box-shadow;
+    }
+  }
+}
+
+// Hero section
+.hero {
+  background: linear-gradient(135deg, $isglobal-orange 0%, darken($isglobal-orange, 15%) 100%);
+  color: $white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  border-radius: $border-radius-lg;
+  text-align: center;
+  box-shadow: $box-shadow-lg;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 20s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30%, -30%) scale(1.1); }
+  }
+  
+  h1 {
+    color: $white;
+    border: none;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Feature cards
+.feature-card {
+  background: $white;
+  border: 2px solid $isglobal-extra-light-grey;
+  border-radius: $border-radius-lg;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    box-shadow: $box-shadow;
+    transform: translateY(-5px);
+    border-color: $isglobal-orange;
+  }
+  
+  .icon {
+    font-size: 3rem;
+    color: $isglobal-orange;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: $isglobal-black;
+    margin-bottom: 1rem;
+  }
+}
+
+// Schedule/Calendar styling
+.schedule-table {
+  background: $white;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  
+  .time-slot {
+    background-color: $isglobal-extra-light-grey;
+    font-weight: 600;
+    color: $isglobal-black;
+    border-left: 4px solid $isglobal-orange;
+  }
+  
+  .session-title {
+    font-weight: 600;
+    color: $isglobal-black;
+  }
+  
+  .session-speaker {
+    color: $isglobal-medium-grey;
+    font-size: 0.9rem;
+  }
+}
+
+// Resource cards
+.resource-card {
+  background: $white;
+  border: 2px solid transparent;
+  border-radius: $border-radius-lg;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid $isglobal-light-grey;
+  
+  &:hover {
+    border-color: $isglobal-orange;
+    box-shadow: $box-shadow;
+    transform: translateY(-3px);
+  }
+  
+  .resource-icon {
+    color: $isglobal-orange;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    
+    .nav-link {
+      margin: 0.25rem 0;
+      
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

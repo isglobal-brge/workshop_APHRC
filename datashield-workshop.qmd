@@ -1,0 +1,98 @@
+---
+title: "DataSHIELD Workshop"
+---
+
+## DataSHIELD: Privacy-Preserving Federated Analysis
+
+::: {.hero}
+# DataSHIELD Workshop
+**Secure Multi-Site Data Analysis Without Data Sharing**
+:::
+
+## Workshop Overview
+
+DataSHIELD is a pioneering approach that enables researchers to analyze data across multiple sites without physically sharing individual-level data. This workshop will provide comprehensive training on implementing and using DataSHIELD for collaborative health research while maintaining the highest standards of data privacy and security.
+
+### What You'll Learn
+
+::: {.row .g-4}
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-shield-check icon"></i>
+
+#### Privacy-Preserving Analytics
+Learn the principles of federated analysis and how DataSHIELD enables secure computation across distributed datasets.
+:::
+:::
+
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-server icon"></i>
+
+#### Server Configuration
+Understand how to set up and configure DataSHIELD servers (Opal) and manage data access permissions.
+:::
+:::
+:::
+
+::: {.row .g-4}
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-code-slash icon"></i>
+
+#### R Client Programming
+Master the DataSHIELD R client packages and learn to write efficient federated analysis scripts.
+:::
+:::
+
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-graph-up icon"></i>
+
+#### Statistical Methods
+Explore available statistical functions and learn when and how to apply them in federated settings.
+:::
+:::
+:::
+
+## Workshop Content
+
+### Day 1: Foundations
+- Introduction to DataSHIELD concepts
+- Understanding the client-server architecture
+- Setting up your analysis environment
+- First federated analysis
+
+### Day 2: Core Methods
+- Descriptive statistics across sites
+- Data visualization in federated settings
+- Handling missing data
+- Quality control procedures
+
+### Day 3: Advanced Analytics
+- Regression modeling
+- Survival analysis
+- Machine learning approaches
+- Custom function development
+
+## Prerequisites
+
+- Basic R programming knowledge
+- Understanding of statistical concepts
+- Familiarity with health data structures
+- Completed [Getting Started](getting-started.qmd) setup
+
+## Workshop Materials
+
+All materials will be provided including:
+- Lecture slides and notes
+- Hands-on exercise notebooks
+- Sample datasets
+- Code examples and solutions
+
+---
+
+::: {.text-center .mt-5}
+<a href="getting-started.qmd" class="btn btn-primary">Get Started</a>
+<a href="schedule.qmd" class="btn btn-secondary">View Schedule</a>
+:::

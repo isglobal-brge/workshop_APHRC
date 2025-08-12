@@ -19,15 +19,21 @@ website:
       - text: "Home"
         href: index.qmd
         icon: house-fill
-      - text: "About"
-        href: about.qmd
-        icon: info-circle-fill
+      - text: "Getting Started"
+        href: getting-started.qmd
+        icon: play-circle-fill
+      - text: "Workshops"
+        icon: mortarboard-fill
+        menu:
+          - text: "DataSHIELD Workshop"
+            href: datashield-workshop.qmd
+            icon: shield-check
+          - text: "dsOMOP Workshop"
+            href: dsomop-workshop.qmd
+            icon: database
       - text: "Schedule"
         href: schedule.qmd
         icon: calendar3
-      - text: "Workshop"
-        href: workshop.qmd
-        icon: mortarboard-fill
       - text: "Resources"
         href: resources.qmd
         icon: book-fill
@@ -39,9 +45,6 @@ website:
       - icon: github
         href: https://github.com/isglobal-brge
         aria-label: GitHub
-      - icon: twitter
-        href: https://twitter.com/isglobalorg
-        aria-label: Twitter
       - icon: linkedin
         href: https://www.linkedin.com/company/isglobal
         aria-label: LinkedIn
@@ -53,11 +56,9 @@ website:
   
   page-footer:
     background: dark
-    left: |
-      © 2025 [ISGlobal](https://www.isglobal.org) - Barcelona Institute for Global Health<br>
-      Bioinformatics Research Group in Epidemiology (BRGE)
     center: |
-      Workshop by [ISGlobal BRGE](https://www.isglobal.org) & [APHRC](https://aphrc.org)
+      © 2025 [ISGlobal](https://www.isglobal.org) - Barcelona Institute for Global Health<br>
+      [Bioinformatics Research Group in Epidemiology (BRGE)](https://brge.isglobal.org)
 
 format:
   html:

@@ -4,7 +4,34 @@ page-layout: custom
 toc: false
 ---
 
-::: {.hero}
+```{=html}
+<div class="hero-carousel">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="images/isglobal_logo.jpg" alt="ISGlobal - Barcelona Institute for Global Health">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/aphrc_logo.png" alt="African Population and Health Research Center">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/brge_logo.png" alt="Bioinformatics Research Group in Epidemiology">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/isglobal_logo.jpg" alt="ISGlobal - Barcelona Institute for Global Health">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/aphrc_logo.png" alt="African Population and Health Research Center">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/brge_logo.png" alt="Bioinformatics Research Group in Epidemiology">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+::: {.my-5}
 # DataSHIELD + OMOP CDM Workshop
 
 **Advancing Health Data Science in Africa**
@@ -13,7 +40,7 @@ A collaborative workshop by ISGlobal's Bioinformatics Research Group in Epidemio
 :::
 
 ::: {.container .mt-5}
-::: {.row g-4}
+::: {.row .g-4}
 
 ::: {.col-lg-4}
 ::: {.feature-card}
@@ -147,6 +174,7 @@ Our goal is to provide APHRC researchers with the skills and knowledge to implem
 - Generate evidence for health policy
 :::
 ::::
+:::
 
 ## Workshop Organizers
 
@@ -197,87 +225,20 @@ APHRC is a leading Africa-based research institution that generates evidence to 
 :::
 :::
 
-## Before Getting Started
-
-### Prerequisites & Requirements
-
-To get the most out of this workshop, participants should have:
-
-::: {.row}
-::: {.col-md-6}
-#### Technical Requirements
-- **Operating System**: Windows 10+, macOS 10.14+, or Ubuntu 18.04+
-- **RAM**: Minimum 8GB (16GB recommended)
-- **Storage**: At least 10GB free space
-- **Internet**: Stable broadband connection
-- **Browser**: Chrome, Firefox, or Safari (latest versions)
-:::
-
-::: {.col-md-6}
-#### Knowledge Prerequisites
-- Basic understanding of **R programming**
-- Familiarity with **RStudio interface**
-- Basic **statistical concepts**
-- Experience with **health/clinical data** (helpful but not required)
-- Understanding of **data privacy** concepts
-:::
-:::
-
-### Pre-Workshop Checklist
-
-Complete these steps **at least 3 days before** the workshop:
+## Ready to Join?
 
 ::: {.callout-important}
-## Essential Setup Tasks
+## Before You Start
 
-1. 📊 **Install R (v4.0+) and RStudio**
-   - Download R from [CRAN](https://cran.r-project.org/)
-   - Download RStudio from [Posit](https://posit.co/download/rstudio-desktop/)
+Make sure you're prepared for the workshop! Complete the setup requirements and review the prerequisites.
 
-2. 📦 **Install Required Packages**
-   ```r
-   # Run this script to install all necessary packages
-   source("https://raw.githubusercontent.com/isglobal-brge/workshop_APHRC/main/setup.R")
-   ```
+**Essential steps:**
+- Install R and RStudio
+- Set up required packages
+- Review pre-reading materials
+- Test your technical setup
 
-3. 🔐 **Test Server Access**
-   - You'll receive credentials via email
-   - Test connection using provided script
-   - Report any issues immediately
-
-4. 📚 **Review Pre-Reading Materials**
-   - Introduction to DataSHIELD (30 min)
-   - OMOP CDM Overview (20 min)
-   - Workshop Guide (15 min)
-:::
-
-### What We'll Provide
-
-- **Server Access**: Dedicated workshop servers with pre-loaded data
-- **Workshop Materials**: Slides, code, and exercises
-- **Sample Datasets**: African health data for practice
-- **Support Channel**: Real-time help during workshop
-- **Certificate**: Upon successful completion
-
-### Server Connection Details
-
-During the workshop, you'll connect to our demonstration servers:
-
-::: {.callout-note}
-## Server Access
-Connection details will be sent via email to registered participants. The workshop uses multiple servers to demonstrate federated analysis:
-- Demo Server 1: Primary exercises
-- Demo Server 2: Multi-site demonstrations  
-- Test Server: Practice environment
-:::
-
-::: {.callout-tip}
-## Pro Tips for Success
-
-- Join our **pre-workshop orientation session** (optional but recommended)
-- Test your setup in advance to avoid technical issues
-- Prepare questions about your specific use cases
-- Connect with other participants in our forum
+[**Get Started Now →**](getting-started.qmd){.btn .btn-primary .btn-lg}
 :::
 
 ## Workshop Format

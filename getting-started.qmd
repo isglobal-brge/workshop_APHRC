@@ -1,0 +1,260 @@
+---
+title: "Getting Started"
+---
+
+## Prerequisites & Requirements
+
+To get the most out of this workshop, participants should have:
+
+::: {.row}
+::: {.col-md-6}
+::: {.content-section}
+### Technical Requirements
+
+- **Operating System**: Windows 10+, macOS 10.14+, or Ubuntu 18.04+
+- **RAM**: Minimum 8GB (16GB recommended)
+- **Storage**: At least 10GB free space
+- **Internet**: Stable broadband connection
+- **Browser**: Chrome, Firefox, or Safari (latest versions)
+:::
+:::
+
+::: {.col-md-6}
+::: {.content-section}
+### Knowledge Prerequisites
+
+- Basic understanding of **R programming**
+- Familiarity with **RStudio interface**
+- Basic **statistical concepts**
+- Experience with **health/clinical data** (helpful but not required)
+- Understanding of **data privacy** concepts
+:::
+:::
+:::
+
+## Pre-Workshop Setup
+
+Complete these steps **at least 3 days before** the workshop:
+
+::: {.callout-important}
+## Essential Setup Tasks
+
+### 1. 📊 Install R (v4.0+) and RStudio
+
+**R Statistical Software:**
+- Download from: [CRAN](https://cran.r-project.org/)
+- Choose the version for your operating system
+- Follow the installation wizard
+
+**RStudio Desktop:**
+- Download from: [Posit](https://posit.co/download/rstudio-desktop/)
+- Free version is sufficient
+- Install after R is installed
+
+### 2. 📦 Install Required Packages
+
+Run this script in RStudio to install all necessary packages:
+
+```r
+# Install DataSHIELD packages
+install.packages(c("DSI", "DSOpal", "dsBaseClient", "dsHelper"),
+                 repos = c("https://cran.obiba.org", 
+                          "https://cloud.r-project.org"))
+
+# Install additional analysis packages
+install.packages(c("tidyverse", "ggplot2", "tableone", 
+                   "survival", "metafor"))
+
+# Install OMOP CDM tools
+install.packages("DatabaseConnector")
+install.packages("SqlRender")
+
+# Verify installation
+library(dsBaseClient)
+library(DSOpal)
+```
+
+### 3. 🔐 Test Server Access
+
+- You'll receive credentials via email 1 week before the workshop
+- Test connection using provided script
+- Report any issues immediately to [workshop-support@isglobal.org](mailto:workshop-support@isglobal.org)
+
+### 4. 📚 Review Pre-Reading Materials
+
+**Required Reading (60 minutes total):**
+- Introduction to DataSHIELD (30 min)
+- OMOP CDM Overview (20 min)
+- Workshop Guide (10 min)
+
+**Optional Background:**
+- [DataSHIELD: taking the analysis to the data](https://doi.org/10.1093/ije/dyu188)
+- [The Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/)
+:::
+
+## Server Connection Details
+
+During the workshop, you'll connect to our demonstration servers:
+
+::: {.callout-note}
+## Workshop Servers
+
+Connection details will be sent via email to registered participants. The workshop uses multiple servers to demonstrate federated analysis:
+
+| Server | Purpose | URL |
+|--------|---------|-----|
+| **Demo Server 1** | Primary exercises | Will be provided |
+| **Demo Server 2** | Multi-site demonstrations | Will be provided |
+| **Test Server** | Practice environment | Will be provided |
+| **OMOP Database** | CDM exercises | Will be provided |
+
+**Security Notice:**
+- Never share your credentials
+- Use only for workshop purposes
+- Access will be revoked after workshop
+- Report any security issues immediately
+:::
+
+## Test Your Setup
+
+Before the workshop, verify your installation:
+
+```r
+# Test script (example - servers will be activated during workshop)
+library(DSOpal)
+library(dsBaseClient)
+
+# Check package versions
+packageVersion("dsBaseClient")
+packageVersion("DSOpal")
+
+# Test basic functionality
+ds.listFunctions()
+```
+
+::: {.callout-tip}
+## Installation Troubleshooting
+
+**Common Issues:**
+
+**Problem**: "Package 'xyz' is not available"
+```r
+# Solution 1: Use alternative repository
+install.packages("xyz", repos = "https://cloud.r-project.org")
+
+# Solution 2: Install from GitHub
+devtools::install_github("datashield/packagename")
+```
+
+**Problem**: "Non-zero exit status"
+- Update R to latest version
+- Install Rtools (Windows) or Xcode (Mac)
+- Check internet connection
+
+**Problem**: "Cannot connect to Opal server"
+- Check VPN connection (if required)
+- Verify credentials
+- Test with ping command
+- Check firewall settings
+:::
+
+## What We'll Provide
+
+During the workshop, you'll have access to:
+
+- **Server Access**: Dedicated workshop servers with pre-loaded data
+- **Workshop Materials**: Slides, code, and exercises
+- **Sample Datasets**: African health data for practice
+- **Support Channel**: Real-time help during workshop
+- **Certificate**: Upon successful completion
+
+## Workshop Schedule Overview
+
+::: {.row}
+::: {.col-md-6}
+### Daily Structure
+- **09:00 - 09:30**: Welcome & Coffee
+- **09:30 - 11:00**: Morning Lecture
+- **11:00 - 11:15**: Break
+- **11:15 - 12:45**: Practical Session I
+- **12:45 - 14:00**: Lunch Break
+- **14:00 - 15:30**: Afternoon Lecture
+- **15:30 - 15:45**: Break
+- **15:45 - 17:00**: Practical Session II
+- **17:00 - 17:30**: Q&A and Wrap-up
+:::
+
+::: {.col-md-6}
+### What to Bring
+- Laptop with required software installed
+- Power adapter and chargers
+- Notebook and pen
+- Water bottle
+- Business cards for networking
+- Questions about your specific use cases
+:::
+:::
+
+## Pre-Workshop Orientation
+
+::: {.callout-tip}
+## Optional Orientation Session
+
+Join our **pre-workshop orientation session** (recommended):
+- **Date**: [To be announced]
+- **Time**: 1 hour
+- **Format**: Online via Zoom
+- **Content**: Setup verification, Q&A, meet other participants
+
+**Register**: [orientation@isglobal.org](mailto:orientation@isglobal.org)
+:::
+
+## Support & Help
+
+### Before the Workshop
+
+::: {.row}
+::: {.col-md-6}
+#### Technical Support
+- **Email**: [workshop-support@isglobal.org](mailto:workshop-support@isglobal.org)
+- **Response Time**: Within 24 hours
+- **Available**: Monday-Friday, 9:00-17:00 CET
+:::
+
+::: {.col-md-6}
+#### General Questions
+- **Email**: [brge@isglobal.org](mailto:brge@isglobal.org)
+- **Contact**: Workshop Coordinator
+- **Phone**: +34 xxx xxx xxx
+:::
+:::
+
+### During the Workshop
+
+- **Real-time Chat**: Workshop Slack channel
+- **Office Hours**: Daily 08:00-09:00 and 17:30-18:30
+- **Emergency Support**: Available throughout workshop hours
+
+## Final Checklist
+
+Before the workshop starts, make sure you have:
+
+- [ ] R and RStudio installed and working
+- [ ] All required packages installed
+- [ ] Received and tested server credentials
+- [ ] Completed pre-reading materials
+- [ ] Joined workshop communication channels
+- [ ] Prepared specific questions about your use cases
+
+::: {.callout-success}
+## Ready to Go!
+
+Once you've completed all the setup steps, you're ready for an amazing workshop experience. We look forward to seeing you there!
+:::
+
+---
+
+::: {.text-center .mt-5}
+<a href="schedule.qmd" class="btn btn-primary">View Workshop Schedule</a>
+<a href="contact.qmd" class="btn btn-secondary">Contact Instructors</a>
+:::

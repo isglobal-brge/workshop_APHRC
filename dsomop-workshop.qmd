@@ -1,0 +1,107 @@
+---
+title: "dsOMOP Workshop"
+---
+
+## dsOMOP: DataSHIELD + OMOP CDM Integration
+
+::: {.hero}
+# dsOMOP Workshop
+**Federated Analysis of Standardized Health Data**
+:::
+
+## Workshop Overview
+
+The dsOMOP workshop focuses on the integration of DataSHIELD with the OMOP Common Data Model (CDM). This powerful combination enables federated analysis of standardized observational health data across multiple institutions while maintaining data privacy and security.
+
+### What You'll Learn
+
+::: {.row .g-4}
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-database icon"></i>
+
+#### OMOP CDM Fundamentals
+Understand the structure and principles of the OMOP Common Data Model and its standardized vocabularies.
+:::
+:::
+
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-arrow-left-right icon"></i>
+
+#### ETL Processes
+Learn to transform local health data into OMOP CDM format using established tools and methodologies.
+:::
+:::
+:::
+
+::: {.row .g-4}
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-shield-lock icon"></i>
+
+#### Federated OMOP Analysis
+Master techniques for analyzing OMOP data across multiple sites using DataSHIELD without sharing individual records.
+:::
+:::
+
+::: {.col-md-6}
+::: {.feature-card}
+<i class="bi bi-people icon"></i>
+
+#### Multi-Site Studies
+Design and implement collaborative research studies using standardized data models and federated analysis.
+:::
+:::
+:::
+
+## Workshop Content
+
+### Day 1: OMOP CDM Introduction
+- OMOP CDM structure and concepts
+- Standardized vocabularies (SNOMED, ICD, LOINC)
+- Data quality assessment
+- OMOP tools ecosystem
+
+### Day 2: Data Transformation
+- ETL design principles
+- WhiteRabbit and Rabbit-in-a-Hat
+- Vocabulary mapping with Usagi
+- Data validation procedures
+
+### Day 3: Federated OMOP Analysis
+- dsOMOP package introduction
+- Cohort definition across sites
+- Federated descriptive analytics
+- Cross-site comparisons
+
+## Prerequisites
+
+- Completion of DataSHIELD workshop (recommended)
+- Understanding of clinical data structures
+- Basic SQL knowledge (helpful)
+- Completed [Getting Started](getting-started.qmd) setup
+
+## Workshop Materials
+
+Comprehensive materials provided:
+- OMOP CDM documentation and guides
+- ETL mapping templates
+- dsOMOP package documentation
+- Real-world case studies
+- Practice datasets in OMOP format
+
+## Use Cases
+
+Learn through practical examples:
+- Multi-site pharmacovigilance studies
+- Comparative effectiveness research
+- Disease natural history studies
+- Health outcomes research
+
+---
+
+::: {.text-center .mt-5}
+<a href="getting-started.qmd" class="btn btn-primary">Get Started</a>
+<a href="schedule.qmd" class="btn btn-secondary">View Schedule</a>
+:::

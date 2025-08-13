@@ -1,5 +1,6 @@
 ---
 title: "DataSHIELD Workshop: Data Science Without Borders"
+freeze: true
 format: 
   html:
     code-copy: false

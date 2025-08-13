@@ -35,7 +35,7 @@ Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRG
 
   <div class="contact-card h-100">
     <div class="contact-card__header">
-      <img src="images/david.jpg" alt="David Sarrat González" class="contact-card__photo" onerror="this.style.display='none'">
+      <img src="images/david.jpeg" alt="David Sarrat González" class="contact-card__photo" onerror="this.style.display='none'">
       <div class="contact-card__avatar" aria-hidden="true">
         <i class="bi bi-person-circle"></i>
       </div>

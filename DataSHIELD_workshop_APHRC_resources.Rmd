@@ -10,20 +10,6 @@ execute:
   error: true
 ---
 
-```{css, echo=FALSE}
-.cell-output {
-  background-color: #FFFACD;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.cell-output pre {
-  background-color: #FFFACD;
-  border: none;
-}
-```
-
 # Analysis using the `resources`
 
 

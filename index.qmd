@@ -71,7 +71,7 @@ This makes DataSHIELD ideal when regulations, ethics, or governance restrict dat
 DataSHIELD is also a community-driven, open-source initiative with contributors from universities, research institutes, and health systems. The community steers method development, governance rules, disclosure controls, and software evolution through open collaboration, ensuring transparency, interoperability, and best practices for secure multi-site analytics.
 
 ::: {.callout-important}
-### A milestone for Africa!
+### A milestone to celebrate!
 
 During our collaboration, we will be deploying the **first African federated clinical data analysis network using DataSHIELD**!
 :::

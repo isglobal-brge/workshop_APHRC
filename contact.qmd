@@ -8,7 +8,7 @@ format:
     anchor-sections: false
 ---
 
-Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRGE) who will be leading this workshop.
+**Feel free to contact us with any questions, suggestions or comments!**
 
 ::: {.container .mt-5}
 

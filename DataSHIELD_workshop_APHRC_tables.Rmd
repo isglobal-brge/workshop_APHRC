@@ -1,0 +1,703 @@
+---
+title: "DataSHIELD Workshop: Data Science Without Borders"
+format: 
+  html:
+    code-copy: false
+    include-in-header: |
+      <style>
+      .cell-output {
+        background-color: #FFFACD;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .cell-output pre {
+        background-color: #FFFACD;
+        border: none;
+      }
+      </style>
+execute:
+  eval: true
+  echo: true
+  warning: false
+  error: true
+---
+### INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS: 
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+# DataSHIELD for analyzing simulated D data
+
+The plan for this workshop is as follows:
+
+- Installing DataSHIELD
+- Logging in and assigning data
+- Describing data
+- Manipulating data
+- Subsetting data
+- Data manipulation with dsHelper
+- Making graphs
+- Performing regression analysis
+
+
+## Installing DataSHIELD
+
+Firstly: check whether we have the right R packages installed to run DataSHIELD: using the very helpful devtools package (which has already been installed for us by Stuart!), we'll use the "Session info" command:
+
+```{r, eval = FALSE}
+install.packages("devtools")
+library(devtools)
+devtools::session_info()
+```
+
+We are missing some of the necessary packages: "DSI", "DSOpal" and "dsBaseClient". 
+
+```{r, eval=FALSE}
+install.packages('DSI')
+install.packages('DSOpal')
+install.packages('dsBaseClient')
+devtools::install_github("timcadman/ds-helper")
+install.packages("metafor")
+```
+
+
+Remember to load them into this R session using "library()" command:
+
+```{r}
+# libraries to connect with Opal databases
+library(DSI)
+library(DSOpal)
+
+# DataSHIELD client libraries
+library(dsBaseClient)
+library(dsHelper)
+
+# Library to perform meta-analyses
+library(metafor)
+```
+
+Check that they have now been added:
+
+```{r}
+devtools::session_info()
+```
+
+## Logging in and assigning data
+
+The login script has to be customized to fit the data you are trying to connect to.
+
+The "builder <-" and "builder$append" functions are standard features.
+
+For this demonstration we are connecting to simulated data- but if it was data of real people, it would be very important for us not to be able to see individual patients' information.
+
+
+For this workshop, we'll imagine that the data is hosted in a two Opal repositories located in France and Spain. The tables are in a project called CNSIM and the tables are named CNSIM1 and CNSIM2 respectively. Data correspond to two simulated datasets with different numbers of observations of 11 harmonized variables. They contain synthetic data based on a model derived from the participants of the 1958 Birth Cohort, as part of an obesity methodological development project. This dataset does contain some NA values. The available variables are:
+
+
+```{r insert_table_variables, echo=FALSE}
+vars <- readr::read_delim("fig/table_variables_cnsim.txt", delim=",")
+knitr::kable(vars)
+```
+
+
+Now, using DataSHIELD, we have to connect to the servers which contains the data in the Opal databases. 
+The below code creates a local R object with the login details for each study:
+
+```{r}
+builder <- DSI::newDSLoginBuilder()
+
+# Server 1: France 
+builder$append(
+  server = 'France', 
+  url = "https://opal-demo.obiba.org",
+  user = "dsuser", 
+  password = "P@ssw0rd",
+  table = "CNSIM.CNSIM1",
+  profile = "default"
+)
+
+# Server 2: Spain (ISGlobal)
+builder$append(
+  server = 'ISGlobal', 
+  url = "https://opal.isglobal.org/repo",
+  user = "invited", 
+  password = "12345678Aa@",
+  table = "CNSIM.CNSIM2",
+  profile = "rock-inma"
+)
+```
+
+NOTE: The `profile` argument is set up by the data owners and controls both, the datasets or projects that are available for this user, as well as the different DataSHIELD packages.
+
+
+Now we need to connect, referring to the login information in the data frame we have just created:
+
+```{r}
+logindata <- builder$build()
+conns <- datashield.login(logins = logindata, assign = TRUE)
+```
+
+The 'assign' argument can be set to either 'TRUE' or 'FALSE'. If set to 'TRUE', all the available variables within that table will be assigned to a serverside data frame and available to access. If you only need a small subset of available variables it can be preferable to set this to 'FALSE' and later use the function 'datashield.assign' to separately assign only the variables you need. The output of this box has useful progress bars which show the progress of connecting to studies, one by one. 
+
+
+
+We can see the serverside has object called `D` which correspond to the dataset `CNSIM` of each study by running:
+
+```{r}
+ds.ls()
+```
+
+
+which is a data.frame called `D` (this name was set using the 'symbol' argument in datashield.login above). We can check that this is a data.frame by typing
+
+
+```{r}
+ds.class(x = "D", datasources = conns)
+```
+
+NOTE: writting `datasources = conns` is not required. This is just to emphasize that if you have several connections you need to specify which one is yours. By default, it missing it looks for your local environment. Also, the argument `x = "D"` can be simply written by `"D"`.  
+
+
+and the data.frame has the variables we have previously described
+
+```{r}
+ds.colnames("D")
+```
+
+################################################################################
+
+## Describing data ('aggregate-type functions')
+
+There are many data exploration functions already implemented into DataSHIELD: let's check it out at the wiki [https://data2knowledge.atlassian.net/wiki/spaces/DSDEV/pages/2733244417/Version+6.2.0](https://data2knowledge.atlassian.net/wiki/spaces/DSDEV/pages/2733244417/Version+6.2.0)
+
+Scroll down to "Data structure queries". Let's try out a few of these:
+
+```{r}
+ds.dim(x="D")
+```
+
+What it is *mandatory* is to write the name of the data.frame with "".  
+
+### We're going to be focus on HDL 
+
+This is a measure of HDL Cholesterol (aka the "good cholesterol" level)
+
+Let's run some summary statistic commands
+
+```{r}
+ds.class(x='D$LAB_HDL')
+ds.length(x='D$LAB_HDL')
+ds.mean(x='D$LAB_HDL')
+```
+
+What is this other function to obtain the mean? Let's use the DataSHIELD function help documentation.
+```{r}
+?ds.quantileMean
+```
+
+Now, putting into action some of what we've learned about the function arguments. NOTE: 'split' is in case you have data from different servers and you want to see the statistic one by one.
+
+```{r}
+ds.quantileMean(x='D$LAB_HDL')
+
+ds.quantileMean(x='D$LAB_HDL', type = "split")
+```
+
+Trying to calculate the variance of FEV1:
+```{r}
+?ds.var
+```
+
+```{r}
+ds.var(x = 'D$LAB_HDL', type = "split")
+```
+
+Can we store the results calculated from a DataSHIELD analysis in a local R session?
+
+Yes- the output of aggregate functions are always R objects, hence can be stored.
+
+```{r}
+a<-ds.var(x = 'D$LAB_HDL', type = "split")[[1]]
+a
+b<-ds.var(x = 'D$LAB_HDL', type = "split")[[1]][[1,1]]
+b
+```
+
+The square brackets are because we are trying to access an element of a list- which is the R object that DataSHIELD aggregate functions output as.
+
+Factor variables visualize by simply writing
+
+```{r}
+ds.table("D$GENDER")
+```
+
+### Using dsHelper to retrieve statistics in a neater format. 
+
+As you may have noticed, some operations which are more straightforward in R can be more complicated in datashield. To help with this, the dsHelper package allows you to do some common operations in fewer lines of code. DsHelper is an entirely serverside package - it contains only clientside functions which call DataSHIELD functions serverside. 
+
+We have seen datashield has a range of functions to retrieve statistics, but is limited in that (i) you need to use different functions for different statistics, (ii) you can only get stats for one variable at a time. dh.GetStats returns many useful stats in a tibble, and allows you to retrieve stats for multiple variables at a time.
+
+```{r, eval = FALSE}
+neat_stats <- dh.getStats(
+	df = "D",
+  vars = c("GENDER", "LAB_TRIG", "LAB_HDL", "DIS_CVA", "DIS_DIAB"))
+           
+neat_stats
+```
+
+
+################################################################################
+
+## Manipulating data ('assign-type' functions)
+
+Assign-type functions are ones where a calculation is done on the data stored at the server (and results of that calculation are "assigned" to a serverside variable, and saved there), but is NOT transmitted back to the user.
+
+The reason for this is that some calculations could be highly disclosive- and if such data were transmitted to the analyst, with not much effort at all, with an inverse function, the analyst could work out exactly what the raw data are- and thus the data's privacy is broken!
+
+To demonstrate: 
+
+```{r}
+ds.ls()
+ds.log(x='D$LAB_HDL', newobj='HDL_log')
+ds.ls()
+ds.mean(x="HDL_log")
+ds.mean(x="D$LAB_HDL")
+```
+The second "ds.mean" shows that the mean of the logged values are definitely smaller, by about the right amount. The DataSHIELD log function has worked.
+
+There is another DataSHIELD assign function that can be used for data transformations - a square root function. Let's test again:
+
+```{r}
+ds.sqrt(x='D$LAB_HDL', newobj='HDL_sqrt')
+ds.ls()
+ds.mean(x="HDL_sqrt")
+ds.mean(x="D$LAB_HDL")
+```
+
+These new objects are not attached to a dataframe. 
+Use the help function to find out about the ds.dataFrame function, which can be used to combine objects.
+
+Now join "HDL_sqrt" and "HDL_log" to the dataframe "D".
+
+```{r}
+ds.dataFrame(c("D", "HDL_sqrt", "HDL_log"), newobj = "D")
+ds.colnames("D")
+```
+
+**EXERCISE: Using some of the functions above, explore the distribution of the variable "PM_BMI_CATEGORICAL" in dataframe "D".**
+
+
+Here you see this has returned a list of two tibbles separated into continuous and categorical information. For the categorical variables info is returned on ns, percentages and missingness within each category, whilst for continuous variables info is returned on mean, standard deviation, quantiles and also missingness.
+
+
+## Sub-setting data
+
+In DataSHIELD there is one function that allows sub-setting of data, ds.dataFrameSubset .
+
+You may wish to use it to:
+
+Subset a column of data by its "Class"
+Subset a dataframe to remove any "NA"s
+Subset a numeric column of a dataframe using a Boolean inequalilty
+
+```{r}
+# first find the column name you wish to refer to
+ds.colnames(x="D")
+# then check which levels you need to apply a boolean operator to:
+ds.levels(x="D$GENDER")
+?ds.dataFrameSubset
+```
+
+Splitting into GENDER groups, assigned to different server-side objects.
+```{r}
+ds.dataFrameSubset(df.name = "D", V1.name = "D$GENDER", V2.name = "1", 
+                   Boolean.operator = "==", newobj = "CNSIM.subset.Males")
+ds.dataFrameSubset(df.name = "D", V1.name = "D$GENDER", V2.name = "0", 
+                   Boolean.operator = "==", newobj = "CNSIM.subset.Females")
+```
+Now there are two serverside objects which have split GENDER by class, to which we have assigned the names "CNSIM.subset.Males" and "CNSIM.subset.Females".
+
+
+### Sub-setting to remove NAs
+```{r}
+ds.completeCases(x1="D",newobj="D_without_NA")
+```
+
+### Sub-setting by inequality
+Say we wanted to have a subset of patients where BMI values are ≥ 25, and call it subset.BMI.25.plus
+```{r}
+ds.dataFrameSubset(df.name = "D",
+  V1.name = "D$PM_BMI_CONTINUOUS",
+  V2.name = "25",
+  Boolean.operator = ">=",
+  newobj = "subset.BMI.25.plus")
+```
+
+Checking we have successfully created such an object, using quantiles and histograms:
+```{r}
+ds.quantileMean(x="subset.BMI.25.plus$PM_BMI_CONTINUOUS", type = "split")
+
+ds.histogram(x="subset.BMI.25.plus$PM_BMI_CONTINUOUS")
+```
+
+### Sub-setting by multiple conditions
+If we want to create a subset based on multiple conditions we can use the ds.Boole function before subsetting. For example, let's say that we want to create a subset of individuals where BMI values are ≥ 25 and adjusted glucose is lower than 6.
+
+```{r}
+ds.Boole(
+  V1 = "D$PM_BMI_CONTINUOUS",
+  V2 = "25",
+  Boolean.operator = ">=",
+  numeric.output = TRUE,
+  newobj = "BMI.25.plus")
+
+ds.Boole(
+  V1 = "D$LAB_GLUC_ADJUSTED",
+  V2 = "6",
+  Boolean.operator = "<",
+  numeric.output = TRUE,
+  newobj = "GLUC.6.less")
+
+```
+
+We can then use the ds.make function to make a new categorical variable which combines these groups:
+
+```{r}
+?ds.make 
+
+ds.make(toAssign = "BMI.25.plus+GLUC.6.less",
+        newobj = "BMI.25.plus_GLUC.6.less")
+
+# If BMI >= 25 and glucose < 6, then BMI.25.plus_GLUC.6.less=2
+# If BMI >= 25 and glucose >= 6, then BMI.25.plus_GLUC.6.less=1
+# If BMI < 25 and glucose < 6, then BMI.25.plus_GLUC.6.less=1
+# If BMI < 25 and glucose >= 6, then BMI.25.plus_GLUC.6.less=0
+
+ds.table(rvar= "BMI.25.plus_GLUC.6.less",
+         datasources = conns)
+
+ds.dataFrame(x=c("D", "BMI.25.plus_GLUC.6.less"), newobj = "D2")
+
+ds.colnames("D2")
+
+ds.dataFrameSubset(df.name = "D2",
+  V1.name = "D2$BMI.25.plus_GLUC.6.less",
+  V2.name = "2",
+  Boolean.operator = "==",
+  newobj = "subset2")
+
+ds.dim("subset2")
+```
+
+
+
+## Data manipulation with dsHelper
+Again, we can use some dsHelper functions to do data manipulation operations in a more efficient way. 
+
+### Create a subset of columns by a vector of column names
+
+```{r}
+dh.dropCols(
+	df = "D", 
+  vars = c("PM_BMI_CONTINUOUS", "GENDER"), 
+  type = "keep",
+  new_obj = "df_subset")
+  
+ds.colnames("df_subset")
+```
+
+
+### Rename variables
+```{r, eval = FALSE}
+dh.renameVars(
+	df = "D", 
+  current_names = c("PM_BMI_CONTINUOUS", "GENDER"),
+  new_names = c("bmi", "sex"), 
+  new_obj = "df_rename")
+  
+ds.colnames("df_rename")
+```
+
+There are many more dsHelper functions designed to make common operations easier in datashield, check out the vignettes at: [https://github.com/timcadman/ds-helper/blob/master/vignettes/ds-helper-main-vignette.Rmd](https://github.com/timcadman/ds-helper/blob/master/vignettes/ds-helper-main-vignette.Rmd)
+
+
+
+################################################################################
+
+## Graphs
+
+Visualising the data we are studying is extremely important to get a sense of it. While it may seem disclosive at first glance, only such graphs that are definitively non-disclosive have been implemented within the DataSHIELD project.
+
+### Histograms
+
+Firstly, histograms give a good sense of how one variable is distributed. But no individual points are disclosed because values are "binned" into groups of a similar magnitude, disguising what each one actually is. We protect privacy by removing bins with low counts (below specific threshold). If you have a symmetric distribution, you may find some things aren't observed at the extreme ends.
+
+Let's create a histogram of the variable we've been investigating for much of this study: HDL Cholesterol ("LAB_HDL").
+
+```{r}
+?ds.histogram
+ds.histogram(x='D$LAB_HDL')
+```
+
+**Use the ds.histogram to explore the distribution of "D$PM_BMI_CONTINUOUS"**
+
+### Scatterplots of two numerical variables
+
+When you generate a scatter plot, you can say that the data points that are displayed are not the actual values. The function gives you the choice on how to anonymise: either you anonymise the values by additional random noise; or you take the average of the k nearest neighbours. (for more details on how anonymisation methods are used for the generation of privacy-preserving visualisations you can have a look on the paper https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-020-00257-4)
+
+```{r}
+ds.scatterPlot(x="D$LAB_HDL", y="D$PM_BMI_CONTINUOUS")
+```
+
+Other DataSHIELD graphical functions allow the creation of box plots, heatmap plots and contour plots. Investigate them using their help functions:
+```{r}
+?ds.heatmapPlot
+?ds.contourPlot
+?ds.boxPlot
+```
+
+
+################################################################################
+
+
+## Analysis
+
+### Simple Linear Regression
+
+We want to examine the relationship between BMI and HDL Cholesterol
+```{r}
+ds.cor(x='D$PM_BMI_CONTINUOUS', y='D$LAB_HDL')
+```
+
+ 
+
+Regress HDL Cholesterol with BMI using the Individual Partition Data (IPD) approach:
+
+ 
+
+The method for this (ds.glm) is a "pooled analysis"- equivalent to placing the individual-level data from all sources in one warehouse.
+
+ 
+
+Important to note that the link function is by default the canonical link function for each family. So binomial <-> logistic link, poisson <-> log link, gaussian <-> identity link.
+
+ 
+
+```{r}
+ds.glm(formula = "D$LAB_HDL~D$PM_BMI_CONTINUOUS", 
+       family="gaussian")
+```
+
+ 
+
+
+Regress HDL Cholesterol with BMI using the Study-Level Meta-Analysis (SLMA) approach:
+```{r}
+ds.glmSLMA(formula = "D$LAB_HDL~D$PM_BMI_CONTINUOUS", family="gaussian", 
+           newobj = "workshop.obj")
+```
+
+ 
+
+For the SLMA approach we can assign the predicted values at each study:
+```{r}
+ds.glmPredict(glmname = "workshop.obj", newobj = "workshop.prediction.obj")
+ds.length("workshop.prediction.obj$fit", datasources=conns)
+ds.length("D$LAB_HDL", datasources=conns)
+```
+
+ 
+
+```{r}
+ds.cbind(c('D$LAB_HDL', 'D$PM_BMI_CONTINUOUS'), newobj='vars')
+ds.completeCases('vars', newobj='vars.complete')
+ds.dim('vars.complete')
+```
+
+
+Let's plot the best linear fit on a scatter plot
+```{r}
+df1 <- ds.scatterPlot('D$PM_BMI_CONTINUOUS', "D$LAB_HDL", return.coords = TRUE)
+df2 <- ds.scatterPlot('vars.complete$PM_BMI_CONTINUOUS', "workshop.prediction.obj$fit", 
+                      return.coords = TRUE)
+# then in native R
+par(mfrow=c(2,2))
+plot(as.data.frame(df1[[1]][[1]])$x,
+     as.data.frame(df1[[1]][[1]])$y, xlab='Body Mass Index', ylab='HDL Cholesterol', main='Study 1')
+lines(as.data.frame(df2[[1]][[1]])$x,as.data.frame(df2[[1]][[1]])$y, col='red')
+plot(as.data.frame(df1[[1]][[2]])$x,as.data.frame(df1[[1]][[2]])$y, 
+     xlab='Body Mass Index', ylab='HDL Cholesterol', main='Study 2')
+lines(as.data.frame(df2[[1]][[2]])$x,as.data.frame(df2[[1]][[2]])$y, col='red')
+```
+
+
+For the SLMA approach we can also create the predicted values and the residuals at each study using the ds.make function:
+```{r}
+
+glmslma <- ds.glmSLMA(formula = "vars.complete$LAB_HDL~vars.complete$PM_BMI_CONTINUOUS", family="gaussian", newobj = "workshop.obj")
+
+ds.make(toAssign=paste0("(",glmslma$SLMA.pooled.ests.matrix[1,1],")+(", glmslma$SLMA.pooled.ests.matrix[2,1],"*vars.complete$PM_BMI_CONTINUOUS)"), 
+        newobj = "predicted.values")
+
+ds.make(toAssign = "vars.complete$LAB_HDL - predicted.values", 
+        newobj = "residuals")
+
+# and you can use those to run regression plot diagnostics  
+ds.scatterPlot('predicted.values', "residuals")
+ds.histogram("residuals")
+```
+
+
+### Creating forest plots
+
+We want to examine the relationship between BMI and diabetes
+
+Examine the distribution of the variable "DIS_DIAB" in all cohorts using 'ds.table':
+
+```{r}
+ds.table("D$DIS_DIAB")
+```
+
+
+Check the class of "DIS_DIAB":
+```{r}
+ds.class("D$DIS_DIAB")
+```
+
+Examine the association between BMI and diabetes:
+
+```{r}
+glmSLMA_mod2<-ds.glmSLMA(formula="D$DIS_DIAB~D$PM_BMI_CONTINUOUS", family='binomial')
+```
+
+
+Save effect estimates and standard errors as new objects
+```{r}
+estimates <- c(glmSLMA_mod2$betamatrix.valid[2,])
+se <- c(glmSLMA_mod2$sematrix.valid[2,])
+```
+
+
+Meta-analyse the results using rma to obtain study weights:
+
+```{r}
+res <- rma(estimates, sei=se)
+```
+
+
+Can produce simple forest plots using output:
+```{r}
+forest(res, atransf=exp)
+```
+
+
+We can also add more information to forest plots:
+```{r}
+study_names <- c("France", "Spain")
+weights <-  c(paste0(formatC(weights(res), format="f", digits=1, width=4), "%"))
+
+forest(res, atransf=exp,
+       xlab="Crude Odds Ratio", refline=log(1), xlim=c(-0.25,0.5), 
+       at=log(c(0.95, 1, 1.1, 1.2, 1.3)),
+       slab=cbind(paste0(study_names, " (", paste0(weights, ")"))), 
+       mlab="RE model")
+text(0.5, 4.5, pos=2, "Odds Ratio [95% CI]")
+text(-0.25, 4.5, pos=4, "Study (weight)")
+```
+
+
+### Modelling multiple variables and interactions
+
+ 
+
+Also possible to model multiple explanatory variables and include interactions: 
+
+ 
+
+```{r}
+glm_mod1<-ds.glm(formula="D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER", family='binomial')
+```
+The "*" between LAB_HDL and GENDER means fit all possible main effects and interactions between the two covariates.
+
+ 
+
+Compare with results of a study-level meta analysis:
+
+ 
+
+```{r}
+glmSLMA_mod2<-ds.glmSLMA(formula="D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER", family='binomial')
+```
+Now compare outputs:
+
+ 
+
+```{r}
+glm_mod1$coefficients
+glmSLMA_mod2$SLMA.pooled.ests.matrix
+```
+
+Similar, but differences between the results are accounted for by the different techniques employed.
+
+
+## At the end of your RStudio Server analysis:
+
+You can save your workspace:
+```{r, eval = FALSE}
+datashield.workspace_save(conns = conns, ws = "workspace2025")
+```
+
+Don't forget to log out! Using:
+```{r}
+datashield.logout(conns)
+```
+
+
+You can restore your workspace, the next time you want to continue with your analysis
+```{r, eval = FALSE}
+conns <- datashield.login(logins = logindata, 
+                          assign = TRUE, symbol = "D")
+ds.ls()
+datashield.logout(conns)
+
+conns <- datashield.login(logins = logindata, restore = "workspace2025")
+ds.ls()
+```
+
+Also you can delete unwanted workspaces using the datashield.workspace_rm
+
+In Rstudio Server: DON'T forget to use the orange "quit the current R session" button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in.
+
+
+# Exercise
+
+
+We have access to 2 datasets corresponding to simulated data from [UKBiobank](https://www.ukbiobank.ac.uk/) available through [CINECA study](https://ega-archive.org/datasets/EGAD00001006673). This data reproduce the exact associations found at UKBiobank. The two datasets are accessed in two Opal server
+
+Server 1: 
+  - URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)
+  - Project: GWAS
+  - Table: ega_phenotypes_1
+  
+Server 2:  
+  - URL: https://opal.isglobal.org/repo (user: invited, pwd: P@12345678Aa@)
+  - Project: EGA
+  - Table: ega_phenotypes_2
+  
+
+Then, load ONE of the three resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 
+
+
+- Check that your loaded objects are of class data.frame
+- How many individuals have been diagnosed with diabetes by doctor (variable - diabetes_diagnosed_doctor)?
+- Obtain the same information stratified by sex (Hint: create a 2x2 table).
+- Create an histogram of the variable height by combining information across the three different datasets (Hint: type ?ds.histogram to see how to get this plot).
+- Create a correlation plot between bmi and weight combining data from the three studies (Hint: ?ds.scatterPlot).
+- Compute the correlation between bmiand weight.
+- Fit a regression model between cholesterol and weight.
+- Fit a regression model between diabetes (variable diabetes_diagnosed_doctor) and colesterol level (variable cholesterol). Note: remember that outcome variable (e.g. diabetes) must be a factor variable.
+- Fit the same model adjusted by bmi. Is still cholesterol associated with diabetes?
+- Is there any interaction between cholesterol and sex adjusted by bmi?

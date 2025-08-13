@@ -1,9 +1,12 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.Rmd"
 
 website:
-  title: "DataSHIELD + OMOP CDM Workshop"
+  title: "DataSHIELD APHRC Workshop"
   site-url: https://isglobal-brge.github.io/workshop_APHRC
   repo-url: https://github.com/isglobal-brge/workshop_APHRC
   
@@ -11,8 +14,6 @@ website:
   
   navbar:
     background: primary
-    logo: images/isglobal_logo.jpg
-    logo-alt: "ISGlobal - Barcelona Institute for Global Health"
     title: false
     
     left:
@@ -25,12 +26,12 @@ website:
       - text: "Workshops"
         icon: mortarboard-fill
         menu:
-          - text: "DataSHIELD Workshop"
-            href: datashield-workshop.qmd
-            icon: shield-check
-          - text: "dsOMOP Workshop"
-            href: dsomop-workshop.qmd
-            icon: database
+          - text: "DataSHIELD (Tables)"
+            href: DataSHIELD_workshop_APHRC_tables.Rmd
+            icon: table
+          - text: "DataSHIELD (Resources)"
+            href: DataSHIELD_workshop_APHRC_resources.Rmd
+            icon: link-45deg
       - text: "Schedule"
         href: schedule.qmd
         icon: calendar3
@@ -88,4 +89,4 @@ format:
     code-overflow: wrap
     
 execute:
-  freeze: auto
+  freeze: false

@@ -1,5 +1,5 @@
 ---
-title: "DataSHIELD + OMOP CDM Workshop"
+title: "DataSHIELD APHRC Workshop"
 page-layout: custom
 toc: false
 ---
@@ -32,230 +32,117 @@ toc: false
 ```
 
 ::: {.my-5}
-# DataSHIELD + OMOP CDM Workshop
+# Combining DataSHIELD with OMOP CDM
 
-**Advancing Health Data Science in Africa**
+**Federated analysis with strong privacy guarantees on standardized clinical data.**
 
-A collaborative workshop by ISGlobal's Bioinformatics Research Group in Epidemiology (BRGE) for the African Population and Health Research Center (APHRC)
+This workshop introduces DataSHIELD for privacy-preserving federated analysis together with dsOMOP, its bridge to the Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) used for standardized clinical databases.
 :::
 
-::: {.container .mt-5}
-::: {.row .g-4}
+### Institutions behind this workshop
 
-::: {.col-lg-4}
-::: {.feature-card}
-<i class="bi bi-shield-check icon"></i>
-
-### Secure Data Analysis
-
-Learn how DataSHIELD enables privacy-preserving analysis of sensitive health data across multiple sites without sharing individual-level data.
-:::
-:::
-
-::: {.col-lg-4}
-::: {.feature-card}
-<i class="bi bi-database icon"></i>
-
-### OMOP CDM Integration
-
-Discover how the OMOP Common Data Model standardizes health data for collaborative research and real-world evidence generation.
-:::
-:::
-
-::: {.col-lg-4}
-::: {.feature-card}
-<i class="bi bi-globe-africa icon"></i>
-
-### African Health Context
-
-Apply these technologies to address unique health challenges and opportunities in African population health research.
-:::
-:::
-
-:::
-:::
-
-## About This Workshop
-
-::: {.content-section}
-Welcome to the DataSHIELD + OMOP CDM workshop, a comprehensive training program designed to empower researchers at the African Population and Health Research Center (APHRC) with cutting-edge tools for secure, collaborative health data analysis.
-
-::: {.row .align-items-center .mt-4}
-::: {.col-md-8}
-This workshop combines two powerful technologies:
-
-- **DataSHIELD**: A method that enables the analysis of sensitive research data without physically sharing the data itself
-- **OMOP CDM**: A common data model that standardizes the structure and content of observational health data
-
-Our goal is to provide APHRC researchers with the skills and knowledge to implement these technologies in their research, fostering collaboration while maintaining the highest standards of data privacy and security.
-:::
-
-::: {.col-md-4}
 ::: {.text-center}
-<div class="placeholder-image">
-  <i class="bi bi-building" style="font-size: 8rem; color: #e47200;"></i>
-  <p class="mt-2 text-muted">APHRC Campus</p>
-</div>
-:::
-:::
-:::
-:::
-
-## About APHRC
-
-::: {.aphrc-section .my-5 .p-5 .bg-light .rounded}
-::: {.container}
-::: {.row .align-items-center}
-::: {.col-md-12 .text-center .mb-4}
-### African Population and Health Research Center
-**Leading Research Excellence in Africa**
-:::
+![](images/isglobal_logo.jpg){.img-fluid width=160px}
+![](images/brge_logo.png){.img-fluid width=140px}
+![](images/aphrc_logo.png){.img-fluid width=200px}
+<br>
+![](images/datashield.webp){.img-fluid width=120px}
+![](images/ohdsi.png){.img-fluid width=140px}
 :::
 
-::: {.row .g-4}
-::: {.col-md-4}
-::: {.text-center}
-<div class="placeholder-image-card">
-  <i class="bi bi-graph-up-arrow" style="font-size: 5rem; color: #e47200;"></i>
-  <h5 class="mt-3">Research Excellence</h5>
-  <p class="text-muted">Conducting cutting-edge population health research across Africa</p>
-</div>
-:::
-:::
+### What is DataSHIELD?
 
-::: {.col-md-4}
-::: {.text-center}
-<div class="placeholder-image-card">
-  <i class="bi bi-people-fill" style="font-size: 5rem; color: #e47200;"></i>
-  <h5 class="mt-3">Capacity Building</h5>
-  <p class="text-muted">Training the next generation of African health researchers</p>
-</div>
-:::
-:::
-
-::: {.col-md-4}
-::: {.text-center}
-<div class="placeholder-image-card">
-  <i class="bi bi-globe2" style="font-size: 5rem; color: #e47200;"></i>
-  <h5 class="mt-3">Policy Impact</h5>
-  <p class="text-muted">Translating research into actionable health policies</p>
-</div>
-:::
-:::
-:::
-
-::: {.row .mt-5}
-::: {.col-md-12}
-<div class="alert alert-info text-center">
-  <i class="bi bi-info-circle-fill"></i> APHRC is a premier research institution generating evidence to inform decision-making for improved health and development in Africa.
-</div>
-:::
-:::
-:::
-:::
-
-## Workshop Objectives
-
-::: {.content-section}
 :::: {.columns}
-::: {.column width="50%"}
-### Technical Skills
-- Set up and configure DataSHIELD environments
-- Transform health data to OMOP CDM format
-- Perform federated analyses across multiple sites
-- Implement privacy-preserving statistical methods
+::: {.column width="60%"}
+DataSHIELD is an open-source platform that enables analysis of sensitive data without sharing individual-level records. Analyses are executed where the data reside; only vetted, non-disclosive summaries are returned. This privacy-by-design approach combines:
+
+- Robust disclosure control on outputs
+- Role-based governance and auditable workflows
+- Secure, federated compute across institutions
+
+This makes DataSHIELD ideal when regulations, ethics, or governance restrict data movement but collaborative analysis is essential.
 :::
 
-::: {.column width="50%"}
-### Research Applications
-- Design multi-site epidemiological studies
-- Analyze real-world health data
-- Collaborate across institutions securely
-- Generate evidence for health policy
+::: {.column width="40%"}
+![](images/datashield.jpg){.img-fluid .rounded alt="High-level schematic of DataSHIELD federated analysis with disclosure controls"}
 :::
 ::::
-:::
 
-## Workshop Organizers
-
-::: {.organizers-section .my-5}
-::: {.container}
-::: {.row .g-5}
-::: {.col-lg-6}
-::: {.organizer-card .h-100 .p-4 .shadow-sm .rounded}
-::: {.text-center .mb-4}
-![](images/isglobal_logo.jpg){.img-fluid width=180px}
-:::
-
-### ISGlobal - Barcelona Institute for Global Health
-
-The **Bioinformatics Research Group in Epidemiology (BRGE)** at ISGlobal specializes in developing and applying computational methods for large-scale epidemiological studies. Our team combines expertise in bioinformatics, statistics, and public health to advance precision medicine and population health research.
-
-::: {.mt-3}
-<i class="bi bi-people-fill text-isglobal-orange"></i> **Workshop Team:**
-- Juan R González, PhD - Group Leader
-- David Sarrat González - Research Scientist
-- Technical Support Team
-:::
-
-::: {.text-center .mt-3}
-![](images/brge_logo.png){.img-fluid width=150px}
-:::
-:::
-:::
-
-::: {.col-lg-6}
-::: {.organizer-card .h-100 .p-4 .shadow-sm .rounded}
-::: {.text-center .mb-4}
-![](images/aphrc_logo.png){.img-fluid width=220px}
-:::
-
-### African Population and Health Research Center
-
-APHRC is a leading Africa-based research institution that generates evidence to inform decision-making for improved health and development in Africa. The center brings together African scholars to lead the development of evidence-based policies and programs in the region.
-
-::: {.mt-3}
-<i class="bi bi-geo-alt-fill text-isglobal-orange"></i> **Location:** Nairobi, Kenya  
-<i class="bi bi-award-fill text-isglobal-orange"></i> **Focus:** Population Health Research  
-<i class="bi bi-globe-africa text-isglobal-orange"></i> **Reach:** Pan-African
-:::
-:::
-:::
-:::
-:::
-:::
-
-## Ready to Join?
+DataSHIELD is also a community-driven, open-source initiative with contributors from universities, research institutes, and health systems. The community steers method development, governance rules, disclosure controls, and software evolution through open collaboration, ensuring transparency, interoperability, and best practices for secure multi-site analytics.
 
 ::: {.callout-important}
-## Before You Start
+### A milestone for Africa!
 
-Make sure you're prepared for the workshop! Complete the setup requirements and review the prerequisites.
-
-**Essential steps:**
-- Install R and RStudio
-- Set up required packages
-- Review pre-reading materials
-- Test your technical setup
-
-[**Get Started Now →**](getting-started.qmd){.btn .btn-primary .btn-lg}
+During our collaboration, we will be deploying the **first African federated clinical data analysis network using DataSHIELD**!
 :::
 
-## Workshop Format
+### What are OHDSI and the OMOP CDM?
 
-The workshop will be delivered through a combination of:
+:::: {.columns}
+::: {.column width="60%"}
+The OHDSI community maintains the OMOP Common Data Model (CDM), a widely adopted standard that harmonizes the structure and vocabularies of observational health data (EHRs, claims, registries). Standardization enables large-scale, reproducible analytics and consistency across diverse datasets.
 
-- **Interactive lectures** introducing key concepts
-- **Hands-on practical sessions** with real-world examples
-- **Group exercises** to reinforce learning
-- **Q&A sessions** for addressing specific use cases
-- **Networking opportunities** with peers and instructors
+OHDSI (Observational Health Data Sciences and Informatics) is a global, open-science collaborative that develops data standards, vocabularies, methods, and software for observational health research. OHDSI fosters reproducible research, open tools, and shared best practices to scale evidence generation across diverse data networks.
+:::
+
+::: {.column width="40%"}
+![](images/cdm54.png){.img-fluid .rounded alt="OMOP CDM high-level schema"}
+:::
+::::
+
+### What is dsOMOP?
+
+:::: {.columns}
+::: {.column width="70%"}
+dsOMOP is a suite of packages that connects OMOP CDM databases to DataSHIELD. It streamlines access to standardized tables and vocabularies under DataSHIELD's privacy model so you can:
+
+- Discover and explore OMOP CDM content securely
+- Build cohorts and run cross-site summary queries
+- Perform federated, standardized analyses on harmonized clinical data
+:::
+
+::: {.column width="30%"}
+::: {.text-end}
+![](images/dsomop_logo.png){.img-fluid width=120px}
+:::
+:::
+::::
+
+## Federated standardized analysis
+
+This combination of technologies enables powerful federated analysis with strong privacy guarantees:
+
+- **Privacy by design**: Individual-level data never leave the hosting institution.
+- **Disclosure control**: Automated safeguards prevent re-identification via output checks.
+- **Security and governance**: Role-based access, auditability, and institutional control.
+- **Standardization**: OMOP CDM ensures consistent structure and meaning across networks.
+- **Reproducibility**: Shared code and common semantics for comparable results.
+
+## Workshop content
+
+:::: {.columns}
+::: {.column width="50%"}
+### Block 1 — Working with DataSHIELD
+- Connect to remote nodes and manage sessions
+- Assign and aggregate safely without exposing rows
+- Run common statistics under disclosure thresholds
+- Understand privacy, security, and governance in practice
+:::
+
+::: {.column width="50%"}
+### Block 2 — OMOP CDM via dsOMOP
+- Connect to OMOP CDM databases through DataSHIELD
+- Explore standardized tables and vocabularies
+- Build cohorts and run summary queries across sites
+- Perform federated, reproducible analyses on harmonized data
+:::
+::::
 
 ---
 
 ::: {.text-center .mt-5 .mb-5}
-<a href="getting-started.qmd" class="btn btn-primary btn-lg">Learn More About the Workshop</a>
-<a href="schedule.qmd" class="btn btn-secondary btn-lg">View Schedule</a>
+<a href="getting-started.qmd" class="btn btn-primary btn-lg">Getting ready for the workshop</a>
+<a href="schedule.qmd" class="btn btn-secondary btn-lg">Workshop schedule</a>
 :::
 
 ::: {.mb-5}

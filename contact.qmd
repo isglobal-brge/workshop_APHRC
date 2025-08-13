@@ -27,8 +27,8 @@ Meet the team from ISGlobal's Bioinformatics Research Group in Epidemiology (BRG
 
       <div class="contact-card__actions">
         <a class="contact-social" href="mailto:juanr.gonzalez@isglobal.org" aria-label="Email Juan"><i class="bi bi-envelope-fill"></i></a>
-        <a class="contact-social" href="https://www.linkedin.com/in/juanrgonzalez" target="_blank" rel="noopener" aria-label="LinkedIn Juan"><i class="bi bi-linkedin"></i></a>
-        <a class="contact-social" href="https://github.com/jrgonzalez" target="_blank" rel="noopener" aria-label="GitHub Juan"><i class="bi bi-github"></i></a>
+        <a class="contact-social" href="https://www.linkedin.com/in/juan-r-gonzalez-50a808171" target="_blank" rel="noopener" aria-label="LinkedIn Juan"><i class="bi bi-linkedin"></i></a>
+        <a class="contact-social" href="https://github.com/isglobal-brge" target="_blank" rel="noopener" aria-label="GitHub Juan"><i class="bi bi-github"></i></a>
       </div>
     </div>
   </div>

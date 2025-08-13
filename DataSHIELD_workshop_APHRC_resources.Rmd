@@ -3,26 +3,26 @@ title: "DataSHIELD Workshop: Data Science Without Borders"
 format: 
   html:
     code-copy: false
-    include-in-header: |
-      <style>
-      .cell-output {
-        background-color: #FFFACD;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .cell-output pre {
-        background-color: #FFFACD;
-        border: none;
-      }
-      </style>
 execute:
   eval: true
   echo: true
   warning: false
   error: true
 ---
+
+```{css, echo=FALSE}
+.cell-output {
+  background-color: #FFFACD;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cell-output pre {
+  background-color: #FFFACD;
+  border: none;
+}
+```
 
 # Analysis using the `resources`
 

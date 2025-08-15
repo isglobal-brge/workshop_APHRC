@@ -199,20 +199,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites-requirements" id="toc-prerequisites-requirements" class="nav-link active" data-scroll-target="#prerequisites-requirements">Prerequisites &amp; Requirements</a></li>
-  <li><a href="#pre-workshop-setup" id="toc-pre-workshop-setup" class="nav-link" data-scroll-target="#pre-workshop-setup">Pre-Workshop Setup</a></li>
-  <li><a href="#server-connection-details" id="toc-server-connection-details" class="nav-link" data-scroll-target="#server-connection-details">Server Connection Details</a></li>
-  <li><a href="#test-your-setup" id="toc-test-your-setup" class="nav-link" data-scroll-target="#test-your-setup">Test Your Setup</a></li>
-  <li><a href="#what-well-provide" id="toc-what-well-provide" class="nav-link" data-scroll-target="#what-well-provide">What We’ll Provide</a></li>
-  <li><a href="#workshop-schedule-overview" id="toc-workshop-schedule-overview" class="nav-link" data-scroll-target="#workshop-schedule-overview">Workshop Schedule Overview</a></li>
-  <li><a href="#pre-workshop-orientation" id="toc-pre-workshop-orientation" class="nav-link" data-scroll-target="#pre-workshop-orientation">Pre-Workshop Orientation</a></li>
-  <li><a href="#support-help" id="toc-support-help" class="nav-link" data-scroll-target="#support-help">Support &amp; Help</a>
+  <li><a href="#setup-instructions" id="toc-setup-instructions" class="nav-link active" data-scroll-target="#setup-instructions">Setup Instructions</a></li>
+  <li><a href="#step-1-install-r-and-rstudio" id="toc-step-1-install-r-and-rstudio" class="nav-link" data-scroll-target="#step-1-install-r-and-rstudio">Step 1: Install R and RStudio</a>
   <ul class="collapse">
-  <li><a href="#before-the-workshop" id="toc-before-the-workshop" class="nav-link" data-scroll-target="#before-the-workshop">Before the Workshop</a></li>
-  <li><a href="#during-the-workshop" id="toc-during-the-workshop" class="nav-link" data-scroll-target="#during-the-workshop">During the Workshop</a></li>
+  <li><a href="#install-r" id="toc-install-r" class="nav-link" data-scroll-target="#install-r">Install R</a></li>
+  <li><a href="#install-rstudio" id="toc-install-rstudio" class="nav-link" data-scroll-target="#install-rstudio">Install RStudio</a></li>
   </ul></li>
-  <li><a href="#final-checklist" id="toc-final-checklist" class="nav-link" data-scroll-target="#final-checklist">Final Checklist</a></li>
-  <li><a href="#ready-to-go" id="toc-ready-to-go" class="nav-link" data-scroll-target="#ready-to-go">Ready to Go!</a></li>
+  <li><a href="#step-2-install-required-r-packages" id="toc-step-2-install-required-r-packages" class="nav-link" data-scroll-target="#step-2-install-required-r-packages">Step 2: Install Required R Packages</a></li>
+  <li><a href="#step-3-verify-installation" id="toc-step-3-verify-installation" class="nav-link" data-scroll-target="#step-3-verify-installation">Step 3: Verify Installation</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#common-installation-issues" id="toc-common-installation-issues" class="nav-link" data-scroll-target="#common-installation-issues">Common Installation Issues</a></li>
+  </ul></li>
+  <li><a href="#workshop-information" id="toc-workshop-information" class="nav-link" data-scroll-target="#workshop-information">Workshop Information</a>
+  <ul class="collapse">
+  <li><a href="#server-access" id="toc-server-access" class="nav-link" data-scroll-target="#server-access">Server Access</a></li>
+  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -238,286 +241,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="prerequisites-requirements" class="level2">
-<h2 data-anchor-id="prerequisites-requirements">Prerequisites &amp; Requirements</h2>
-<p>To get the most out of this workshop, participants should have:</p>
-<div class="row">
-<div class="col-md-6">
-<section id="technical-requirements" class="level3 content-section">
-<h3 data-anchor-id="technical-requirements">Technical Requirements</h3>
-<ul>
-<li><strong>Operating System</strong>: Windows 10+, macOS 10.14+, or Ubuntu 18.04+</li>
-<li><strong>RAM</strong>: Minimum 8GB (16GB recommended)</li>
-<li><strong>Storage</strong>: At least 10GB free space</li>
-<li><strong>Internet</strong>: Stable broadband connection</li>
-<li><strong>Browser</strong>: Chrome, Firefox, or Safari (latest versions)</li>
-</ul>
+<section id="setup-instructions" class="level2">
+<h2 data-anchor-id="setup-instructions">Setup Instructions</h2>
+<p>This page provides simple instructions to install R and all required packages for the workshop.</p>
 </section>
-</div>
-<div class="col-md-6">
-<section id="knowledge-prerequisites" class="level3 content-section">
-<h3 data-anchor-id="knowledge-prerequisites">Knowledge Prerequisites</h3>
-<ul>
-<li>Basic understanding of <strong>R programming</strong></li>
-<li>Familiarity with <strong>RStudio interface</strong></li>
-<li>Basic <strong>statistical concepts</strong></li>
-<li>Experience with <strong>health/clinical data</strong> (helpful but not required)</li>
-<li>Understanding of <strong>data privacy</strong> concepts</li>
-</ul>
+<section id="step-1-install-r-and-rstudio" class="level2">
+<h2 data-anchor-id="step-1-install-r-and-rstudio">Step 1: Install R and RStudio</h2>
+<section id="install-r" class="level3">
+<h3 data-anchor-id="install-r">Install R</h3>
+<ol type="1">
+<li>Go to <a href="https://cran.r-project.org/">CRAN</a></li>
+<li>Download R for your operating system (Windows, Mac, or Linux)</li>
+<li>Run the installer and follow the instructions</li>
+</ol>
 </section>
-</div>
-</div>
+<section id="install-rstudio" class="level3">
+<h3 data-anchor-id="install-rstudio">Install RStudio</h3>
+<ol type="1">
+<li>Go to <a href="https://posit.co/download/rstudio-desktop/">Posit RStudio</a></li>
+<li>Download the free RStudio Desktop</li>
+<li>Install RStudio after R is installed</li>
+</ol>
 </section>
-<section id="pre-workshop-setup" class="level2">
-<h2 data-anchor-id="pre-workshop-setup">Pre-Workshop Setup</h2>
-<p>Complete these steps <strong>at least 3 days before</strong> the workshop:</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Essential Setup Tasks
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<section id="install-r-v4.0-and-rstudio" class="level3">
-<h3 data-anchor-id="install-r-v4.0-and-rstudio">1. 📊 Install R (v4.0+) and RStudio</h3>
-<p><strong>R Statistical Software:</strong> - Download from: <a href="https://cran.r-project.org/">CRAN</a> - Choose the version for your operating system - Follow the installation wizard</p>
-<p><strong>RStudio Desktop:</strong> - Download from: <a href="https://posit.co/download/rstudio-desktop/">Posit</a> - Free version is sufficient - Install after R is installed</p>
 </section>
-<section id="install-required-packages" class="level3">
-<h3 data-anchor-id="install-required-packages">2. 📦 Install Required Packages</h3>
-<p>Run this script in RStudio to install all necessary packages:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install DataSHIELD packages</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"DSI"</span>, <span class="st">"DSOpal"</span>, <span class="st">"dsBaseClient"</span>, <span class="st">"dsHelper"</span>),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"https://cloud.r-project.org"</span>))</span>
+<section id="step-2-install-required-r-packages" class="level2">
+<h2 data-anchor-id="step-2-install-required-r-packages">Step 2: Install Required R Packages</h2>
+<p>Open RStudio and run the following commands to install all necessary packages:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core DataSHIELD packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DSI"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DSOpal"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dsBaseClient"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install additional analysis packages</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"ggplot2"</span>, <span class="st">"tableone"</span>, </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"survival"</span>, <span class="st">"metafor"</span>))</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Install OMOP CDM tools</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DatabaseConnector"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"SqlRender"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install devtools for GitHub installations</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># DataSHIELD helper packages</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"timcadman/ds-helper"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># dsOMOP packages</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'isglobal-brge/dsOMOPClient'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'isglobal-brge/dsOMOPHelper'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistical analysis packages</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"metafor"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic data manipulation (if not already installed)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"knitr"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Additional packages for advanced workshops (optional)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"dsOmicsClient"</span>, <span class="at">ask =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="test-server-access" class="level3">
-<h3 data-anchor-id="test-server-access">3. 🔐 Test Server Access</h3>
-<ul>
-<li>You’ll receive credentials via email 1 week before the workshop</li>
-<li>Test connection using provided script</li>
-<li>Report any issues immediately to <a href="mailto:workshop-support@isglobal.org">workshop-support@isglobal.org</a></li>
-</ul>
+<section id="step-3-verify-installation" class="level2">
+<h2 data-anchor-id="step-3-verify-installation">Step 3: Verify Installation</h2>
+<p>Run this code to check that packages are installed correctly:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load main packages</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSI)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsHelper)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metafor)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check DataSHIELD functions are available</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"DataSHIELD packages loaded successfully!"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check package versions</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Package versions:</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"DSI:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"DSI"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"DSOpal:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"DSOpal"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"dsBaseClient:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"dsBaseClient"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="review-pre-reading-materials" class="level3">
-<h3 data-anchor-id="review-pre-reading-materials">4. 📚 Review Pre-Reading Materials</h3>
-<p><strong>Required Reading (60 minutes total):</strong> - Introduction to DataSHIELD (30 min) - OMOP CDM Overview (20 min) - Workshop Guide (10 min)</p>
-<p><strong>Optional Background:</strong> - <a href="https://doi.org/10.1093/ije/dyu188">DataSHIELD: taking the analysis to the data</a> - <a href="https://ohdsi.github.io/TheBookOfOhdsi/">The Book of OHDSI</a></p>
-</section>
-</div>
-</div>
-</section>
-<section id="server-connection-details" class="level2">
-<h2 data-anchor-id="server-connection-details">Server Connection Details</h2>
-<p>During the workshop, you’ll connect to our demonstration servers:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Workshop Servers
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Connection details will be sent via email to registered participants. The workshop uses multiple servers to demonstrate federated analysis:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Server</th>
-<th>Purpose</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Demo Server 1</strong></td>
-<td>Primary exercises</td>
-<td>Will be provided</td>
-</tr>
-<tr class="even">
-<td><strong>Demo Server 2</strong></td>
-<td>Multi-site demonstrations</td>
-<td>Will be provided</td>
-</tr>
-<tr class="odd">
-<td><strong>Test Server</strong></td>
-<td>Practice environment</td>
-<td>Will be provided</td>
-</tr>
-<tr class="even">
-<td><strong>OMOP Database</strong></td>
-<td>CDM exercises</td>
-<td>Will be provided</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Security Notice:</strong> - Never share your credentials - Use only for workshop purposes - Access will be revoked after workshop - Report any security issues immediately</p>
-</div>
-</div>
-</section>
-<section id="test-your-setup" class="level2">
-<h2 data-anchor-id="test-your-setup">Test Your Setup</h2>
-<p>Before the workshop, verify your installation:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test script (example - servers will be activated during workshop)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check package versions</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"dsBaseClient"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"DSOpal"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Test basic functionality</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.listFunctions</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Installation Troubleshooting
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Common Issues:</strong></p>
-<p><strong>Problem</strong>: “Package ‘xyz’ is not available”</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution 1: Use alternative repository</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"xyz"</span>, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
+<section id="troubleshooting" class="level2">
+<h2 data-anchor-id="troubleshooting">Troubleshooting</h2>
+<section id="common-installation-issues" class="level3">
+<h3 data-anchor-id="common-installation-issues">Common Installation Issues</h3>
+<p><strong>If a package fails to install:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try installing from CRAN only</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution 2: Install from GitHub</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"datashield/packagename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Problem</strong>: “Non-zero exit status” - Update R to latest version - Install Rtools (Windows) or Xcode (Mac) - Check internet connection</p>
-<p><strong>Problem</strong>: “Cannot connect to Opal server” - Check VPN connection (if required) - Verify credentials - Test with ping command - Check firewall settings</p>
-</div>
-</div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or try updating R if packages require newer version</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Then reinstall the package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>For GitHub packages that fail:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure devtools is installed and loaded</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If still failing, try:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"username/repository"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>On Windows:</strong> You may need to install Rtools from <a href="https://cran.r-project.org/bin/windows/Rtools/">CRAN Rtools</a></p>
+<p><strong>On Mac:</strong> You may need Xcode Command Line Tools. Install by running in Terminal:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="what-well-provide" class="level2">
-<h2 data-anchor-id="what-well-provide">What We’ll Provide</h2>
-<p>During the workshop, you’ll have access to:</p>
-<ul>
-<li><strong>Server Access</strong>: Dedicated workshop servers with pre-loaded data</li>
-<li><strong>Workshop Materials</strong>: Slides, code, and exercises</li>
-<li><strong>Sample Datasets</strong>: African health data for practice</li>
-<li><strong>Support Channel</strong>: Real-time help during workshop</li>
-<li><strong>Certificate</strong>: Upon successful completion</li>
-</ul>
 </section>
-<section id="workshop-schedule-overview" class="level2">
-<h2 data-anchor-id="workshop-schedule-overview">Workshop Schedule Overview</h2>
-<div class="row">
-<section id="daily-structure" class="level3 col-md-6">
-<h3 data-anchor-id="daily-structure">Daily Structure</h3>
-<ul>
-<li><strong>09:00 - 09:30</strong>: Welcome &amp; Coffee</li>
-<li><strong>09:30 - 11:00</strong>: Morning Lecture</li>
-<li><strong>11:00 - 11:15</strong>: Break</li>
-<li><strong>11:15 - 12:45</strong>: Practical Session I</li>
-<li><strong>12:45 - 14:00</strong>: Lunch Break</li>
-<li><strong>14:00 - 15:30</strong>: Afternoon Lecture</li>
-<li><strong>15:30 - 15:45</strong>: Break</li>
-<li><strong>15:45 - 17:00</strong>: Practical Session II</li>
-<li><strong>17:00 - 17:30</strong>: Q&amp;A and Wrap-up</li>
-</ul>
+<section id="workshop-information" class="level2">
+<h2 data-anchor-id="workshop-information">Workshop Information</h2>
+<section id="server-access" class="level3">
+<h3 data-anchor-id="server-access">Server Access</h3>
+<p>Connection details and credentials will be provided at the beginning of the workshop.</p>
 </section>
-<section id="what-to-bring" class="level3 col-md-6">
-<h3 data-anchor-id="what-to-bring">What to Bring</h3>
-<ul>
-<li>Laptop with required software installed</li>
-<li>Power adapter and chargers</li>
-<li>Notebook and pen</li>
-<li>Water bottle</li>
-<li>Business cards for networking</li>
-<li>Questions about your specific use cases</li>
-</ul>
-</section>
-</div>
-</section>
-<section id="pre-workshop-orientation" class="level2">
-<h2 data-anchor-id="pre-workshop-orientation">Pre-Workshop Orientation</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Optional Orientation Session
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Join our <strong>pre-workshop orientation session</strong> (recommended): - <strong>Date</strong>: [To be announced] - <strong>Time</strong>: 1 hour - <strong>Format</strong>: Online via Zoom - <strong>Content</strong>: Setup verification, Q&amp;A, meet other participants</p>
-<p><strong>Register</strong>: <a href="mailto:orientation@isglobal.org">orientation@isglobal.org</a></p>
-</div>
-</div>
-</section>
-<section id="support-help" class="level2">
-<h2 data-anchor-id="support-help">Support &amp; Help</h2>
-<section id="before-the-workshop" class="level3">
-<h3 data-anchor-id="before-the-workshop">Before the Workshop</h3>
-<div class="row">
-<section id="technical-support" class="level4 col-md-6">
-<h4 data-anchor-id="technical-support">Technical Support</h4>
+<section id="support" class="level3">
+<h3 data-anchor-id="support">Support</h3>
 <ul>
 <li><strong>Email</strong>: <a href="mailto:workshop-support@isglobal.org">workshop-support@isglobal.org</a></li>
-<li><strong>Response Time</strong>: Within 24 hours</li>
-<li><strong>Available</strong>: Monday-Friday, 9:00-17:00 CET</li>
+<li><strong>General questions</strong>: <a href="mailto:brge@isglobal.org">brge@isglobal.org</a></li>
 </ul>
-</section>
-<section id="general-questions" class="level4 col-md-6">
-<h4 data-anchor-id="general-questions">General Questions</h4>
-<ul>
-<li><strong>Email</strong>: <a href="mailto:brge@isglobal.org">brge@isglobal.org</a></li>
-<li><strong>Contact</strong>: Workshop Coordinator</li>
-<li><strong>Phone</strong>: +34 xxx xxx xxx</li>
-</ul>
-</section>
-</div>
-</section>
-<section id="during-the-workshop" class="level3">
-<h3 data-anchor-id="during-the-workshop">During the Workshop</h3>
-<ul>
-<li><strong>Real-time Chat</strong>: Workshop Slack channel</li>
-<li><strong>Office Hours</strong>: Daily 08:00-09:00 and 17:30-18:30</li>
-<li><strong>Emergency Support</strong>: Available throughout workshop hours</li>
-</ul>
-</section>
-</section>
-<section id="final-checklist" class="level2">
-<h2 data-anchor-id="final-checklist">Final Checklist</h2>
-<p>Before the workshop starts, make sure you have:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">R and RStudio installed and working</label></li>
-<li><label><input type="checkbox">All required packages installed</label></li>
-<li><label><input type="checkbox">Received and tested server credentials</label></li>
-<li><label><input type="checkbox">Completed pre-reading materials</label></li>
-<li><label><input type="checkbox">Joined workshop communication channels</label></li>
-<li><label><input type="checkbox">Prepared specific questions about your use cases</label></li>
-</ul>
-</section>
-<section id="ready-to-go" class="level2 callout-success">
-<h2 data-anchor-id="ready-to-go">Ready to Go!</h2>
-<p>Once you’ve completed all the setup steps, you’re ready for an amazing workshop experience. We look forward to seeing you there!</p>
-</section>
 <hr>
 <div class="text-center mt-5">
 <p><a href="./schedule.html" class="btn btn-primary">View Workshop Schedule</a> <a href="./contact.html" class="btn btn-secondary">Contact Instructors</a></p>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

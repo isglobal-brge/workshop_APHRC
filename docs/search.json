@@ -28,67 +28,25 @@
     "text": "The following resources may be of interest for those wanting to learn more about DataSHIELD and OMOP CDM:\n\nDataSHIELD\n\nDataSHIELD Beginners Tutorial\ndsTidyverseClient vignette\n\n\n\nResources and Opal integration\n\nresourcer: Examples of resources\n\n\n\nOHDSI / OMOP CDM\n\nThe Book of OHDSI – Common Data Model\nThe Book of OHDSI – Standardized Vocabularies\n\n\n\ndsOMOP\n\ndsOMOP website\ndsOMOPClient vignette\ndsOMOPHelper vignette\n\n\n\nPublications\n\nList of DataSHIELD publications\ndsOMOP paper\n\n\n\nGetting ready for the workshop Contact instructors"
   },
   {
-    "objectID": "getting-started.html",
-    "href": "getting-started.html",
-    "title": "Getting Started",
-    "section": "",
-    "text": "This page provides simple instructions to install R and all required packages for the workshop."
+    "objectID": "index.html#combining-datashield-with-omop-cdm",
+    "href": "index.html#combining-datashield-with-omop-cdm",
+    "title": "Data Science Without Borders Workshop",
+    "section": "Combining DataSHIELD with OMOP CDM",
+    "text": "Combining DataSHIELD with OMOP CDM\nWelcome to the workshop where federated data analysis meets standardized clinical data!\nThis hands-on session will introduce you to the combination of DataSHIELD’s federated analysis capabilities and the OMOP Common Data Model (CDM) for clinical databases using the dsOMOP framework.\n\nInstitutions behind this workshop\n\n          \n\n\n\nWhat is DataSHIELD?\n\n\nDataSHIELD is an open-source platform that enables analysis of sensitive data without sharing individual-level records. Analyses are executed where the data reside; only vetted, non-disclosive summaries are returned. This privacy-by-design approach combines:\n\nRobust disclosure control on outputs\nRole-based governance and auditable workflows\nSecure, federated compute across institutions\n\nThis makes DataSHIELD ideal when regulations, ethics, or governance restrict data movement but collaborative analysis is essential.\n\n\n\n\nDataSHIELD is also a community-driven, open-source initiative with contributors from universities, research institutes, and health systems. The community steers method development, governance rules, disclosure controls, and software evolution through open collaboration, ensuring transparency, interoperability, and best practices for secure multi-site analytics.\n\n\n\n\n\n\nA milestone to celebrate!\n\n\n\nDuring our collaboration, we will be deploying the first African federated clinical data analysis network using DataSHIELD!\n\n\n\n\nWhat are OHDSI and the OMOP CDM?\n\n\nThe OHDSI community maintains the OMOP Common Data Model (CDM), a widely adopted standard that harmonizes the structure and vocabularies of observational health data (EHRs, claims, registries). Standardization enables large-scale, reproducible analytics and consistency across diverse datasets.\nOHDSI (Observational Health Data Sciences and Informatics) is a global, open-science collaborative that develops data standards, vocabularies, methods, and software for observational health research. OHDSI fosters reproducible research, open tools, and shared best practices to scale evidence generation across diverse data networks.\n\n\n\n\n\n\nWhat is dsOMOP?\n\n\ndsOMOP is a suite of packages that connects OMOP CDM databases to DataSHIELD. It streamlines access to standardized tables and vocabularies under DataSHIELD’s privacy model so you can:\n\nDiscover and explore OMOP CDM content securely\nBuild cohorts and run cross-site summary queries\nPerform federated, standardized analyses on harmonized clinical data"
   },
   {
-    "objectID": "getting-started.html#setup-instructions",
-    "href": "getting-started.html#setup-instructions",
-    "title": "Getting Started",
-    "section": "",
-    "text": "This page provides simple instructions to install R and all required packages for the workshop."
+    "objectID": "index.html#federated-standardized-analysis",
+    "href": "index.html#federated-standardized-analysis",
+    "title": "Data Science Without Borders Workshop",
+    "section": "Federated standardized analysis",
+    "text": "Federated standardized analysis\nThis combination of technologies enables powerful federated analysis with strong privacy guarantees:\n\nPrivacy by design: Individual-level data never leave the hosting institution.\nDisclosure control: Automated safeguards prevent re-identification via output checks.\nSecurity and governance: Role-based access, auditability, and institutional control.\nStandardization: OMOP CDM ensures consistent structure and meaning across networks.\nReproducibility: Shared code and common semantics for comparable results."
   },
   {
-    "objectID": "getting-started.html#step-1-install-r-and-rstudio",
-    "href": "getting-started.html#step-1-install-r-and-rstudio",
-    "title": "Getting Started",
-    "section": "Step 1: Install R and RStudio",
-    "text": "Step 1: Install R and RStudio\n\nInstall R\n\nGo to CRAN\nDownload R for your operating system (Windows, Mac, or Linux)\nRun the installer and follow the instructions\n\n\n\nInstall RStudio\n\nGo to Posit RStudio\nDownload the free RStudio Desktop\nInstall RStudio after R is installed"
-  },
-  {
-    "objectID": "getting-started.html#step-2-install-required-r-packages",
-    "href": "getting-started.html#step-2-install-required-r-packages",
-    "title": "Getting Started",
-    "section": "Step 2: Install Required R Packages",
-    "text": "Step 2: Install Required R Packages\nOpen RStudio and run the following commands to install all necessary packages:\n# Core DataSHIELD packages\ninstall.packages(\"DSI\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\ninstall.packages(\"DSOpal\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\ninstall.packages(\"dsBaseClient\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\n\n# Install devtools for GitHub installations\ninstall.packages(\"devtools\")\n\n# DataSHIELD helper packages\ndevtools::install_github(\"timcadman/ds-helper\")\n\n# dsOMOP packages\ndevtools::install_github('isglobal-brge/dsOMOPClient')\ndevtools::install_github('isglobal-brge/dsOMOPHelper')\n\n# Statistical analysis packages\ninstall.packages(\"metafor\")\n\n# Basic data manipulation (if not already installed)\ninstall.packages(\"readr\")\ninstall.packages(\"knitr\")\n\n# Additional packages for advanced workshops (optional)\ninstall.packages(\"BiocManager\")\nBiocManager::install(\"dsOmicsClient\", ask = FALSE)\n\n\nView workshop schedule Contact instructors"
-  },
-  {
-    "objectID": "datashield-workshop.html#workshop-overview",
-    "href": "datashield-workshop.html#workshop-overview",
-    "title": "DataSHIELD Workshop",
-    "section": "Workshop Overview",
-    "text": "Workshop Overview\nDataSHIELD is a pioneering approach that enables researchers to analyze data across multiple sites without physically sharing individual-level data. This workshop will provide comprehensive training on implementing and using DataSHIELD for collaborative health research while maintaining the highest standards of data privacy and security.\n\nWhat You’ll Learn\n\n\n\n\n\nPrivacy-Preserving Analytics\nLearn the principles of federated analysis and how DataSHIELD enables secure computation across distributed datasets.\n\n\n\n\n\n\n\nServer Configuration\nUnderstand how to set up and configure DataSHIELD servers (Opal) and manage data access permissions.\n\n\n\n\n\n\n\n\n\nR Client Programming\nMaster the DataSHIELD R client packages and learn to write efficient federated analysis scripts.\n\n\n\n\n\n\n\nStatistical Methods\nExplore available statistical functions and learn when and how to apply them in federated settings."
-  },
-  {
-    "objectID": "datashield-workshop.html#workshop-content",
-    "href": "datashield-workshop.html#workshop-content",
-    "title": "DataSHIELD Workshop",
-    "section": "Workshop Content",
-    "text": "Workshop Content\n\nDay 1: Foundations\n\nIntroduction to DataSHIELD concepts\nUnderstanding the client-server architecture\nSetting up your analysis environment\nFirst federated analysis\n\n\n\nDay 2: Core Methods\n\nDescriptive statistics across sites\nData visualization in federated settings\nHandling missing data\nQuality control procedures\n\n\n\nDay 3: Advanced Analytics\n\nRegression modeling\nSurvival analysis\nMachine learning approaches\nCustom function development"
-  },
-  {
-    "objectID": "datashield-workshop.html#prerequisites",
-    "href": "datashield-workshop.html#prerequisites",
-    "title": "DataSHIELD Workshop",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBasic R programming knowledge\nUnderstanding of statistical concepts\nFamiliarity with health data structures\nCompleted Getting Started setup"
-  },
-  {
-    "objectID": "datashield-workshop.html#workshop-materials",
-    "href": "datashield-workshop.html#workshop-materials",
-    "title": "DataSHIELD Workshop",
-    "section": "Workshop Materials",
-    "text": "Workshop Materials\nAll materials will be provided including: - Lecture slides and notes - Hands-on exercise notebooks - Sample datasets - Code examples and solutions\n\n\nGet Started View Schedule"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Feel free to contact us with any questions, suggestions or comments!\n\n\n  \n    \n      \n      \n        \n      \n    \n    \n      Juan R González, PhD\n      DataSHIELD instructor\n\n      \n        \n        \n        \n      \n    \n  \n\n  \n    \n      \n      \n        \n      \n    \n    \n      David Sarrat González\n      OMOP CDM instructor"
+    "objectID": "index.html#workshop-content",
+    "href": "index.html#workshop-content",
+    "title": "Data Science Without Borders Workshop",
+    "section": "Workshop content",
+    "text": "Workshop content\n\n\n\nBlock 1 — Working with DataSHIELD\n\nConnect to remote nodes and manage sessions\nAssign and aggregate safely without exposing rows\nRun common statistics under disclosure thresholds\nUnderstand privacy, security, and governance in practice\n\n\n\n\nBlock 2 — OMOP CDM via dsOMOP\n\nConnect to OMOP CDM databases through DataSHIELD\nExplore standardized tables and vocabularies\nBuild cohorts and run summary queries across sites\nPerform federated, reproducible analyses on harmonized data\n\n\n\n\n\n\nGetting ready for the workshop Workshop schedule"
   },
   {
     "objectID": "dsomop-workshop.html#workshop-overview",
@@ -126,25 +84,81 @@
     "text": "Use Cases\nLearn through practical examples: - Multi-site pharmacovigilance studies - Comparative effectiveness research - Disease natural history studies - Health outcomes research\n\n\nGet Started View Schedule"
   },
   {
-    "objectID": "index.html#combining-datashield-with-omop-cdm",
-    "href": "index.html#combining-datashield-with-omop-cdm",
-    "title": "Data Science Without Borders Workshop",
-    "section": "Combining DataSHIELD with OMOP CDM",
-    "text": "Combining DataSHIELD with OMOP CDM\nWelcome to the workshop where federated data analysis meets standardized clinical data!\nThis hands-on session will introduce you to the combination of DataSHIELD’s federated analysis capabilities and the OMOP Common Data Model (CDM) for clinical databases using the dsOMOP framework.\n\nInstitutions behind this workshop\n\n          \n\n\n\nWhat is DataSHIELD?\n\n\nDataSHIELD is an open-source platform that enables analysis of sensitive data without sharing individual-level records. Analyses are executed where the data reside; only vetted, non-disclosive summaries are returned. This privacy-by-design approach combines:\n\nRobust disclosure control on outputs\nRole-based governance and auditable workflows\nSecure, federated compute across institutions\n\nThis makes DataSHIELD ideal when regulations, ethics, or governance restrict data movement but collaborative analysis is essential.\n\n\n\n\nDataSHIELD is also a community-driven, open-source initiative with contributors from universities, research institutes, and health systems. The community steers method development, governance rules, disclosure controls, and software evolution through open collaboration, ensuring transparency, interoperability, and best practices for secure multi-site analytics.\n\n\n\n\n\n\nA milestone to celebrate!\n\n\n\nDuring our collaboration, we will be deploying the first African federated clinical data analysis network using DataSHIELD!\n\n\n\n\nWhat are OHDSI and the OMOP CDM?\n\n\nThe OHDSI community maintains the OMOP Common Data Model (CDM), a widely adopted standard that harmonizes the structure and vocabularies of observational health data (EHRs, claims, registries). Standardization enables large-scale, reproducible analytics and consistency across diverse datasets.\nOHDSI (Observational Health Data Sciences and Informatics) is a global, open-science collaborative that develops data standards, vocabularies, methods, and software for observational health research. OHDSI fosters reproducible research, open tools, and shared best practices to scale evidence generation across diverse data networks.\n\n\n\n\n\n\nWhat is dsOMOP?\n\n\ndsOMOP is a suite of packages that connects OMOP CDM databases to DataSHIELD. It streamlines access to standardized tables and vocabularies under DataSHIELD’s privacy model so you can:\n\nDiscover and explore OMOP CDM content securely\nBuild cohorts and run cross-site summary queries\nPerform federated, standardized analyses on harmonized clinical data"
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Feel free to contact us with any questions, suggestions or comments!\n\n\n  \n    \n      \n      \n        \n      \n    \n    \n      Juan R González, PhD\n      DataSHIELD instructor\n\n      \n        \n        \n        \n      \n    \n  \n\n  \n    \n      \n      \n        \n      \n    \n    \n      David Sarrat González\n      OMOP CDM instructor"
   },
   {
-    "objectID": "index.html#federated-standardized-analysis",
-    "href": "index.html#federated-standardized-analysis",
-    "title": "Data Science Without Borders Workshop",
-    "section": "Federated standardized analysis",
-    "text": "Federated standardized analysis\nThis combination of technologies enables powerful federated analysis with strong privacy guarantees:\n\nPrivacy by design: Individual-level data never leave the hosting institution.\nDisclosure control: Automated safeguards prevent re-identification via output checks.\nSecurity and governance: Role-based access, auditability, and institutional control.\nStandardization: OMOP CDM ensures consistent structure and meaning across networks.\nReproducibility: Shared code and common semantics for comparable results."
+    "objectID": "datashield-workshop.html#workshop-overview",
+    "href": "datashield-workshop.html#workshop-overview",
+    "title": "DataSHIELD Workshop",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\nDataSHIELD is a pioneering approach that enables researchers to analyze data across multiple sites without physically sharing individual-level data. This workshop will provide comprehensive training on implementing and using DataSHIELD for collaborative health research while maintaining the highest standards of data privacy and security.\n\nWhat You’ll Learn\n\n\n\n\n\nPrivacy-Preserving Analytics\nLearn the principles of federated analysis and how DataSHIELD enables secure computation across distributed datasets.\n\n\n\n\n\n\n\nServer Configuration\nUnderstand how to set up and configure DataSHIELD servers (Opal) and manage data access permissions.\n\n\n\n\n\n\n\n\n\nR Client Programming\nMaster the DataSHIELD R client packages and learn to write efficient federated analysis scripts.\n\n\n\n\n\n\n\nStatistical Methods\nExplore available statistical functions and learn when and how to apply them in federated settings."
   },
   {
-    "objectID": "index.html#workshop-content",
-    "href": "index.html#workshop-content",
-    "title": "Data Science Without Borders Workshop",
-    "section": "Workshop content",
-    "text": "Workshop content\n\n\n\nBlock 1 — Working with DataSHIELD\n\nConnect to remote nodes and manage sessions\nAssign and aggregate safely without exposing rows\nRun common statistics under disclosure thresholds\nUnderstand privacy, security, and governance in practice\n\n\n\n\nBlock 2 — OMOP CDM via dsOMOP\n\nConnect to OMOP CDM databases through DataSHIELD\nExplore standardized tables and vocabularies\nBuild cohorts and run summary queries across sites\nPerform federated, reproducible analyses on harmonized data\n\n\n\n\n\n\nGetting ready for the workshop Workshop schedule"
+    "objectID": "datashield-workshop.html#workshop-content",
+    "href": "datashield-workshop.html#workshop-content",
+    "title": "DataSHIELD Workshop",
+    "section": "Workshop Content",
+    "text": "Workshop Content\n\nDay 1: Foundations\n\nIntroduction to DataSHIELD concepts\nUnderstanding the client-server architecture\nSetting up your analysis environment\nFirst federated analysis\n\n\n\nDay 2: Core Methods\n\nDescriptive statistics across sites\nData visualization in federated settings\nHandling missing data\nQuality control procedures\n\n\n\nDay 3: Advanced Analytics\n\nRegression modeling\nSurvival analysis\nMachine learning approaches\nCustom function development"
+  },
+  {
+    "objectID": "datashield-workshop.html#prerequisites",
+    "href": "datashield-workshop.html#prerequisites",
+    "title": "DataSHIELD Workshop",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBasic R programming knowledge\nUnderstanding of statistical concepts\nFamiliarity with health data structures\nCompleted Getting Started setup"
+  },
+  {
+    "objectID": "datashield-workshop.html#workshop-materials",
+    "href": "datashield-workshop.html#workshop-materials",
+    "title": "DataSHIELD Workshop",
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\nAll materials will be provided including: - Lecture slides and notes - Hands-on exercise notebooks - Sample datasets - Code examples and solutions\n\n\nGet Started View Schedule"
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "This page provides simple instructions to install R and all required packages for the workshop."
+  },
+  {
+    "objectID": "getting-started.html#setup-instructions",
+    "href": "getting-started.html#setup-instructions",
+    "title": "Getting Started",
+    "section": "",
+    "text": "This page provides simple instructions to install R and all required packages for the workshop."
+  },
+  {
+    "objectID": "getting-started.html#step-1-install-r-and-rstudio",
+    "href": "getting-started.html#step-1-install-r-and-rstudio",
+    "title": "Getting Started",
+    "section": "Step 1: Install R and RStudio",
+    "text": "Step 1: Install R and RStudio\n\nInstall R\n\nGo to CRAN\nDownload R for your operating system (Windows, Mac, or Linux)\nRun the installer and follow the instructions\n\n\n\nInstall RStudio\n\nGo to Posit RStudio\nDownload the free RStudio Desktop\nInstall RStudio after R is installed"
+  },
+  {
+    "objectID": "getting-started.html#step-2-install-required-r-packages",
+    "href": "getting-started.html#step-2-install-required-r-packages",
+    "title": "Getting Started",
+    "section": "Step 2: Install Required R Packages",
+    "text": "Step 2: Install Required R Packages\nOpen RStudio and run the following commands to install all necessary packages:\n# Core DataSHIELD packages\ninstall.packages(\"DSI\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\ninstall.packages(\"DSOpal\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\ninstall.packages(\"dsBaseClient\", repos = c(\"https://cran.obiba.org\", \"https://cloud.r-project.org\"))\n\n# Install devtools for GitHub installations\ninstall.packages(\"devtools\")\n\n# DataSHIELD helper packages\ndevtools::install_github(\"timcadman/ds-helper\")\n\n# dsOMOP packages\ndevtools::install_github('isglobal-brge/dsOMOPClient')\ndevtools::install_github('isglobal-brge/dsOMOPHelper')\n\n# Statistical analysis packages\ninstall.packages(\"metafor\")\n\n# Basic data manipulation (if not already installed)\ninstall.packages(\"readr\")\ninstall.packages(\"knitr\")\n\n# Additional packages for advanced workshops (optional)\ninstall.packages(\"BiocManager\")\nBiocManager::install(\"dsOmicsClient\", ask = FALSE)\n\n\nView workshop schedule Contact instructors"
+  },
+  {
+    "objectID": "omop-presentation.html",
+    "href": "omop-presentation.html",
+    "title": "OMOP CDM Presentation",
+    "section": "",
+    "text": "Having trouble viewing the slides?\n\n\n\nIf the embedded viewer doesn’t work properly, you can download the slides using the button below.\n\n\n\n\n\n  Download Presentation (PDF) \n\n\n\n\n\nThe Book of OHDSI\nOMOP CDM Documentation\nOHDSI Forums\n\n\n\nContinue to the dsOMOP Workshop"
+  },
+  {
+    "objectID": "omop-presentation.html#introduction-to-the-omop-common-data-model",
+    "href": "omop-presentation.html#introduction-to-the-omop-common-data-model",
+    "title": "OMOP CDM Presentation",
+    "section": "",
+    "text": "Having trouble viewing the slides?\n\n\n\nIf the embedded viewer doesn’t work properly, you can download the slides using the button below.\n\n\n\n\n\n  Download Presentation (PDF) \n\n\n\n\n\nThe Book of OHDSI\nOMOP CDM Documentation\nOHDSI Forums\n\n\n\nContinue to the dsOMOP Workshop"
   },
   {
     "objectID": "schedule.html",

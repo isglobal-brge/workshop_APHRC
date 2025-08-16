@@ -32,6 +32,9 @@ website:
           - text: "DataSHIELD (Resources)"
             href: DataSHIELD_workshop_APHRC_resources.Rmd
             icon: link-45deg
+          - text: "OMOP CDM Presentation"
+            href: omop-presentation.qmd
+            icon: file-earmark-slides
           - text: "dsOMOP Workshop"
             href: dsomop.Rmd
             icon: database-fill

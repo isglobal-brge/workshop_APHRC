@@ -18,63 +18,14 @@
     "href": "schedule.html",
     "title": "Workshop Schedule",
     "section": "",
-    "text": "Save the Dates!\n\n\n\nWorkshop Dates: [To be announced]\nTime Zone: East Africa Time (EAT)\nFormat: Hybrid (In-person at APHRC + Virtual participation available)"
+    "text": "View Workshop Content Access Resources"
   },
   {
     "objectID": "schedule.html#workshop-dates",
     "href": "schedule.html#workshop-dates",
     "title": "Workshop Schedule",
     "section": "",
-    "text": "Save the Dates!\n\n\n\nWorkshop Dates: [To be announced]\nTime Zone: East Africa Time (EAT)\nFormat: Hybrid (In-person at APHRC + Virtual participation available)"
-  },
-  {
-    "objectID": "schedule.html#daily-schedule-overview",
-    "href": "schedule.html#daily-schedule-overview",
-    "title": "Workshop Schedule",
-    "section": "Daily Schedule Overview",
-    "text": "Daily Schedule Overview\nThe workshop follows a structured daily format designed to maximize learning while accommodating different time zones and work schedules.\n\nTypical Day Structure\n\n\n\n\nTime (EAT)\nDuration\nSession Type\n\n\n\n\n09:00 - 09:30\n30 min\nWelcome & Coffee\n\n\n09:30 - 11:00\n90 min\nMorning Lecture\n\n\n11:00 - 11:15\n15 min\nBreak\n\n\n11:15 - 12:45\n90 min\nPractical Session I\n\n\n12:45 - 14:00\n75 min\nLunch Break\n\n\n14:00 - 15:30\n90 min\nAfternoon Lecture\n\n\n15:30 - 15:45\n15 min\nBreak\n\n\n15:45 - 17:00\n75 min\nPractical Session II\n\n\n17:00 - 17:30\n30 min\nQ&A and Wrap-up"
-  },
-  {
-    "objectID": "schedule.html#detailed-schedule",
-    "href": "schedule.html#detailed-schedule",
-    "title": "Workshop Schedule",
-    "section": "Detailed Schedule",
-    "text": "Detailed Schedule\n\nPre-Workshop Preparation\n\n\nOne Week Before Workshop\n\nInstall required software (R, RStudio, Git)\nTest connection to workshop servers\nReview pre-reading materials\nComplete pre-workshop survey\n\n\n\n\nDay 1: Introduction to Federated Analysis\n\n\n\n\n\n\n\n\n\n\nTime\nSession\nDescription\nInstructor\n\n\n\n\n09:00 - 09:30\nRegistration & Welcome\nCheck-in, networking, coffee\nAll\n\n\n09:30 - 11:00\nOpening Keynote\nThe Future of Collaborative Health Research in Africa\nTBD\n\n\n11:15 - 12:45\nIntroduction to DataSHIELD\nCore concepts, architecture, and use cases\nJuan R González\n\n\n14:00 - 15:30\nHands-on: First Steps\nConnecting to servers, basic commands\nTechnical Team\n\n\n15:45 - 17:00\nLab Session\nIndividual practice with support\nAll\n\n\n\n\n\n\nDay 2: Understanding OMOP CDM\n\n\n\n\n\n\n\n\n\n\nTime\nSession\nDescription\nInstructor\n\n\n\n\n09:30 - 11:00\nOMOP CDM Overview\nStructure, vocabularies, and concepts\nTBD\n\n\n11:15 - 12:45\nData Mapping Workshop\nETL strategies and tools\nTechnical Team\n\n\n14:00 - 15:30\nCase Study: African Health Data\nReal examples from APHRC datasets\nAPHRC Team\n\n\n15:45 - 17:00\nGroup Exercise\nMapping local data to OMOP\nAll\n\n\n\n\n\n\nDay 3: DataSHIELD Analytics\n\n\n\n\n\n\n\n\n\n\nTime\nSession\nDescription\nInstructor\n\n\n\n\n09:30 - 11:00\nStatistical Methods in DataSHIELD\nAvailable functions and limitations\nJuan R González\n\n\n11:15 - 12:45\nPractical: Descriptive Analytics\nSummary statistics, data exploration\nTechnical Team\n\n\n14:00 - 15:30\nAdvanced Analytics\nRegression, survival analysis\nTBD\n\n\n15:45 - 17:00\nLab: Your First Analysis\nComplete analysis workflow\nAll\n\n\n\n\n\n\nDay 4: Advanced Topics & Integration\n\n\n\n\n\n\n\n\n\n\nTime\nSession\nDescription\nInstructor\n\n\n\n\n09:30 - 11:00\nMachine Learning with DataSHIELD\nPrivacy-preserving ML methods\nTBD\n\n\n11:15 - 12:45\nIntegration Topics\nConnecting with other tools\nTechnical Team\n\n\n14:00 - 15:30\nProject Planning Session\nDesigning your study\nAll\n\n\n15:45 - 17:00\nGroup Project Kickoff\nForm teams, select projects\nAll\n\n\n\n\n\n\nDay 5: Projects & Future Directions\n\n\n\n\n\n\n\n\n\n\nTime\nSession\nDescription\nInstructor\n\n\n\n\n09:30 - 11:00\nProject Work Time\nTeams work on projects\nWith support\n\n\n11:15 - 12:45\nTroubleshooting Clinic\nOne-on-one help available\nTechnical Team\n\n\n14:00 - 15:30\nProject Presentations\nTeams present their work\nAll\n\n\n15:45 - 16:30\nFuture Roadmap\nWhat’s next for DataSHIELD\nJuan R González\n\n\n16:30 - 17:30\nClosing Ceremony\nCertificates, networking\nAll"
-  },
-  {
-    "objectID": "schedule.html#special-sessions",
-    "href": "schedule.html#special-sessions",
-    "title": "Workshop Schedule",
-    "section": "Special Sessions",
-    "text": "Special Sessions\n\nLightning Talks\nThroughout the week, participants are invited to give 5-minute lightning talks about their research interests or use cases. Sign up at registration!\n\n\nOffice Hours\nDaily office hours available: - Morning: 08:00 - 09:00 (before sessions) - Evening: 17:30 - 18:30 (after sessions)\n\n\nSocial Events\n\n\n\n\n\nWelcome Reception\nDay 1, 18:00\nJoin us for an informal welcome reception to meet fellow participants and instructors.\n\n\n\n\n\n\n\nWorkshop Dinner\nDay 3, 19:00\nOptional group dinner at a local restaurant (self-pay)."
-  },
-  {
-    "objectID": "schedule.html#virtual-participation",
-    "href": "schedule.html#virtual-participation",
-    "title": "Workshop Schedule",
-    "section": "Virtual Participation",
-    "text": "Virtual Participation\nFor those joining virtually:\n\nAll sessions will be live-streamed via Zoom\nRecorded sessions available within 24 hours\nDedicated online support channel\nVirtual networking sessions scheduled\nSame access to servers and materials\n\n\n\n\n\n\n\nTime Zone Considerations\n\n\n\n\nPrimary schedule is in East Africa Time (EAT)\nKey sessions will be recorded for asynchronous viewing\nSupport available across multiple time zones"
-  },
-  {
-    "objectID": "schedule.html#what-to-bring",
-    "href": "schedule.html#what-to-bring",
-    "title": "Workshop Schedule",
-    "section": "What to Bring",
-    "text": "What to Bring\n\nIn-Person Participants\n\nLaptop with required software installed\nPower adapter and chargers\nNotebook and pen\nWater bottle\nBusiness cards for networking\n\n\n\nVirtual Participants\n\nStable internet connection\nHeadset with microphone\nSecond monitor recommended\nQuiet workspace"
-  },
-  {
-    "objectID": "schedule.html#accommodation",
-    "href": "schedule.html#accommodation",
-    "title": "Workshop Schedule",
-    "section": "Accommodation",
-    "text": "Accommodation\nFor participants traveling to APHRC:\n\n\n\n\n\n\nRecommended Hotels\n\n\n\nDetails about nearby accommodation options will be provided upon registration, including: - Hotels within walking distance - Transportation options - Special workshop rates"
-  },
-  {
-    "objectID": "schedule.html#important-reminders",
-    "href": "schedule.html#important-reminders",
-    "title": "Workshop Schedule",
-    "section": "Important Reminders",
-    "text": "Important Reminders\n\nPre-workshop Setup: Complete all setup requirements before Day 1\nPunctuality: Sessions start promptly at scheduled times\nParticipation: Active engagement expected in all sessions\nCode of Conduct: Respectful, inclusive environment for all\nHealth & Safety: Current guidelines will be followed\n\n\n\nView Workshop Content Access Resources"
+    "text": "View Workshop Content Access Resources"
   },
   {
     "objectID": "index.html#federated-standardized-analysis",
@@ -341,5 +292,12 @@
     "title": "DataSHIELD Workshop: Data Science Without Borders",
     "section": "At the end of your RStudio Server analysis:",
     "text": "At the end of your RStudio Server analysis:\nYou can save your workspace:\n\ndatashield.workspace_save(conns = conns, ws = \"workspace2025\")\n\nDon’t forget to log out! Using:\n\ndatashield.logout(conns)\n\nYou can restore your workspace, the next time you want to continue with your analysis\n\nconns &lt;- datashield.login(logins = logindata, \n                          assign = TRUE, symbol = \"D\")\nds.ls()\ndatashield.logout(conns)\n\nconns &lt;- datashield.login(logins = logindata, restore = \"workspace2025\")\nds.ls()\n\nAlso you can delete unwanted workspaces using the datashield.workspace_rm\nIn Rstudio Server: DON’T forget to use the orange “quit the current R session” button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in."
+  },
+  {
+    "objectID": "index.html#combining-datashield-with-omop-cdm",
+    "href": "index.html#combining-datashield-with-omop-cdm",
+    "title": "DataSHIELD APHRC Workshop",
+    "section": "Combining DataSHIELD with OMOP CDM",
+    "text": "Combining DataSHIELD with OMOP CDM\nFederated analysis with strong privacy guarantees on standardized clinical data.\nThis workshop introduces DataSHIELD for privacy-preserving federated analysis together with dsOMOP, its bridge to the Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) used for standardized clinical databases.\n\nInstitutions behind this workshop\n\n     \n\n\n\nWhat is DataSHIELD?\n\n\nDataSHIELD is an open-source platform that enables analysis of sensitive data without sharing individual-level records. Analyses are executed where the data reside; only vetted, non-disclosive summaries are returned. This privacy-by-design approach combines:\n\nRobust disclosure control on outputs\nRole-based governance and auditable workflows\nSecure, federated compute across institutions\n\nThis makes DataSHIELD ideal when regulations, ethics, or governance restrict data movement but collaborative analysis is essential.\n\n\n\n\nDataSHIELD is also a community-driven, open-source initiative with contributors from universities, research institutes, and health systems. The community steers method development, governance rules, disclosure controls, and software evolution through open collaboration, ensuring transparency, interoperability, and best practices for secure multi-site analytics.\n\n\n\n\n\n\nA milestone to celebrate!\n\n\n\nDuring our collaboration, we will be deploying the first African federated clinical data analysis network using DataSHIELD!\n\n\n\n\nWhat are OHDSI and the OMOP CDM?\n\n\nThe OHDSI community maintains the OMOP Common Data Model (CDM), a widely adopted standard that harmonizes the structure and vocabularies of observational health data (EHRs, claims, registries). Standardization enables large-scale, reproducible analytics and consistency across diverse datasets.\nOHDSI (Observational Health Data Sciences and Informatics) is a global, open-science collaborative that develops data standards, vocabularies, methods, and software for observational health research. OHDSI fosters reproducible research, open tools, and shared best practices to scale evidence generation across diverse data networks.\n\n\n\n\n\n\nWhat is dsOMOP?\n\n\ndsOMOP is a suite of packages that connects OMOP CDM databases to DataSHIELD. It streamlines access to standardized tables and vocabularies under DataSHIELD’s privacy model so you can:\n\nDiscover and explore OMOP CDM content securely\nBuild cohorts and run cross-site summary queries\nPerform federated, standardized analyses on harmonized clinical data"
   }
 ]

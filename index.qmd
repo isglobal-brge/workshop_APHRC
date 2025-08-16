@@ -4,40 +4,7 @@ page-layout: custom
 toc: false
 ---
 
-```{=html}
-<div class="hero-carousel">
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/ahprc.jpg">
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-::: {.my-5}
-# Combining DataSHIELD with OMOP CDM
-
-**Federated analysis with strong privacy guarantees on standardized clinical data.**
-
-This workshop introduces DataSHIELD for privacy-preserving federated analysis together with dsOMOP, its bridge to the Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) used for standardized clinical databases.
-:::
+Welcome to the workshop where privacy-preserving analytics meets standardized clinical data! This hands-on session will introduce you to the combination of DataSHIELD's federated analysis capabilities and the OMOP Common Data Model (CDM) for clinical databases using the dsOMOP framework.
 
 ### Institutions behind this workshop
 

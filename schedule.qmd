@@ -138,7 +138,6 @@ The DataSHIELD Without Borders workshop will be delivered at the following three
 ---
 
 ::: {.text-center .mt-5}
-<a href="getting-started.qmd" class="btn btn-primary">Pre-Workshop Setup</a>
-<a href="workshop.qmd" class="btn btn-secondary">View Workshop Content</a>
-<a href="resources.qmd" class="btn btn-secondary">Access Resources</a>
+<a href="getting-started.qmd" class="btn btn-primary">Getting ready for the workshop</a>
+<a href="contact.qmd" class="btn btn-secondary">Contact instructors</a>
 :::

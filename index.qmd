@@ -4,7 +4,7 @@ page-layout: custom
 toc: false
 ---
 
-### Combining DataSHIELD with OMOP CDM
+## Combining DataSHIELD with OMOP CDM
 
 **Welcome to the workshop where federated data analysis meets standardized clinical data!** 
 

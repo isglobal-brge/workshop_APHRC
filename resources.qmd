@@ -2,8 +2,6 @@
 title: "Resources"
 ---
 
-## Resources
-
 The following resources may be of interest for those wanting to learn more about DataSHIELD and OMOP CDM:
 
 ### DataSHIELD
@@ -29,6 +27,6 @@ The following resources may be of interest for those wanting to learn more about
 ---
 
 ::: {.text-center .mt-5}
-<a href="workshop.qmd" class="btn btn-primary">Back to Workshop Content</a>
-<a href="contact.qmd" class="btn btn-secondary">Contact Instructors</a>
+<a href="getting-started.qmd" class="btn btn-primary">Getting ready for the workshop</a>
+<a href="contact.qmd" class="btn btn-secondary">Contact instructors</a>
 :::

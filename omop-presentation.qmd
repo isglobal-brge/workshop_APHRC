@@ -30,6 +30,7 @@ If the embedded viewer doesn't work properly, you can download the slides using 
 - [The Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/)
 - [OMOP CDM Documentation](https://ohdsi.github.io/CommonDataModel/)
 - [OHDSI Forums](https://forums.ohdsi.org/)
+- [dsOMOP website](https://isglobal-brge.github.io/dsOMOP)
 
 ---
 

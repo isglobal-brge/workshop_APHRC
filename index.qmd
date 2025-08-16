@@ -1,8 +1,10 @@
 ---
-title: "DSWB Workshop - DatasHIELD + OMOP CDM"
+title: "Data Science Without Borders Workshop"
 page-layout: custom
 toc: false
 ---
+
+### Combining DataSHIELD with OMOP CDM
 
 **Welcome to the workshop where federated data analysis meets standardized clinical data!** 
 

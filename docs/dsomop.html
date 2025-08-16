@@ -1223,7 +1223,7 @@ $`opal-demo`$length
 
 $`opal-demo`$`quantiles &amp; mean`
       5%      10%      25%      50%      75%      90%      95%     Mean 
- 86.7000  96.4000 107.2500 112.5000 124.0000 146.0000 151.2000 116.2241 </code></pre>
+ 90.2500  93.4000 102.0000 110.0000 122.2500 138.3000 146.0000 112.9655 </code></pre>
 </div>
 </div>
 <p>Let’s now use the <code>renameVars</code> from the <code>dsHelper</code> package, which we have seen before, to rename the variable to <code>sbp</code> for convenience:</p>
@@ -1264,7 +1264,7 @@ $`opal-demo`$`quantiles &amp; mean`
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="st">"mimiciv$sbp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: opal-demo: 2 invalid cells</code></pre>
+<pre><code>Warning: opal-demo: 1 invalid cells</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
@@ -1275,19 +1275,19 @@ $`opal-demo`$`quantiles &amp; mean`
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$breaks
- [1]  72.90734  82.37205  91.83675 101.30145 110.76615 120.23085 129.69556
- [8] 139.16026 148.62496 158.08966 167.55436
+ [1]  78.81875  86.33939  93.86003 101.38066 108.90130 116.42194 123.94258
+ [8] 131.46322 138.98385 146.50449 154.02513
 
 $counts
- [1]  0  3  4 15 15  8  3  4  3  0
+ [1]  3  3  8  9 15  6  5  3  4  0
 
 $density
- [1] 0.000000000 0.005464952 0.007286602 0.027324758 0.027324758 0.014573204
- [7] 0.005464952 0.007286602 0.005464952 0.000000000
+ [1] 0.006877626 0.006877626 0.018340337 0.020632879 0.034388132 0.013755253
+ [7] 0.011462711 0.006877626 0.009170169 0.000000000
 
 $mids
- [1]  77.6397  87.1044  96.5691 106.0338 115.4985 124.9632 134.4279 143.8926
- [9] 153.3573 162.8220
+ [1]  82.57907  90.09971  97.62035 105.14098 112.66162 120.18226 127.70290
+ [8] 135.22354 142.74417 150.26481
 
 $xname
 [1] "xvect"

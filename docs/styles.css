@@ -136,7 +136,7 @@ h2:first-of-type {
 }
 
 .carousel-container {
-  height: 400px;
+  height: 250px; /* Reduced from 400px */
   background: transparent;
   overflow: hidden;
   position: relative;
@@ -146,7 +146,7 @@ h2:first-of-type {
   display: flex;
   width: 600%; /* 6 images × 100% each */
   height: 100%;
-  animation: carousel-infinite 12s infinite ease-in-out; /* 4 seconds per image × 3 images */
+  animation: carousel-infinite 12s infinite ease-in-out;
 }
 
 .carousel-slide {
@@ -165,25 +165,25 @@ h2:first-of-type {
 
 @keyframes carousel-infinite {
   0% {
-    transform: translateX(0); /* Show ISGlobal (position 1) */
+    transform: translateX(0);
   }
   25% {
-    transform: translateX(0); /* Stay on ISGlobal */
+    transform: translateX(0);
   }
   33.333% {
-    transform: translateX(-16.666%); /* Slide to APHRC (position 2) */
+    transform: translateX(-16.666%);
   }
   58.333% {
-    transform: translateX(-16.666%); /* Stay on APHRC */
+    transform: translateX(-16.666%);
   }
   66.666% {
-    transform: translateX(-33.333%); /* Slide to BRGE (position 3) */
+    transform: translateX(-33.333%);
   }
   91.666% {
-    transform: translateX(-33.333%); /* Stay on BRGE */
+    transform: translateX(-33.333%);
   }
   100% {
-    transform: translateX(-50%); /* Jump to ISGlobal duplicate (position 4) - INVISIBLE because same image */
+    transform: translateX(-50%);
   }
 }
 
@@ -282,8 +282,8 @@ h2:first-of-type {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .carousel {
-    height: 400px;
+  .carousel-container {
+    height: 200px; /* Even smaller on mobile */
   }
   
   .carousel-caption h1 {

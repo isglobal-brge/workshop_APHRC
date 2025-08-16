@@ -1,5 +1,8 @@
 ---
 title: "dsOMOP Workshop"
+format: 
+  html:
+    code-copy: false
 ---
 
 In this lesson, we will learn how to:

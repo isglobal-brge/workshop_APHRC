@@ -96,7 +96,7 @@ helper$tables()
 
 As expected, the `mimiciv` database presents the structure of the OMOP CDM 5.4:
 
-![OMOP CDM v5.4 schema](../img/cdm54.png)
+![OMOP CDM v5.4 schema](fig/cdm54.png)
 
 We can also check the columns available in each table using the `columns` method. These should match the columns available in the OMOP CDM documentation for the specific version of the CDM that the database is formatted in. This information is also available in the [OMOP CDM documentation](https://ohdsi.github.io/CommonDataModel/cdm54.html), but is a good reminder of the structure of the data. 
 

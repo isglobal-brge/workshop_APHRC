@@ -1,17 +1,22 @@
 ---
-title: "DataSHIELD APHRC Workshop"
+title: "DSWB Workshop - DatasHIELD + OMOP CDM"
 page-layout: custom
 toc: false
 ---
 
-Welcome to the workshop where privacy-preserving analytics meets standardized clinical data! This hands-on session will introduce you to the combination of DataSHIELD's federated analysis capabilities and the OMOP Common Data Model (CDM) for clinical databases using the dsOMOP framework.
+**Welcome to the workshop where federated data analysis meets standardized clinical data!** 
+
+This hands-on session will introduce you to the combination of DataSHIELD's federated analysis capabilities and the OMOP Common Data Model (CDM) for clinical databases using the dsOMOP framework.
 
 ### Institutions behind this workshop
 
 ::: {.text-center}
 ![](images/isglobal_logo.jpg){.img-fluid width=160px}
 ![](images/brge_logo.png){.img-fluid width=140px}
+<br>
 ![](images/aphrc_logo.png){.img-fluid width=200px}
+![](images/dgh.png){.img-fluid width=180px}
+![](images/iressef.png){.img-fluid width=180px}
 <br>
 ![](images/datashield.webp){.img-fluid width=120px}
 ![](images/ohdsi.png){.img-fluid width=140px}
@@ -53,7 +58,7 @@ OHDSI (Observational Health Data Sciences and Informatics) is a global, open-sci
 :::
 
 ::: {.column width="40%"}
-![](images/cdm54.png){.img-fluid .rounded alt="OMOP CDM high-level schema"}
+![](fig/cdm54.png){.img-fluid .rounded alt="OMOP CDM high-level schema"}
 :::
 ::::
 

@@ -664,15 +664,15 @@ In Rstudio Server: DON'T forget to use the orange "quit the current R session" b
 
 We have access to 2 datasets corresponding to simulated data from [UKBiobank](https://www.ukbiobank.ac.uk/) available through [CINECA study](https://ega-archive.org/datasets/EGAD00001006673). This data reproduce the exact associations found at UKBiobank. The two datasets are accessed in two Opal server
 
-Server 1: 
-  - URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)
-  - Project: GWAS
-  - Table: ega_phenotypes_1
-  
+Server 1:  
+- URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)  
+- Project: GWAS  
+- Table: ega_phenotypes_1  
+
 Server 2:  
-  - URL: https://opal.isglobal.org/repo (user: invited, pwd: P@12345678Aa@)
-  - Project: EGA
-  - Table: ega_phenotypes_2
+- URL: https://opal.isglobal.org/repo (user: invited, pwd: P@12345678Aa@)  
+- Project: EGA  
+- Table: ega_phenotypes_2  
   
 
 Then, load ONE of the three resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 

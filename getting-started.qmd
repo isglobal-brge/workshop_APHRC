@@ -50,71 +50,9 @@ install.packages("BiocManager")
 BiocManager::install("dsOmicsClient", ask = FALSE)
 ```
 
-## Step 3: Verify Installation
-
-Run this code to check that packages are installed correctly:
-
-```r
-# Load main packages
-library(DSI)
-library(DSOpal)
-library(dsBaseClient)
-library(dsHelper)
-library(metafor)
-
-# Check DataSHIELD functions are available
-print("DataSHIELD packages loaded successfully!")
-
-# Check package versions
-cat("Package versions:\n")
-cat("DSI:", as.character(packageVersion("DSI")), "\n")
-cat("DSOpal:", as.character(packageVersion("DSOpal")), "\n")
-cat("dsBaseClient:", as.character(packageVersion("dsBaseClient")), "\n")
-```
-
-## Troubleshooting
-
-### Common Installation Issues
-
-**If a package fails to install:**
-```r
-# Try installing from CRAN only
-install.packages("package_name", repos = "https://cloud.r-project.org")
-
-# Or try updating R if packages require newer version
-# Then reinstall the package
-```
-
-**For GitHub packages that fail:**
-```r
-# Make sure devtools is installed and loaded
-install.packages("devtools")
-library(devtools)
-
-# If still failing, try:
-install.packages("remotes")
-remotes::install_github("username/repository")
-```
-
-**On Windows:** You may need to install Rtools from [CRAN Rtools](https://cran.r-project.org/bin/windows/Rtools/)
-
-**On Mac:** You may need Xcode Command Line Tools. Install by running in Terminal:
-```bash
-xcode-select --install
-```
-
-## Workshop Information
-
-### Server Access
-Connection details and credentials will be provided at the beginning of the workshop.
-
-### Support
-- **Email**: [workshop-support@isglobal.org](mailto:workshop-support@isglobal.org)
-- **General questions**: [brge@isglobal.org](mailto:brge@isglobal.org)
-
 ---
 
 ::: {.text-center .mt-5}
-<a href="schedule.qmd" class="btn btn-primary">View Workshop Schedule</a>
-<a href="contact.qmd" class="btn btn-secondary">Contact Instructors</a>
+<a href="schedule.qmd" class="btn btn-primary">View workshop schedule</a>
+<a href="contact.qmd" class="btn btn-secondary">Contact instructors</a>
 :::

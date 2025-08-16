@@ -785,7 +785,13 @@ a:hover {
 
 /* Remove duplicate grid styles */
 
-/* Quarto/R Markdown output cell styling (site-wide) */
+/* Quarto/R Markdown input/output cell styling (site-wide) */
+/* Normalize input code block spacing */
+div.sourceCode, pre.sourceCode {
+  margin: 0 !important;
+}
+
+/* Output containers: consistent margins and no container padding */
 .cell-output,
 .cell-output-stdout,
 .cell-output-stderr,
@@ -793,15 +799,25 @@ a:hover {
   background-color: #FFFACD; /* light yellow */
   border: 1px solid #f0e6a6;
   border-radius: 6px;
-  padding: 0; /* match input code block padding (handled by inner <pre>) */
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0; /* vertical rhythm */
+  padding: 0; /* content handles its own padding */
 }
 
+/* Output text blocks */
 .cell-output pre,
 .cell-output-stdout pre,
 .cell-output-stderr pre,
 .cell-output-display pre {
   background-color: #FFFACD;
   border: none;
+  margin: 0; /* remove default pre margins */
+  padding: 0.75rem 1rem; /* readable padding inside output */
+}
+
+/* Output images/plots/tables should align flush with container edges */
+.cell-output-display img,
+.cell-output-display svg,
+.cell-output-display table {
+  display: block;
+  margin: 0; /* remove extra spacing */
 }

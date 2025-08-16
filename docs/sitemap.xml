@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_tables.html</loc>
-    <lastmod>2025-08-13T10:21:44.710Z</lastmod>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/dsomop.html</loc>
+    <lastmod>2025-08-16T10:09:13.818Z</lastmod>
   </url>
   <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/workshop.html</loc>
-    <lastmod>2025-08-12T09:15:12.406Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/resources.html</loc>
-    <lastmod>2025-08-12T09:32:59.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/getting-started.html</loc>
-    <lastmod>2025-08-15T19:33:55.834Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/datashield-workshop.html</loc>
-    <lastmod>2025-08-12T09:49:51.276Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/contact.html</loc>
-    <lastmod>2025-08-13T10:10:47.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/dsomop-workshop.html</loc>
-    <lastmod>2025-08-13T06:30:45.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/index.html</loc>
-    <lastmod>2025-08-13T10:32:36.256Z</lastmod>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_resources.html</loc>
+    <lastmod>2025-08-16T10:26:50.891Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/schedule.html</loc>
     <lastmod>2025-08-12T09:15:12.406Z</lastmod>
   </url>
   <url>
-    <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_resources.html</loc>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/index.html</loc>
+    <lastmod>2025-08-13T10:33:05.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/dsomop-workshop.html</loc>
+    <lastmod>2025-08-13T06:30:45.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/contact.html</loc>
+    <lastmod>2025-08-13T10:10:47.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/datashield-workshop.html</loc>
+    <lastmod>2025-08-12T09:49:51.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/getting-started.html</loc>
+    <lastmod>2025-08-15T19:49:17.788Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/resources.html</loc>
+    <lastmod>2025-08-16T09:45:55.659Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/workshop.html</loc>
+    <lastmod>2025-08-12T09:15:12.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_tables.html</loc>
     <lastmod>2025-08-13T10:21:44.710Z</lastmod>
   </url>
 </urlset>

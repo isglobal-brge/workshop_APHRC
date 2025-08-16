@@ -149,6 +149,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </i> 
  <span class="dropdown-text">DataSHIELD (Resources)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./dsomop.html"><i class="bi bi-database-fill" role="img">
+</i> 
+ <span class="dropdown-text">dsOMOP Workshop</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -206,16 +211,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#install-rstudio" id="toc-install-rstudio" class="nav-link" data-scroll-target="#install-rstudio">Install RStudio</a></li>
   </ul></li>
   <li><a href="#step-2-install-required-r-packages" id="toc-step-2-install-required-r-packages" class="nav-link" data-scroll-target="#step-2-install-required-r-packages">Step 2: Install Required R Packages</a></li>
-  <li><a href="#step-3-verify-installation" id="toc-step-3-verify-installation" class="nav-link" data-scroll-target="#step-3-verify-installation">Step 3: Verify Installation</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
-  <ul class="collapse">
-  <li><a href="#common-installation-issues" id="toc-common-installation-issues" class="nav-link" data-scroll-target="#common-installation-issues">Common Installation Issues</a></li>
-  </ul></li>
-  <li><a href="#workshop-information" id="toc-workshop-information" class="nav-link" data-scroll-target="#workshop-information">Workshop Information</a>
-  <ul class="collapse">
-  <li><a href="#server-access" id="toc-server-access" class="nav-link" data-scroll-target="#server-access">Server Access</a></li>
-  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -292,68 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Additional packages for advanced workshops (optional)</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"dsOmicsClient"</span>, <span class="at">ask =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-3-verify-installation" class="level2">
-<h2 data-anchor-id="step-3-verify-installation">Step 3: Verify Installation</h2>
-<p>Run this code to check that packages are installed correctly:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load main packages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSI)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsHelper)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metafor)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check DataSHIELD functions are available</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"DataSHIELD packages loaded successfully!"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check package versions</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Package versions:</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"DSI:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"DSI"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"DSOpal:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"DSOpal"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"dsBaseClient:"</span>, <span class="fu">as.character</span>(<span class="fu">packageVersion</span>(<span class="st">"dsBaseClient"</span>)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 data-anchor-id="troubleshooting">Troubleshooting</h2>
-<section id="common-installation-issues" class="level3">
-<h3 data-anchor-id="common-installation-issues">Common Installation Issues</h3>
-<p><strong>If a package fails to install:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try installing from CRAN only</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or try updating R if packages require newer version</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Then reinstall the package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>For GitHub packages that fail:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure devtools is installed and loaded</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If still failing, try:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"username/repository"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>On Windows:</strong> You may need to install Rtools from <a href="https://cran.r-project.org/bin/windows/Rtools/">CRAN Rtools</a></p>
-<p><strong>On Mac:</strong> You may need Xcode Command Line Tools. Install by running in Terminal:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="workshop-information" class="level2">
-<h2 data-anchor-id="workshop-information">Workshop Information</h2>
-<section id="server-access" class="level3">
-<h3 data-anchor-id="server-access">Server Access</h3>
-<p>Connection details and credentials will be provided at the beginning of the workshop.</p>
-</section>
-<section id="support" class="level3">
-<h3 data-anchor-id="support">Support</h3>
-<ul>
-<li><strong>Email</strong>: <a href="mailto:workshop-support@isglobal.org">workshop-support@isglobal.org</a></li>
-<li><strong>General questions</strong>: <a href="mailto:brge@isglobal.org">brge@isglobal.org</a></li>
-</ul>
 <hr>
 <div class="text-center mt-5">
-<p><a href="./schedule.html" class="btn btn-primary">View Workshop Schedule</a> <a href="./contact.html" class="btn btn-secondary">Contact Instructors</a></p>
+<p><a href="./schedule.html" class="btn btn-primary">View workshop schedule</a> <a href="./contact.html" class="btn btn-secondary">Contact instructors</a></p>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

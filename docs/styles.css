@@ -684,3 +684,11 @@ div.sourceCode, pre.sourceCode {
 .cell-output-display::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Hide copy buttons in output cells to prevent double copy button issue */
+.cell-output .code-copy-button,
+.cell-output-stdout .code-copy-button,
+.cell-output-stderr .code-copy-button,
+.cell-output-display .code-copy-button {
+  display: none !important;
+}

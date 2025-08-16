@@ -18,6 +18,8 @@ This hands-on session will introduce you to the combination of DataSHIELD's fede
 ![](images/dgh.png){.img-fluid width=180px}
 ![](images/iressef.png){.img-fluid width=180px}
 <br>
+<br>
+<br>
 ![](images/datashield.webp){.img-fluid width=120px}
 ![](images/ohdsi.png){.img-fluid width=140px}
 :::

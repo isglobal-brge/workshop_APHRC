@@ -26,6 +26,9 @@ website:
       - text: "Workshops"
         icon: mortarboard-fill
         menu:
+          - text: "DataSHIELD Presentation"
+            href: datashield-presentation.qmd
+            icon: file-earmark-slides
           - text: "DataSHIELD (Tables)"
             href: DataSHIELD_workshop_APHRC_tables.Rmd
             icon: table

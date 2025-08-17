@@ -140,6 +140,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
         <li>
+    <a class="dropdown-item" href="./datashield-presentation.html"><i class="bi bi-file-earmark-slides" role="img">
+</i> 
+ <span class="dropdown-text">DataSHIELD Presentation</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./DataSHIELD_workshop_APHRC_tables.html"><i class="bi bi-table" role="img">
 </i> 
  <span class="dropdown-text">DataSHIELD (Tables)</span></a>
@@ -242,6 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/dsomop.Rmd').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'dsomop.Rmd'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm"> <i class="bi bi-download"></i> Download this R Markdown file </a></p>
 <p>In this lesson, we will learn how to:</p>
 <ul>
 <li>Set up the required dependencies and connect to a DataSHIELD server</li>
@@ -1228,7 +1234,7 @@ $`opal-demo`$length
 
 $`opal-demo`$`quantiles &amp; mean`
       5%      10%      25%      50%      75%      90%      95%     Mean 
- 86.1000  94.1000 107.0000 113.5000 125.0000 146.0000 151.2000 116.8448 </code></pre>
+ 84.4000  93.8000 106.2500 113.5000 126.5000 146.0000 152.0500 116.3276 </code></pre>
 </div>
 </div>
 <p>Let’s now use the <code>renameVars</code> from the <code>dsHelper</code> package, which we have seen before, to rename the variable to <code>sbp</code> for convenience:</p>
@@ -1269,7 +1275,7 @@ $`opal-demo`$`quantiles &amp; mean`
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="st">"mimiciv$sbp"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: opal-demo: 1 invalid cells</code></pre>
+<pre><code>Warning: opal-demo: 2 invalid cells</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
@@ -1280,19 +1286,19 @@ $`opal-demo`$`quantiles &amp; mean`
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$breaks
- [1]  74.87781  84.14547  93.41312 102.68078 111.94843 121.21609 130.48374
- [8] 139.75140 149.01905 158.28671 167.55436
+ [1]  71.86930  81.33057  90.79184 100.25311 109.71439 119.17566 128.63693
+ [8] 138.09820 147.55947 157.02074 166.48202
 
 $counts
- [1]  3  3  5 15 12  7  5  4  3  0
+ [1]  3  0  6 12 12  9  7  3  0  3
 
 $density
- [1] 0.005581146 0.005581146 0.009301910 0.027905731 0.022324585 0.013022674
- [7] 0.009301910 0.007441528 0.005581146 0.000000000
+ [1] 0.005466933 0.000000000 0.010933866 0.021867732 0.021867732 0.016400799
+ [7] 0.012756177 0.005466933 0.000000000 0.005466933
 
 $mids
- [1]  79.51164  88.77930  98.04695 107.31461 116.58226 125.84992 135.11757
- [8] 144.38523 153.65288 162.92054
+ [1]  76.59993  86.06121  95.52248 104.98375 114.44502 123.90629 133.36756
+ [8] 142.82884 152.29011 161.75138
 
 $xname
 [1] "xvect"

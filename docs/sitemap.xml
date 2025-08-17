@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/dsomop.html</loc>
-    <lastmod>2025-08-16T16:00:19.730Z</lastmod>
+    <lastmod>2025-08-17T21:47:34.292Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_resources.html</loc>
-    <lastmod>2025-08-16T11:29:06.999Z</lastmod>
+    <lastmod>2025-08-17T21:53:15.068Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/resources.html</loc>
@@ -14,11 +14,15 @@
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/index.html</loc>
-    <lastmod>2025-08-16T11:36:24.404Z</lastmod>
+    <lastmod>2025-08-17T07:11:01.818Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/dsomop-workshop.html</loc>
     <lastmod>2025-08-16T11:31:16.478Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isglobal-brge.github.io/workshop_APHRC/datashield-presentation.html</loc>
+    <lastmod>2025-08-17T21:45:45.629Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/contact.html</loc>
@@ -34,7 +38,7 @@
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/omop-presentation.html</loc>
-    <lastmod>2025-08-16T14:55:21.508Z</lastmod>
+    <lastmod>2025-08-17T21:47:37.221Z</lastmod>
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/schedule.html</loc>
@@ -42,6 +46,6 @@
   </url>
   <url>
     <loc>https://isglobal-brge.github.io/workshop_APHRC/DataSHIELD_workshop_APHRC_tables.html</loc>
-    <lastmod>2025-08-16T11:01:13.515Z</lastmod>
+    <lastmod>2025-08-17T21:53:15.058Z</lastmod>
   </url>
 </urlset>

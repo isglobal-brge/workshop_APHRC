@@ -140,6 +140,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
         <li>
+    <a class="dropdown-item" href="./datashield-presentation.html"><i class="bi bi-file-earmark-slides" role="img">
+</i> 
+ <span class="dropdown-text">DataSHIELD Presentation</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./DataSHIELD_workshop_APHRC_tables.html"><i class="bi bi-table" role="img">
 </i> 
  <span class="dropdown-text">DataSHIELD (Tables)</span></a>
@@ -240,6 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/DataSHIELD_workshop_APHRC_resources.Rmd').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'DataSHIELD_workshop_APHRC_resources.Rmd'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm"> <i class="bi bi-download"></i> Download this R Markdown file </a></p>
 <section id="analysis-using-the-resources" class="level1">
 <h1>Analysis using the <code>resources</code></h1>
 <p>Now, let us illustrate a similar analysis of the previous example using CNSIM datasets but having the data as a resource. Now the resources are available in a project called <code>RSRC</code> (see https://opal-demo.obiba.org/#/project/RSRC/resources). Now, we write all the require code in a single chunk:</p>

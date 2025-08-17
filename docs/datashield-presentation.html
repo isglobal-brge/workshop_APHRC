@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Getting Started – DataSHIELD APHRC Workshop</title>
+<title>DataSHIELD Presentation – DataSHIELD APHRC Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -128,7 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./getting-started.html" aria-current="page"> <i class="bi bi-play-circle-fill" role="img">
+    <a class="nav-link" href="./getting-started.html"> <i class="bi bi-play-circle-fill" role="img">
 </i> 
 <span class="menu-text">Getting Started</span></a>
   </li>  
@@ -214,13 +179,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup-instructions" id="toc-setup-instructions" class="nav-link active" data-scroll-target="#setup-instructions">Setup Instructions</a></li>
-  <li><a href="#step-1-install-r-and-rstudio" id="toc-step-1-install-r-and-rstudio" class="nav-link" data-scroll-target="#step-1-install-r-and-rstudio">Step 1: Install R and RStudio</a>
+  <li><a href="#introduction-to-datashield" id="toc-introduction-to-datashield" class="nav-link active" data-scroll-target="#introduction-to-datashield">Introduction to DataSHIELD</a>
   <ul class="collapse">
-  <li><a href="#install-r" id="toc-install-r" class="nav-link" data-scroll-target="#install-r">Install R</a></li>
-  <li><a href="#install-rstudio" id="toc-install-rstudio" class="nav-link" data-scroll-target="#install-rstudio">Install RStudio</a></li>
+  <li><a href="#download-slides" id="toc-download-slides" class="nav-link" data-scroll-target="#download-slides">Download Slides</a></li>
   </ul></li>
-  <li><a href="#step-2-install-required-r-packages" id="toc-step-2-install-required-r-packages" class="nav-link" data-scroll-target="#step-2-install-required-r-packages">Step 2: Install Required R Packages</a></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Getting Started</h1>
+<h1 class="title">DataSHIELD Presentation</h1>
 </div>
 
 
@@ -246,63 +208,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="setup-instructions" class="level2">
-<h2 data-anchor-id="setup-instructions">Setup Instructions</h2>
-<p>This page provides simple instructions to install R and all required packages for the workshop.</p>
-</section>
-<section id="step-1-install-r-and-rstudio" class="level2">
-<h2 data-anchor-id="step-1-install-r-and-rstudio">Step 1: Install R and RStudio</h2>
-<section id="install-r" class="level3">
-<h3 data-anchor-id="install-r">Install R</h3>
-<ol type="1">
-<li>Go to <a href="https://cran.r-project.org/">CRAN</a></li>
-<li>Download R for your operating system (Windows, Mac, or Linux)</li>
-<li>Run the installer and follow the instructions</li>
-</ol>
-</section>
-<section id="install-rstudio" class="level3">
-<h3 data-anchor-id="install-rstudio">Install RStudio</h3>
-<ol type="1">
-<li>Go to <a href="https://posit.co/download/rstudio-desktop/">Posit RStudio</a></li>
-<li>Download the free RStudio Desktop</li>
-<li>Install RStudio after R is installed</li>
-</ol>
-</section>
-</section>
-<section id="step-2-install-required-r-packages" class="level2">
-<h2 data-anchor-id="step-2-install-required-r-packages">Step 2: Install Required R Packages</h2>
-<p>Open RStudio and run the following commands to install all necessary packages:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core DataSHIELD packages</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DSI"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DSOpal"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dsBaseClient"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://cran.obiba.org"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install devtools for GitHub installations</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># DataSHIELD helper packages</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"timcadman/ds-helper"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># dsOMOP packages</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'isglobal-brge/dsOMOPClient'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'isglobal-brge/dsOMOPHelper'</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistical analysis packages</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"metafor"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic data manipulation (if not already installed)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"knitr"</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Additional packages for advanced workshops (optional)</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"dsOmicsClient"</span>, <span class="at">ask =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="introduction-to-datashield" class="level2">
+<h2 data-anchor-id="introduction-to-datashield">Introduction to DataSHIELD</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #f0f0f0; border: 1px solid #ddd; border-radius: 8px;">
+<p><iframe src="../DATASHIELD_DSWB_workshop.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" title="DataSHIELD Presentation Slides"> </iframe></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Having trouble viewing the slides?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the embedded viewer doesn’t work properly, you can download the slides using the button below.</p>
+</div>
+</div>
+<section id="download-slides" class="level3">
+<h3 data-anchor-id="download-slides">Download Slides</h3>
+<div class="text-center mt-4">
+<p><a href="../DATASHIELD_DSWB_workshop.pdf" download="" class="btn btn-primary"> <i class="bi bi-download"></i> Download Presentation (PDF) </a></p>
+</div>
 <hr>
 <div class="text-center mt-5">
-<p><a href="./schedule.html" class="btn btn-primary">View workshop schedule</a> <a href="./contact.html" class="btn btn-secondary">Contact instructors</a></p>
+<p><a href="./DataSHIELD_workshop_APHRC_tables.html" class="btn btn-primary">Continue to DataSHIELD Workshop</a></p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

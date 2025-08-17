@@ -4,6 +4,8 @@ project:
   render:
     - "*.qmd"
     - "*.Rmd"
+  resources:
+    - "*.pdf"
 
 website:
   title: "DataSHIELD APHRC Workshop"

@@ -68,3 +68,6 @@ ds.glm("ega$diabetes_diagnosed_doctor ~ ega$cholesterol + ega$bmi",
 # question 10
 ds.glm("ega$diabetes_diagnosed_doctor ~ ega$cholesterol*ega$sex + ega$bmi",
        family = "binomial")
+
+# do not forget to disconnect!!!
+datashield.logout(conns)

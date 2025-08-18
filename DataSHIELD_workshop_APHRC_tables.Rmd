@@ -48,11 +48,9 @@ devtools::session_info()
 We are missing some of the necessary packages: "DSI", "DSOpal" and "dsBaseClient". 
 
 ```{r, eval=FALSE}
-install.packages("remotes")
-remotes::install_github("mbannert/panelaggregation")
 install.packages('DSI')
 install.packages('DSOpal')
-install.packages('dsBaseClient')
+devtools::install_github("datashield/dsBaseClient", force = TRUE)
 devtools::install_github("timcadman/ds-helper")
 install.packages("metafor")
 ```
@@ -107,8 +105,8 @@ builder <- DSI::newDSLoginBuilder()
 builder$append(
   server = 'France', 
   url = "https://opal-demo.obiba.org",
-  user = "dsuser", 
-  password = "P@ssw0rd",
+  user = "administrator", 
+  password = "password",
   table = "CNSIM.CNSIM1",
   profile = "default"
 )

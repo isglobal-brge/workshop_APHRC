@@ -232,7 +232,7 @@ As you may have noticed, some operations which are more straightforward in R can
 
 We have seen datashield has a range of functions to retrieve statistics, but is limited in that (i) you need to use different functions for different statistics, (ii) you can only get stats for one variable at a time. dh.GetStats returns many useful stats in a tibble, and allows you to retrieve stats for multiple variables at a time.
 
-```{r, eval = FALSE}
+```{r}
 neat_stats <- dh.getStats(
 	df = "D",
   vars = c("GENDER", "LAB_TRIG", "LAB_HDL", "DIS_CVA", "DIS_DIAB"))
@@ -680,16 +680,20 @@ Server 2:
 - Table: ega_phenotypes_2  
   
 
-Then, load ONE of the three resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 
+Then, load the resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 
 
 
 - Check that your loaded objects are of class data.frame
 - How many individuals have been diagnosed with diabetes by doctor (variable - diabetes_diagnosed_doctor)?
 - Obtain the same information stratified by sex (Hint: create a 2x2 table).
-- Create an histogram of the variable height by combining information across the three different datasets (Hint: type ?ds.histogram to see how to get this plot).
-- Create a correlation plot between bmi and weight combining data from the three studies (Hint: ?ds.scatterPlot).
+- Create an histogram of the variable height by combining information across the different datasets (Hint: type ?ds.histogram to see how to get this plot).
+- Create a correlation plot between bmi and weight combining data from the studies (Hint: ?ds.scatterPlot).
 - Compute the correlation between bmiand weight.
 - Fit a regression model between cholesterol and weight.
 - Fit a regression model between diabetes (variable diabetes_diagnosed_doctor) and colesterol level (variable cholesterol). Note: remember that outcome variable (e.g. diabetes) must be a factor variable.
 - Fit the same model adjusted by bmi. Is still cholesterol associated with diabetes?
 - Is there any interaction between cholesterol and sex adjusted by bmi?
+
+<a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/Exercise_tables.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'Exercise_tables.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
+<i class="bi bi-download"></i> Download this R Markdown file
+</a>

@@ -2313,13 +2313,13 @@ D$LAB_HDL:D$GENDER1 0.69958422</code></pre>
 - URL: https://opal.isglobal.org/repo (user: invited, pwd: P@12345678Aa@)<br>
 - Project: EGA<br>
 - Table: ega_phenotypes_2</p>
-<p>Then, load ONE of the three resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the functions available at dsBaseClient package.</p>
+<p>Then, load the three resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the functions available at dsBaseClient package.</p>
 <ul>
 <li>Check that your loaded objects are of class data.frame</li>
 <li>How many individuals have been diagnosed with diabetes by doctor (variable - diabetes_diagnosed_doctor)?</li>
 <li>Obtain the same information stratified by sex (Hint: create a 2x2 table).</li>
-<li>Create an histogram of the variable height by combining information across the three different datasets (Hint: type ?ds.histogram to see how to get this plot).</li>
-<li>Create a correlation plot between bmi and weight combining data from the three studies (Hint: ?ds.scatterPlot).</li>
+<li>Create an histogram of the variable height by combining information across the different datasets (Hint: type ?ds.histogram to see how to get this plot).</li>
+<li>Create a correlation plot between bmi and weight combining data from the studies (Hint: ?ds.scatterPlot).</li>
 <li>Compute the correlation between bmiand weight.</li>
 <li>Fit a regression model between cholesterol and weight.</li>
 <li>Fit a regression model between diabetes (variable diabetes_diagnosed_doctor) and colesterol level (variable cholesterol). Note: remember that outcome variable (e.g.&nbsp;diabetes) must be a factor variable.</li>
@@ -2327,6 +2327,7 @@ D$LAB_HDL:D$GENDER1 0.69958422</code></pre>
 <li>Is there any interaction between cholesterol and sex adjusted by bmi?</li>
 </ul>
 
+<p><a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/Exercise_tables.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'Exercise_tables.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm"> <i class="bi bi-download"></i> Download the solution </a></p>
 
 </section>
 

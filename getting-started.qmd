@@ -23,6 +23,10 @@ This page provides simple instructions to install R and all required packages fo
 Open RStudio and run the following commands to install all necessary packages:
 
 ```r
+# dsBaseClient dependencies
+install.packages("remotes")
+remotes::install_github("mbannert/panelaggregation")
+
 # Core DataSHIELD packages
 install.packages("DSI", repos = c("https://cran.obiba.org", "https://cloud.r-project.org"))
 install.packages("DSOpal", repos = c("https://cran.obiba.org", "https://cloud.r-project.org"))

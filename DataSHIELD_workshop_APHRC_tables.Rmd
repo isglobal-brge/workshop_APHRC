@@ -48,6 +48,8 @@ devtools::session_info()
 We are missing some of the necessary packages: "DSI", "DSOpal" and "dsBaseClient". 
 
 ```{r, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("mbannert/panelaggregation")
 install.packages('DSI')
 install.packages('DSOpal')
 install.packages('dsBaseClient')

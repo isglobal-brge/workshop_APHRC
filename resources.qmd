@@ -2,6 +2,9 @@
 title: "Resources"
 ---
 
+### Workshop Materials
+- [Resources Workshop Repository](https://github.com/obiba/resources-workshop)
+
 The following resources may be of interest for those wanting to learn more about DataSHIELD and OMOP CDM:
 
 ### DataSHIELD

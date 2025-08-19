@@ -17,6 +17,7 @@ execute:
 
 # Analysis using the `resources`
 
+For more examples and detailed information about working with resources in DataSHIELD, please refer to the [Resources Workshop Repository](https://github.com/obiba/resources-workshop).
 
 Now, let us illustrate a similar analysis of the previous example using CNSIM datasets but having the data as a resource. Now the resources are available in a project called `RSRC` (see https://opal-demo.obiba.org/#/project/RSRC/resources). Now, we write all the require code in a single chunk:
 
@@ -63,10 +64,6 @@ mod$coeff
 datashield.logout(conns)
 ```
 
-# Omic data analysis
-
-Please refer to the [Omic data analysis resource](https://isglobal-brge.github.io/resource_bookdown/Omic.html).
-
 # Survival analysis
 
 Survival analysis can be performed in DataSHIELD using `dsSurvival` package 
@@ -91,6 +88,10 @@ is in the variable called "todeath" and censoring variable is in the variable
 "death" to investigate whether smoking (variable "fumador") is associated or not
 with mortality after adjusting for age (variable "edad")
 NOTE: follow all steps in the vignette.
+
+# Omic data analysis
+
+Please refer to the [Omic data analysis resource](https://isglobal-brge.github.io/resource_bookdown/Omic.html).
 
 # Exercise: CORDELIA Project Analysis
 

@@ -215,8 +215,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#analysis-using-the-resources" id="toc-analysis-using-the-resources" class="nav-link active" data-scroll-target="#analysis-using-the-resources">Analysis using the <code>resources</code></a></li>
-  <li><a href="#omic-data-analysis" id="toc-omic-data-analysis" class="nav-link" data-scroll-target="#omic-data-analysis">Omic data analysis</a></li>
   <li><a href="#survival-analysis" id="toc-survival-analysis" class="nav-link" data-scroll-target="#survival-analysis">Survival analysis</a></li>
+  <li><a href="#omic-data-analysis" id="toc-omic-data-analysis" class="nav-link" data-scroll-target="#omic-data-analysis">Omic data analysis</a></li>
   <li><a href="#exercise-cordelia-project-analysis" id="toc-exercise-cordelia-project-analysis" class="nav-link" data-scroll-target="#exercise-cordelia-project-analysis">Exercise: CORDELIA Project Analysis</a>
   <ul class="collapse">
   <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
@@ -249,6 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/DataSHIELD_workshop_APHRC_resources.Rmd').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'DataSHIELD_workshop_APHRC_resources.Rmd'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm"> <i class="bi bi-download"></i> Download this R Markdown file </a></p>
 <section id="analysis-using-the-resources" class="level1">
 <h1>Analysis using the <code>resources</code></h1>
+<p>For more examples and detailed information about working with resources in DataSHIELD, please refer to the <a href="https://github.com/obiba/resources-workshop">Resources Workshop Repository</a>.</p>
 <p>Now, let us illustrate a similar analysis of the previous example using CNSIM datasets but having the data as a resource. Now the resources are available in a project called <code>RSRC</code> (see https://opal-demo.obiba.org/#/project/RSRC/resources). Now, we write all the require code in a single chunk:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span>
@@ -352,10 +353,6 @@ GENDER          0.6315685 0.797650197    0.338328242      1.88055787</code></pre
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datashield.logout</span>(conns)</span></code></pre></div>
 </div>
 </section>
-<section id="omic-data-analysis" class="level1">
-<h1>Omic data analysis</h1>
-<p>Please refer to the <a href="https://isglobal-brge.github.io/resource_bookdown/Omic.html">Omic data analysis resource</a>.</p>
-</section>
 <section id="survival-analysis" class="level1">
 <h1>Survival analysis</h1>
 <p>Survival analysis can be performed in DataSHIELD using <code>dsSurvival</code> package (paper <a href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06085-1">https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06085-1</a>)</p>
@@ -367,6 +364,10 @@ GENDER          0.6315685 0.797650197    0.338328242      1.88055787</code></pre
 <p>Now, read how to perform surival analysis using DataSHIELD in this vignette</p>
 <p><a href="https://neelsoumya.github.io/dsSurvivalbookdown/">https://neelsoumya.github.io/dsSurvivalbookdown/</a></p>
 <p>TASK: Perform survival analysis of CORDELIA dataset where the time until death is in the variable called “todeath” and censoring variable is in the variable “death” to investigate whether smoking (variable “fumador”) is associated or not with mortality after adjusting for age (variable “edad”) NOTE: follow all steps in the vignette.</p>
+</section>
+<section id="omic-data-analysis" class="level1">
+<h1>Omic data analysis</h1>
+<p>Please refer to the <a href="https://isglobal-brge.github.io/resource_bookdown/Omic.html">Omic data analysis resource</a>.</p>
 </section>
 <section id="exercise-cordelia-project-analysis" class="level1">
 <h1>Exercise: CORDELIA Project Analysis</h1>

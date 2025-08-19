@@ -1,3 +1,7 @@
+---
+title: "DataSHIELD OMOP Practical Exercises"
+---
+
 # Practical Exercises: OMOP CDM with DataSHIELD {#omop-exercises}
 
 ## Introduction
@@ -44,11 +48,15 @@ For this tutorial, you'll connect to:
 This server uses a self-signed certificate. You'll need to configure your R session to accept it.
 :::
 
-### Download the Exercise Script
+---
 
-You can download the complete exercise script here: [omop_exercises_solution.R](omop_exercises_solution.R)
+## Need Help? 
 
-The script contains both the exercises and solutions. Try to complete each exercise before looking at the solution!
+<a href="omop_exercises_solution.html" class="btn btn-success btn-lg">
+<i class="bi bi-lightbulb"></i> View Complete Solution!
+</a>
+
+The solution file contains all the code with detailed explanations and outputs to help you understand each step of the analysis.
 
 ---
 
@@ -79,6 +87,7 @@ httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
 ::: {.callout-tip}
 **Hint**: You need to:
+
 1. Create a builder with `newDSLoginBuilder()`
 2. Add server details with `builder$append()`
 3. Build the login data
@@ -143,6 +152,7 @@ Check how many participants we have:
 
 ::: {.callout-note}
 **Detective Work**: Based on what you've discovered so far:
+
 - All participants share a specific characteristic
 - They're in a particular age range
 - What life event might they be experiencing?
@@ -189,6 +199,7 @@ Finally, look at other observations (social/demographic factors):
 
 ::: {.callout-important}
 **The Big Reveal**: By now you should have figured out:
+
 - This is a study of women
 - In reproductive age
 - Looking at specific mental health conditions
@@ -245,6 +256,7 @@ Check your final data structure. How many variables do you have now?
 
 ::: {.callout-tip}
 **Expected Variables**: By the end of Exercise 4, you should have:
+
 - Original person table columns (11)
 - Edinburgh scale (1)
 - Social factors (5)
@@ -345,6 +357,7 @@ Create a cross-tabulation to understand the relationship between antenatal and p
 ```
 
 **Key Questions**:
+
 1. How many women had depression during pregnancy only?
 2. How many developed it only after delivery?
 3. How many had depression at both time points?
@@ -374,6 +387,7 @@ Create a dataset for correlation analysis:
 ```
 
 **Research Questions**:
+
 1. Is younger age associated with higher depression scores?
 2. How strong is the link between antenatal and postpartum depression?
 3. Does the Edinburgh score correlate with clinical diagnoses?
@@ -442,37 +456,11 @@ ds.cbind(
 
 ---
 
-## Exercise 10: The Complete Picture
-
-### Final Analysis: What Have We Learned?
-
-Reflect on your discoveries:
-
-1. **The Study Population**: You discovered this was a maternal health study focusing on depression during and after pregnancy.
-
-2. **Key Findings from Your Analysis**:
-   - Prevalence of antenatal depression: ~38%
-   - Prevalence of postpartum depression: ~17%
-   - Many women with postpartum depression also had antenatal depression
-
-3. **Clinical Implications**: What do these patterns suggest about screening and intervention timing?
-
 ### Challenge: Create Your Own Research Question
 
-Based on what you've learned about the data, formulate and test your own hypothesis:
+Based on what you've observed about the data, formulate and test your own hypothesis:
 
 ```r
 # YOUR CODE HERE:
 # Design and run your own analysis
 ```
-
----
-
-## Need Help? 
-
-<a href="omop_exercises_solution.html" class="btn btn-success btn-lg">
-<i class="bi bi-lightbulb"></i> View Complete Solutions
-</a>
-
-The solution file contains all the code with detailed explanations and outputs to help you understand each step of the analysis.
-

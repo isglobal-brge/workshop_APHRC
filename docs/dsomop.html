@@ -228,6 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#subsetting-data" id="toc-subsetting-data" class="nav-link" data-scroll-target="#subsetting-data">Subsetting data</a></li>
   <li><a href="#more-advanced-operations" id="toc-more-advanced-operations" class="nav-link" data-scroll-target="#more-advanced-operations">More advanced operations</a></li>
   <li><a href="#logout" id="toc-logout" class="nav-link" data-scroll-target="#logout">Logout</a></li>
+  <li><a href="#real-world-example" id="toc-real-world-example" class="nav-link" data-scroll-target="#real-world-example">Real-world example</a></li>
   </ul>
 </nav>
     </div>
@@ -1236,7 +1237,7 @@ $`opal-demo`$length
 
 $`opal-demo`$`quantiles &amp; mean`
       5%      10%      25%      50%      75%      90%      95%     Mean 
- 90.4000  98.4000 107.2500 113.5000 126.5000 146.3000 158.0000 117.8448 </code></pre>
+ 76.0000  91.7000 107.2500 117.5000 127.7500 139.2000 146.1500 115.6034 </code></pre>
 </div>
 </div>
 <p>Let’s now use the <code>renameVars</code> from the <code>dsHelper</code> package, which we have seen before, to rename the variable to <code>sbp</code> for convenience:</p>
@@ -1267,19 +1268,19 @@ $`opal-demo`$`quantiles &amp; mean`
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$breaks
- [1]  71.29917  80.93246  90.56574 100.19902 109.83230 119.46558 129.09886
- [8] 138.73215 148.36543 157.99871 167.63199
+ [1]  67.44516  76.23727  85.02938  93.82149 102.61359 111.40570 120.19781
+ [8] 128.98991 137.78202 146.57413 155.36624
 
 $counts
- [1]  0  0  6 13 14 10  3  4  0  4
+ [1]  4  0  4  3 10 13  9  7  4  3
 
 $density
- [1] 0.000000000 0.000000000 0.010738633 0.023267038 0.025056810 0.017897721
- [7] 0.005369316 0.007159089 0.000000000 0.007159089
+ [1] 0.007844026 0.000000000 0.007844026 0.005883019 0.019610065 0.025493084
+ [7] 0.017649058 0.013727045 0.007844026 0.005883019
 
 $mids
- [1]  76.11581  85.74910  95.38238 105.01566 114.64894 124.28222 133.91551
- [8] 143.54879 153.18207 162.81535
+ [1]  71.84122  80.63332  89.42543  98.21754 107.00965 115.80175 124.59386
+ [8] 133.38597 142.17808 150.97018
 
 $xname
 [1] "xvect"
@@ -2643,6 +2644,14 @@ $output.information
 <div class="cell">
 <div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datashield.logout</span>(conns)</span></code></pre></div>
 </div>
+</section>
+<section id="real-world-example" class="level1">
+<h1>Real-world example</h1>
+<p>In this article, we present a real-world example demonstrating how dsOMOP can be applied to analyze clinical data and validate known clinical associations by exploring the relationship between chronic obstructive pulmonary disease (COPD) and several key predictors using a large-scale synthetic dataset:</p>
+<p><a href="https://isglobal-brge.github.io/dsOMOPHelper/articles/copd.html" class="btn btn-info btn-lg" target="_blank"> <i class="bi bi-arrow-right-circle"></i> COPD analysis with dsOMOP </a></p>
+<hr>
+<p>Now that you are familiar with DataSHIELD, the OMOP CDM and dsOMOP, are you ready to practice with real data? Try our comprehensive OMOP exercises using data from the African Population and Health Research Center (APHRC)!</p>
+<p><a href="./omop-exercises.html" class="btn btn-primary btn-lg"> <i class="bi bi-pencil-square"></i> Go to the exercises! </a></p>
 
 
 </section>

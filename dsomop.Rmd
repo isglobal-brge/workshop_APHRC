@@ -562,3 +562,19 @@ Do not forget to logout from the DataSHIELD server after finishing the exercise:
 ```{r logout}
 datashield.logout(conns)
 ```
+
+# Real-world example
+
+In this article, we present a real-world example demonstrating how dsOMOP can be applied to analyze clinical data and validate known clinical associations by exploring the relationship between chronic obstructive pulmonary disease (COPD) and several key predictors using a large-scale synthetic dataset:
+
+<a href="https://isglobal-brge.github.io/dsOMOPHelper/articles/copd.html" class="btn btn-info btn-lg" target="_blank">
+<i class="bi bi-arrow-right-circle"></i> COPD analysis with dsOMOP
+</a>
+
+---
+
+Now that you are familiar with DataSHIELD, the OMOP CDM and dsOMOP, are you ready to practice with real data? Try our comprehensive OMOP exercises using data from the African Population and Health Research Center (APHRC)!
+
+<a href="omop-exercises.qmd" class="btn btn-primary btn-lg">
+<i class="bi bi-pencil-square"></i> Go to the exercises!
+</a>

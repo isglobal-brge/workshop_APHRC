@@ -227,8 +227,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#server-connection-details" id="toc-server-connection-details" class="nav-link" data-scroll-target="#server-connection-details">Server Connection Details</a></li>
-  <li><a href="#download-the-exercise-script" id="toc-download-the-exercise-script" class="nav-link" data-scroll-target="#download-the-exercise-script">Download the Exercise Script</a></li>
   </ul></li>
+  <li><a href="#need-help" id="toc-need-help" class="nav-link" data-scroll-target="#need-help">Need Help?</a></li>
   <li><a href="#exercise-1-server-connection-and-mystery-dataset" id="toc-exercise-1-server-connection-and-mystery-dataset" class="nav-link" data-scroll-target="#exercise-1-server-connection-and-mystery-dataset">Exercise 1: Server Connection and Mystery Dataset</a>
   <ul class="collapse">
   <li><a href="#task-1.1-create-a-server-connection" id="toc-task-1.1-create-a-server-connection" class="nav-link" data-scroll-target="#task-1.1-create-a-server-connection">Task 1.1: Create a Server Connection</a></li>
@@ -276,13 +276,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#task-9.1-hypothesis-1---social-support-matters" id="toc-task-9.1-hypothesis-1---social-support-matters" class="nav-link" data-scroll-target="#task-9.1-hypothesis-1---social-support-matters">Task 9.1: Hypothesis 1 - Social Support Matters</a></li>
   <li><a href="#task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression" id="toc-task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression" class="nav-link" data-scroll-target="#task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression">Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression</a></li>
   <li><a href="#task-9.3-hypothesis-3---young-mothers-at-higher-risk" id="toc-task-9.3-hypothesis-3---young-mothers-at-higher-risk" class="nav-link" data-scroll-target="#task-9.3-hypothesis-3---young-mothers-at-higher-risk">Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk</a></li>
-  </ul></li>
-  <li><a href="#exercise-10-the-complete-picture" id="toc-exercise-10-the-complete-picture" class="nav-link" data-scroll-target="#exercise-10-the-complete-picture">Exercise 10: The Complete Picture</a>
-  <ul class="collapse">
-  <li><a href="#final-analysis-what-have-we-learned" id="toc-final-analysis-what-have-we-learned" class="nav-link" data-scroll-target="#final-analysis-what-have-we-learned">Final Analysis: What Have We Learned?</a></li>
   <li><a href="#challenge-create-your-own-research-question" id="toc-challenge-create-your-own-research-question" class="nav-link" data-scroll-target="#challenge-create-your-own-research-question">Challenge: Create Your Own Research Question</a></li>
   </ul></li>
-  <li><a href="#need-help" id="toc-need-help" class="nav-link" data-scroll-target="#need-help">Need Help?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -344,13 +339,14 @@ Warning
 <p>This server uses a self-signed certificate. You’ll need to configure your R session to accept it.</p>
 </div>
 </div>
-</section>
-<section id="download-the-exercise-script" class="level3">
-<h3 data-anchor-id="download-the-exercise-script">Download the Exercise Script</h3>
-<p>You can download the complete exercise script here: <a href="omop_exercises_solution.R">omop_exercises_solution.R</a></p>
-<p>The script contains both the exercises and solutions. Try to complete each exercise before looking at the solution!</p>
 <hr>
 </section>
+</section>
+<section id="need-help" class="level2">
+<h2 data-anchor-id="need-help">Need Help?</h2>
+<p><a href="omop_exercises_solution.html" class="btn btn-success btn-lg"> <i class="bi bi-lightbulb"></i> View Complete Solution! </a></p>
+<p>The solution file contains all the code with detailed explanations and outputs to help you understand each step of the analysis.</p>
+<hr>
 </section>
 <section id="exercise-1-server-connection-and-mystery-dataset" class="level2">
 <h2 data-anchor-id="exercise-1-server-connection-and-mystery-dataset">Exercise 1: Server Connection and Mystery Dataset</h2>
@@ -382,7 +378,13 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Hint</strong>: You need to: 1. Create a builder with <code>newDSLoginBuilder()</code> 2. Add server details with <code>builder$append()</code> 3. Build the login data 4. Connect with <code>datashield.login()</code></p>
+<p><strong>Hint</strong>: You need to:</p>
+<ol type="1">
+<li>Create a builder with <code>newDSLoginBuilder()</code></li>
+<li>Add server details with <code>builder$append()</code></li>
+<li>Build the login data</li>
+<li>Connect with <code>datashield.login()</code></li>
+</ol>
 </div>
 </div>
 </section>
@@ -433,7 +435,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Detective Work</strong>: Based on what you’ve discovered so far: - All participants share a specific characteristic - They’re in a particular age range - What life event might they be experiencing?</p>
+<p><strong>Detective Work</strong>: Based on what you’ve discovered so far:</p>
+<ul>
+<li>All participants share a specific characteristic</li>
+<li>They’re in a particular age range</li>
+<li>What life event might they be experiencing?</li>
+</ul>
 </div>
 </div>
 <hr>
@@ -472,7 +479,13 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>The Big Reveal</strong>: By now you should have figured out: - This is a study of women - In reproductive age - Looking at specific mental health conditions - During a particular life period</p>
+<p><strong>The Big Reveal</strong>: By now you should have figured out:</p>
+<ul>
+<li>This is a study of women</li>
+<li>In reproductive age</li>
+<li>Looking at specific mental health conditions</li>
+<li>During a particular life period</li>
+</ul>
 <p>Can you name the specific focus of this study?</p>
 </div>
 </div>
@@ -519,7 +532,14 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Expected Variables</strong>: By the end of Exercise 4, you should have: - Original person table columns (11) - Edinburgh scale (1) - Social factors (5) - Depression diagnoses (2) - Total: 19 variables</p>
+<p><strong>Expected Variables</strong>: By the end of Exercise 4, you should have:</p>
+<ul>
+<li>Original person table columns (11)</li>
+<li>Edinburgh scale (1)</li>
+<li>Social factors (5)</li>
+<li>Depression diagnoses (2)</li>
+<li>Total: 19 variables</li>
+</ul>
 </div>
 </div>
 <hr>
@@ -594,7 +614,13 @@ Tip
 <p>Create a cross-tabulation to understand the relationship between antenatal and postpartum depression:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use ds.table() with rvar="antenatal_depression" and cvar="postpartum_depression"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Key Questions</strong>: 1. How many women had depression during pregnancy only? 2. How many developed it only after delivery? 3. How many had depression at both time points? 4. What does this tell us about the progression of maternal depression?</p>
+<p><strong>Key Questions</strong>:</p>
+<ol type="1">
+<li>How many women had depression during pregnancy only?</li>
+<li>How many developed it only after delivery?</li>
+<li>How many had depression at both time points?</li>
+<li>What does this tell us about the progression of maternal depression?</li>
+</ol>
 <hr>
 </section>
 </section>
@@ -612,7 +638,12 @@ Tip
 <h3 data-anchor-id="task-8.2-explore-correlations">Task 8.2: Explore Correlations</h3>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Research Questions</strong>: 1. Is younger age associated with higher depression scores? 2. How strong is the link between antenatal and postpartum depression? 3. Does the Edinburgh score correlate with clinical diagnoses?</p>
+<p><strong>Research Questions</strong>:</p>
+<ol type="1">
+<li>Is younger age associated with higher depression scores?</li>
+<li>How strong is the link between antenatal and postpartum depression?</li>
+<li>Does the Edinburgh score correlate with clinical diagnoses?</li>
+</ol>
 <hr>
 </section>
 </section>
@@ -673,37 +704,14 @@ Note
 </div>
 <hr>
 </section>
-</section>
-<section id="exercise-10-the-complete-picture" class="level2">
-<h2 data-anchor-id="exercise-10-the-complete-picture">Exercise 10: The Complete Picture</h2>
-<section id="final-analysis-what-have-we-learned" class="level3">
-<h3 data-anchor-id="final-analysis-what-have-we-learned">Final Analysis: What Have We Learned?</h3>
-<p>Reflect on your discoveries:</p>
-<ol type="1">
-<li><p><strong>The Study Population</strong>: You discovered this was a maternal health study focusing on depression during and after pregnancy.</p></li>
-<li><p><strong>Key Findings from Your Analysis</strong>:</p>
-<ul>
-<li>Prevalence of antenatal depression: ~38%</li>
-<li>Prevalence of postpartum depression: ~17%</li>
-<li>Many women with postpartum depression also had antenatal depression</li>
-</ul></li>
-<li><p><strong>Clinical Implications</strong>: What do these patterns suggest about screening and intervention timing?</p></li>
-</ol>
-</section>
 <section id="challenge-create-your-own-research-question" class="level3">
 <h3 data-anchor-id="challenge-create-your-own-research-question">Challenge: Create Your Own Research Question</h3>
-<p>Based on what you’ve learned about the data, formulate and test your own hypothesis:</p>
+<p>Based on what you’ve observed about the data, formulate and test your own hypothesis:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Design and run your own analysis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-</section>
-<section id="need-help" class="level2">
-<h2 data-anchor-id="need-help">Need Help?</h2>
-<p><a href="omop_exercises_solution.html" class="btn btn-success btn-lg"> <i class="bi bi-lightbulb"></i> View Complete Solutions </a></p>
-<p>The solution file contains all the code with detailed explanations and outputs to help you understand each step of the analysis.</p>
 
 
+</section>
 </section>
 </section>
 

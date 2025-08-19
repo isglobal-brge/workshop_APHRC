@@ -1,5 +1,8 @@
 ---
 title: "DataSHIELD OMOP Practical Exercises"
+format: 
+  html:
+    code-copy: false
 ---
 
 # Practical Exercises: OMOP CDM with DataSHIELD {#omop-exercises}

@@ -248,6 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modelling-multiple-variables-and-interactions" id="toc-modelling-multiple-variables-and-interactions" class="nav-link" data-scroll-target="#modelling-multiple-variables-and-interactions">Modelling multiple variables and interactions</a></li>
   </ul></li>
   <li><a href="#at-the-end-of-your-rstudio-server-analysis" id="toc-at-the-end-of-your-rstudio-server-analysis" class="nav-link" data-scroll-target="#at-the-end-of-your-rstudio-server-analysis">At the end of your RStudio Server analysis:</a></li>
+  <li><a href="#meta-analysis" id="toc-meta-analysis" class="nav-link" data-scroll-target="#meta-analysis">Meta-analysis</a></li>
   </ul></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul>
@@ -2299,7 +2300,14 @@ D$LAB_HDL:D$GENDER1 0.69958422</code></pre>
 <span id="cb148-7"><a href="#cb148-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code></pre></div>
 </div>
 <p>Also you can delete unwanted workspaces using the datashield.workspace_rm</p>
-<p>In Rstudio Server: DON’T forget to use the orange “quit the current R session” button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in.</p>
+<p>In Rstudio Server: DON'T forget to use the orange "quit the current R session" button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in.</p>
+</section>
+<section id="meta-analysis" class="level2">
+<h2 data-anchor-id="meta-analysis">Meta-analysis</h2>
+<p>The following script describes how to perform a meta-analysis of data from three different Opal servers:</p>
+<p><a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/meta_analysis.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'meta_analysis.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
+<i class="bi bi-download"></i> Download the meta-analysis script 
+</a></p>
 </section>
 </section>
 <section id="exercise" class="level1">

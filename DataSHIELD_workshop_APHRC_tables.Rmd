@@ -663,6 +663,13 @@ Also you can delete unwanted workspaces using the datashield.workspace_rm
 
 In Rstudio Server: DON'T forget to use the orange "quit the current R session" button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in.
 
+# Meta-analysis
+
+The following script describes how to perform a meta-analysis of data from three different Opal servers:
+
+<a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/meta_analysis.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'meta_analysis.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
+<i class="bi bi-download"></i> Download the meta-analysis script 
+</a>
 
 # Exercise
 

@@ -5,14 +5,6 @@ format:
     code-copy: false
 ---
 
-## Download the Worksheet
-
-<a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_APHRC/main/omop_exercises_worksheet.Rmd').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'omop_exercises_worksheet.Rmd'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
-<i class="bi bi-download"></i> Download exercise worksheet
-</a>
-
-Download the R Markdown worksheet to complete the exercises in your own RStudio environment. The worksheet contains all the exercise tasks with space for your code.
-
 ## Introduction
 
 In this practical exercise, you will learn how to work with OMOP CDM (Observational Medical Outcomes Partnership Common Data Model) data using DataSHIELD. 

@@ -55,7 +55,7 @@ This server uses a self-signed certificate. You'll need to configure your R sess
 
 ## Need Help? 
 
-<a href="omop_exercises_solution.html" class="btn btn-success btn-lg">
+<a href="omop_exercises_solution.html" target="_blank" class="btn btn-success btn-lg">
 <i class="bi bi-lightbulb"></i> View Complete Solution!
 </a>
 

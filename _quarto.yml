@@ -43,6 +43,9 @@ website:
           - text: "dsOMOP Workshop"
             href: dsomop.Rmd
             icon: database-fill
+          - text: "OMOP Exercises"
+            href: omop-exercises.qmd
+            icon: clipboard-check
       - text: "Schedule"
         href: schedule.qmd
         icon: calendar3

@@ -1,0 +1,474 @@
+---
+title: "DataSHIELD OMOP Practical Exercises"
+subtitle: "Learning to explore and analyze OMOP data with DataSHIELD"
+freeze: true
+format: 
+  html:
+    code-copy: true
+    toc: true
+    toc-depth: 3
+execute:
+  eval: true
+  echo: true
+  warning: false
+  error: true
+---
+
+<a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/omop_exercises_solution.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'omop_exercises_solution.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
+<i class="bi bi-download"></i> Run the solution yourself!
+</a>
+
+# Introduction
+
+This tutorial will guide you through exploring and analyzing OMOP data using DataSHIELD. You'll work with a real dataset from the African Population and Health Research Center (APHRC), discovering what type of study it is through systematic exploration.
+
+## Learning Objectives
+
+By the end of this tutorial, you will learn how to:
+
+- Connect to an OMOP database through DataSHIELD
+- Explore available data systematically to understand the study design
+- Transform OMOP concepts into analyzable variables
+- Perform privacy-preserving statistical analyses
+- Build and interpret statistical models with federated data
+
+## Setup
+
+First, let's load the required libraries and configure SSL settings:
+
+```{r setup}
+# Load required libraries
+library(DSI)
+library(DSOpal)
+library(dsBaseClient)
+library(dsOMOPClient)
+library(dsOMOPHelper)
+
+# Configure SSL settings (for self-signed certificates)
+library(httr)
+httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
+```
+
+# Exercise 1: Server Connection and Initial Data Exploration
+
+Let's connect to the mystery dataset and see what we can discover!
+
+```{r exercise1}
+cat("\n==================================================\n")
+cat("EXERCISE 1: Connect to the server and explore the data structure\n")
+cat("==================================================\n\n")
+
+# Create a connection to the OMOP DataSHIELD server
+builder <- newDSLoginBuilder()
+builder$append(server="aphrc",
+               url="https://44.201.204.234:9090",
+               user="administrator",
+               password="password",
+               driver = "OpalDriver",
+               profile = "omop")
+
+logindata <- builder$build()
+conns <- datashield.login(logins=logindata)
+
+# Create a dsOMOPHelper instance
+o <- ds.omop.helper(
+  connections = conns,
+  resource = "omop.study_1", 
+  symbol = "data"
+)
+
+# Check the initial data summary
+cat("Initial data summary:\n")
+ds.summary("data")
+```
+
+# Exercise 2: Who Are We Studying?
+
+Let's investigate the characteristics of our study population.
+
+```{r exercise2}
+cat("\n\n==================================================\n")
+cat("EXERCISE 2: Who Are We Studying?\n")
+cat("==================================================\n\n")
+
+# First Clue - Gender Distribution
+cat("Task 2.1: Gender distribution\n")
+ds.table("data$gender_concept_id")
+cat("\nObservation: All participants are female! This is our first clue.\n")
+
+# Second Clue - Age Distribution
+cat("\nTask 2.2: Age distribution\n")
+ds.assign(
+  toAssign = "2025 - data$year_of_birth",
+  newobj = "age",
+  datasources = conns
+)
+cat("Age statistics:\n")
+ds.mean("age", datasources = conns)
+ds.quantileMean("age", datasources = conns)
+cat("\nObservation: Women of reproductive age (roughly 30-45)\n")
+
+# Sample Size
+cat("\nTask 2.3: Sample size\n")
+print(ds.dim("data"))
+cat("\nWe have 188 female participants of reproductive age. What might they have in common?\n")
+```
+
+# Exercise 3: What Was Measured?
+
+Now let's explore what types of data were collected.
+
+```{r exercise3}
+cat("\n\n==================================================\n")
+cat("EXERCISE 3: What Was Measured?\n")
+cat("==================================================\n\n")
+
+# Explore Conditions (Diagnoses)
+cat("Task 3.1: Available conditions:\n")
+cond_concepts <- o$concepts("condition_occurrence")
+print(cond_concepts)
+cat("\nReveal: Depression during and after pregnancy! This is a maternal mental health study.\n")
+
+# Explore Measurements
+cat("\nTask 3.2: Clinical measurements:\n")
+meas_concepts <- o$concepts("measurement")
+print(meas_concepts)
+cat("\nThe Edinburgh Postnatal Depression Scale - a standard tool for screening maternal depression\n")
+
+# Explore Observations
+cat("\nTask 3.3: Social and demographic factors:\n")
+obs_concepts <- o$concepts("observation")
+print(obs_concepts)
+cat("\nKey factors: Employment, marital status, household size, religion, education\n")
+cat("These social determinants can influence mental health outcomes!\n")
+```
+
+# Exercise 4: Building Your Analysis Dataset
+
+Let's retrieve the variables we need for our analysis.
+
+```{r exercise4}
+cat("\n\n==================================================\n")
+cat("EXERCISE 4: Building Your Analysis Dataset\n")
+cat("==================================================\n\n")
+
+# Retrieve the main clinical measurement
+cat("Task 4.1: Retrieving Edinburgh Postnatal Depression Scale...\n")
+o$auto(tables="measurement", 
+       concepts=4164838,
+       columns="value_as_number")
+
+cat("\nData structure after adding Edinburgh scale:\n")
+ds.summary("data")
+cat("\n✓ Added: edinburgh_postnatal_depression_scale.value_as_number\n")
+
+# Add Social Determinants
+cat("\nTask 4.2: Retrieving social determinants...\n")
+
+# Employment status
+cat("- Adding employment status...\n")
+o$auto(tables="observation",
+       concepts=44804285,
+       columns="value_as_concept_id")
+
+# Other social factors
+cat("- Adding marital status, household size, and religious affiliation...\n")
+o$auto(tables="observation",
+       concepts=c(4053609, 4075500, 4052017),
+       columns="value_as_concept_id")
+
+# Education level
+cat("- Checking for education level...\n")
+o$auto(tables="observation",
+       concepts=42528763,
+       columns="value_as_concept_id")
+
+cat("\nCurrent variables in our dataset:\n")
+current_vars <- ds.colnames("data")[[1]]
+print(current_vars)
+
+# Retrieve the Diagnoses
+cat("\nTask 4.3: Retrieving depression diagnoses...\n")
+o$auto(tables="condition_occurrence",
+       concepts=c(4239471, 37312479),
+       columns="condition_occurrence_id")
+
+# Final check
+cat("\nFinal data structure:\n")
+ds.summary("data")
+```
+
+# Exercise 5: The Data Transformation Challenge
+
+The depression diagnoses are stored as IDs. Let's understand why we need to transform them.
+
+```{r exercise5}
+cat("\n\n==================================================\n")
+cat("EXERCISE 5: The Data Transformation Challenge\n")
+cat("==================================================\n\n")
+
+cat("Examining the depression diagnosis columns...\n")
+cat("These are stored as condition_occurrence_id values (long ID numbers)\n")
+cat("We need to transform these into analyzable boolean (0/1) variables\n\n")
+
+# Let's see what columns we have now
+current_cols <- ds.colnames("data")[[1]]
+depression_cols <- grep("depression.*condition_occurrence_id", current_cols, value = TRUE)
+cat("Depression-related columns:\n")
+print(depression_cols)
+```
+
+# Exercise 6: Converting OMOP IDs to Boolean Variables
+
+Here's how we transform the condition IDs into analyzable format:
+
+```{r exercise6}
+cat("\n\n==================================================\n")
+cat("EXERCISE 6: Transform condition IDs to analyzable format\n")
+cat("==================================================\n\n")
+
+# Function to convert OMOP IDs to boolean variables
+convert_to_boolean <- function(table, variable_name, id_type, conns) {
+  cat(sprintf("Converting %s to boolean...\n", variable_name))
+  
+  # Step 1: Construct the full variable name
+  full_variable_name <- paste0(table, "$", variable_name, ".", id_type)
+  
+  # Step 2: Convert to numeric (IDs are often stored as strings)
+  new_numeric_name <- paste0(variable_name, "_numeric")
+  ds.asNumeric(
+    x.name = full_variable_name, 
+    newobj = new_numeric_name, 
+    datasources = conns
+  )
+  
+  # Step 3: Convert to boolean (1 if ID exists, 0 if not)
+  ds.Boole(
+    V1 = new_numeric_name, 
+    V2 = 0, 
+    Boolean.operator = "!=", 
+    numeric.output = TRUE, 
+    na.assign = 0, 
+    newobj = variable_name,
+    datasources = conns
+  )
+}
+
+# Convert antenatal depression to boolean
+convert_to_boolean("data", "antenatal_depression", "condition_occurrence_id", conns)
+
+# Convert postpartum depression to boolean
+convert_to_boolean("data", "postpartum_depression", "condition_occurrence_id", conns)
+
+# Check the distribution of these new variables
+cat("\nAntenatal depression prevalence:\n")
+ds.table("antenatal_depression")
+cat("\nPostpartum depression prevalence:\n")
+ds.table("postpartum_depression")
+```
+
+# Exercise 7: Understanding Depression Patterns
+
+Let's explore the depression patterns in our data.
+
+```{r exercise7}
+cat("\n\n==================================================\n")
+cat("EXERCISE 7: Understanding Depression Patterns\n")
+cat("==================================================\n\n")
+
+# Create a histogram of Edinburgh scores
+ds.assign(
+  toAssign = "data$edinburgh_postnatal_depression_scale.value_as_number",
+  newobj = "edinburgh_score",
+  datasources = conns
+)
+
+cat("Edinburgh score distribution:\n")
+ds.histogram("edinburgh_score", datasources = conns)
+
+# Calculate summary statistics for Edinburgh scores
+cat("\nEdinburgh score statistics:\n")
+cat("Mean:", ds.mean("edinburgh_score", datasources = conns)$Global.Mean[1], "\n")
+cat("Variance:", ds.var("edinburgh_score", datasources = conns)$Global.Variance[1], "\n")
+cat("Quantiles:\n")
+print(ds.quantileMean("edinburgh_score", datasources = conns))
+
+# Create a cross-tabulation of depression types
+cat("\nCross-tabulation of depression types:\n")
+ds.table(rvar = "antenatal_depression", cvar = "postpartum_depression", datasources = conns)
+```
+
+# Exercise 8: Correlation Analysis
+
+Let's explore correlations between variables.
+
+```{r exercise8}
+cat("\n\n==================================================\n")
+cat("EXERCISE 8: Explore correlations\n")
+cat("==================================================\n\n")
+
+# Create simplified variable names
+ds.assign("data$employment.value_as_concept_id", "employment", conns)
+ds.assign("data$number_in_household.value_as_concept_id", "household_size", conns)
+
+# Create a dataset for correlation
+variable_list <- c("edinburgh_score", "age", "antenatal_depression", "postpartum_depression")
+ds.dataFrame(
+  x = variable_list,
+  newobj = "cor_data",
+  datasources = conns
+)
+
+# Calculate the correlation matrix
+cat("Correlation matrix:\n")
+cor_matrix <- ds.cor("cor_data", datasources = conns)
+print(cor_matrix)
+```
+
+# Exercise 9: Building Statistical Models
+
+Now let's test some hypotheses with statistical models.
+
+```{r exercise9}
+cat("\n\n==================================================\n")
+cat("EXERCISE 9: Create and interpret GLM models\n")
+cat("==================================================\n\n")
+
+# Prepare all variables
+ds.assign("data$marital_status.value_as_concept_id", "marital_status", conns)
+ds.assign("data$religious_affiliation.value_as_concept_id", "religion", conns)
+
+# Create modeling dataset
+model_vars <- c(
+  "edinburgh_score",
+  "age",
+  "employment",
+  "marital_status",
+  "household_size",
+  "religion",
+  "antenatal_depression",
+  "postpartum_depression"
+)
+
+ds.cbind(
+  x = model_vars,
+  DataSHIELD.checks = FALSE,
+  newobj = "model_data",
+  datasources = conns
+)
+
+# Model 1: Simple linear regression
+cat("Model 1: Simple linear regression\n")
+cat("Research question: Do age and employment affect depression severity?\n\n")
+
+model1 <- ds.glm(
+  formula = "edinburgh_score ~ age + employment",
+  data = "model_data",
+  family = "gaussian",
+  datasources = conns
+)
+
+cat("Model 1 Results:\n")
+print(model1$coefficients[, c("Estimate", "Std. Error", "p-value")])
+
+# Model 2: Logistic regression for postpartum depression
+cat("\n\nModel 2: Logistic regression\n")
+cat("Research question: What predicts postpartum depression?\n\n")
+
+model2 <- ds.glm(
+  formula = "postpartum_depression ~ antenatal_depression + edinburgh_score + age",
+  data = "model_data",
+  family = "binomial",
+  datasources = conns
+)
+
+cat("Model 2 Results (with Odds Ratios):\n")
+coef2 <- as.data.frame(model2$coefficients)
+print(coef2[, c("Estimate", "P_OR", "low0.95CI.P_OR", "high0.95CI.P_OR", "p-value")])
+
+# Model 3: Comprehensive model
+cat("\n\nModel 3: Comprehensive model\n")
+cat("Research question: How do social factors influence depression severity?\n\n")
+
+model3 <- ds.glm(
+  formula = "edinburgh_score ~ age + employment + marital_status + household_size + antenatal_depression + postpartum_depression",
+  data = "model_data",
+  family = "gaussian",
+  datasources = conns
+)
+
+cat("Model 3 Results:\n")
+coef3 <- as.data.frame(model3$coefficients)
+significant <- coef3[coef3$`p-value` < 0.05, ]
+if(nrow(significant) > 0) {
+  cat("\nSignificant predictors (p < 0.05):\n")
+  print(significant[, c("Estimate", "Std. Error", "p-value")])
+} else {
+  cat("\nNo significant predictors at p < 0.05\n")
+}
+```
+
+# Exercise 10: Advanced Analysis - Interaction Effects
+
+Let's test for interaction effects between variables.
+
+```{r exercise10}
+cat("\n\n==================================================\n")
+cat("EXERCISE 10: Test for interaction effects\n")
+cat("==================================================\n\n")
+
+cat("Testing interaction: Does employment modify the effect of antenatal depression?\n\n")
+
+model4 <- ds.glm(
+  formula = "edinburgh_score ~ antenatal_depression * employment + age",
+  data = "model_data",
+  family = "gaussian",
+  datasources = conns
+)
+
+# Look for interaction terms
+coef4 <- as.data.frame(model4$coefficients)
+interaction_terms <- grep(":", rownames(coef4), value = TRUE)
+if(length(interaction_terms) > 0) {
+  cat("Interaction effects:\n")
+  print(coef4[interaction_terms, c("Estimate", "Std. Error", "p-value")])
+}
+```
+
+# Clean Up
+
+Always remember to log out from the servers!
+
+```{r cleanup}
+# Very important!!!
+datashield.logout(conns)
+```
+
+# Summary
+
+In this tutorial, you've learned how to:
+
+1. **Connect to OMOP data** through DataSHIELD
+2. **Discover the nature of a dataset** through systematic exploration
+3. **Transform OMOP concepts** into analyzable variables using boolean conversion
+4. **Perform statistical analyses** while preserving privacy
+5. **Build and interpret models** with federated data
+
+## Key Findings from Our Analysis
+
+Through exploration, we discovered this was a **maternal mental health study** from APHRC with:
+- 188 female participants of reproductive age
+- 38% experiencing antenatal depression
+- 17% experiencing postpartum depression
+- Strong correlation between Edinburgh scores and depression diagnoses
+- Complex relationships between social factors and mental health outcomes
+
+## Next Steps
+
+Consider exploring:
+- Time-based analyses if longitudinal data is available
+- More complex interaction effects
+- Machine learning approaches with DataSHIELD
+- Integration with other OMOP databases for meta-analysis
+
+Remember: The power of DataSHIELD lies in its ability to analyze sensitive health data while preserving privacy!

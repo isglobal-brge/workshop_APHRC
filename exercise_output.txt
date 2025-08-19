@@ -1,0 +1,368 @@
+Loading required package: progress
+Loading required package: R6
+Loading required package: opalr
+Loading required package: httr
+
+==================================================
+EXERCISE 1: Connect to the server and explore the data structure
+==================================================
+
+
+Logging into the collaborating servers
+Initial data summary:
+$`aphrc-dsp`
+$`aphrc-dsp`$class
+[1] "data.frame"
+
+$`aphrc-dsp`$`number of rows`
+[1] 188
+
+$`aphrc-dsp`$`number of columns`
+[1] 11
+
+$`aphrc-dsp`$`variables held`
+ [1] "person_id"            "gender_concept_id"    "year_of_birth"       
+ [4] "month_of_birth"       "day_of_birth"         "birth_datetime"      
+ [7] "race_concept_id"      "ethnicity_concept_id" "location_id"         
+[10] "provider_id"          "care_site_id"        
+
+
+
+
+==================================================
+EXERCISE 2: Explore demographic information
+==================================================
+
+Column names in the person table:
+ [1] "person_id"            "gender_concept_id"    "year_of_birth"       
+ [4] "month_of_birth"       "day_of_birth"         "birth_datetime"      
+ [7] "race_concept_id"      "ethnicity_concept_id" "location_id"         
+[10] "provider_id"          "care_site_id"        
+
+Gender distribution:
+
+ Data in all studies were valid 
+
+Study 1 :  No errors reported from this study
+
+$output.list
+$output.list$TABLE_rvar.by.study_row.props
+                      study
+data$gender_concept_id aphrc-dsp
+                female         1
+                NA           NaN
+
+$output.list$TABLE_rvar.by.study_col.props
+                      study
+data$gender_concept_id aphrc-dsp
+                female         1
+                NA             0
+
+$output.list$TABLE_rvar.by.study_counts
+                      study
+data$gender_concept_id aphrc-dsp
+                female       188
+                NA             0
+
+$output.list$TABLES.COMBINED_all.sources_proportions
+data$gender_concept_id
+female     NA 
+     1      0 
+
+$output.list$TABLES.COMBINED_all.sources_counts
+data$gender_concept_id
+female     NA 
+   188      0 
+
+
+$validity.message
+[1] "Data in all studies were valid"
+
+
+Age statistics:
+$Mean.by.Study
+          EstimatedMean Nmissing Nvalid Ntotal
+aphrc-dsp      36.37234        0    188    188
+
+$Nstudies
+[1] 1
+
+$ValidityMessage
+          ValidityMessage 
+aphrc-dsp "VALID ANALYSIS"
+
+ Quantiles of the pooled data
+      5%      10%      25%      50%      75%      90%      95%     Mean 
+29.00000 30.00000 33.00000 36.00000 39.00000 42.30000 45.65000 36.37234 
+
+
+==================================================
+EXERCISE 3: Discover available OMOP concepts
+==================================================
+
+Available observation concepts:
+$`aphrc-dsp`
+  concept_id                         concept_name
+1          0                  No matching concept
+2    4052017                Religious affiliation
+3    4053609                       Marital status
+4    4075500                  Number in household
+5    4128030                   Delivery procedure
+6    4164838 Edinburgh postnatal depression scale
+7   42528763           Highest level of education
+8   44804285                           Employment
+
+
+Available measurement concepts:
+$`aphrc-dsp`
+  concept_id                         concept_name
+1    4164838 Edinburgh postnatal depression scale
+
+
+Answer: Edinburgh Postnatal Depression Scale has concept_id = 4164838
+
+Available condition concepts:
+$`aphrc-dsp`
+  concept_id          concept_name
+1    4239471 Postpartum depression
+2   37312479  Antenatal depression
+
+
+Depression-related conditions:
+- Postpartum depression: 4239471
+- Antenatal depression: 37312479
+
+
+==================================================
+EXERCISE 4: Retrieve specific OMOP concepts
+==================================================
+
+Retrieving Edinburgh scale measurements...
+Retrieving employment status...
+Retrieving social factors...
+$`aphrc-dsp`
+$`aphrc-dsp`$class
+[1] "data.frame"
+
+$`aphrc-dsp`$`number of rows`
+[1] 188
+
+$`aphrc-dsp`$`number of columns`
+[1] 16
+
+$`aphrc-dsp`$`variables held`
+ [1] "person_id"                                           
+ [2] "gender_concept_id"                                   
+ [3] "year_of_birth"                                       
+ [4] "month_of_birth"                                      
+ [5] "day_of_birth"                                        
+ [6] "birth_datetime"                                      
+ [7] "race_concept_id"                                     
+ [8] "ethnicity_concept_id"                                
+ [9] "location_id"                                         
+[10] "provider_id"                                         
+[11] "care_site_id"                                        
+[12] "edinburgh_postnatal_depression_scale.value_as_number"
+[13] "employment.value_as_concept_id"                      
+[14] "religious_affiliation.value_as_concept_id"           
+[15] "marital_status.value_as_concept_id"                  
+[16] "number_in_household.value_as_concept_id"             
+
+
+
+
+==================================================
+EXERCISE 5: Work with condition occurrences
+==================================================
+
+Retrieving depression diagnoses...
+$`aphrc-dsp`
+$`aphrc-dsp`$class
+[1] "data.frame"
+
+$`aphrc-dsp`$`number of rows`
+[1] 188
+
+$`aphrc-dsp`$`number of columns`
+[1] 18
+
+$`aphrc-dsp`$`variables held`
+ [1] "person_id"                                           
+ [2] "gender_concept_id"                                   
+ [3] "year_of_birth"                                       
+ [4] "month_of_birth"                                      
+ [5] "day_of_birth"                                        
+ [6] "birth_datetime"                                      
+ [7] "race_concept_id"                                     
+ [8] "ethnicity_concept_id"                                
+ [9] "location_id"                                         
+[10] "provider_id"                                         
+[11] "care_site_id"                                        
+[12] "edinburgh_postnatal_depression_scale.value_as_number"
+[13] "employment.value_as_concept_id"                      
+[14] "religious_affiliation.value_as_concept_id"           
+[15] "marital_status.value_as_concept_id"                  
+[16] "number_in_household.value_as_concept_id"             
+[17] "antenatal_depression.condition_occurrence_id"        
+[18] "postpartum_depression.condition_occurrence_id"       
+
+
+
+
+==================================================
+EXERCISE 6: Transform condition IDs to analyzable format
+==================================================
+
+Converting antenatal_depression to boolean...
+$is.object.created
+[1] "A data object <antenatal_depression> has been created in all specified data sources"
+
+$validity.check
+[1] "<antenatal_depression> appears valid in all sources"
+
+Converting postpartum_depression to boolean...
+$is.object.created
+[1] "A data object <postpartum_depression> has been created in all specified data sources"
+
+$validity.check
+[1] "<postpartum_depression> appears valid in all sources"
+
+
+Antenatal depression prevalence:
+
+ Data in all studies were valid 
+
+Study 1 :  No errors reported from this study
+
+$output.list
+$output.list$TABLE_rvar.by.study_row.props
+                    study
+antenatal_depression aphrc-dsp
+                  0          1
+                  1          1
+                  NA       NaN
+
+$output.list$TABLE_rvar.by.study_col.props
+                    study
+antenatal_depression aphrc-dsp
+                  0  0.6223404
+                  1  0.3776596
+                  NA 0.0000000
+
+$output.list$TABLE_rvar.by.study_counts
+                    study
+antenatal_depression aphrc-dsp
+                  0        117
+                  1         71
+                  NA         0
+
+$output.list$TABLES.COMBINED_all.sources_proportions
+antenatal_depression
+    0     1    NA 
+0.622 0.378 0.000 
+
+$output.list$TABLES.COMBINED_all.sources_counts
+antenatal_depression
+  0   1  NA 
+117  71   0 
+
+
+$validity.message
+[1] "Data in all studies were valid"
+
+
+Postpartum depression prevalence:
+
+ Data in all studies were valid 
+
+Study 1 :  No errors reported from this study
+
+$output.list
+$output.list$TABLE_rvar.by.study_row.props
+                     study
+postpartum_depression aphrc-dsp
+                   0          1
+                   1          1
+                   NA       NaN
+
+$output.list$TABLE_rvar.by.study_col.props
+                     study
+postpartum_depression aphrc-dsp
+                   0  0.8297872
+                   1  0.1702128
+                   NA 0.0000000
+
+$output.list$TABLE_rvar.by.study_counts
+                     study
+postpartum_depression aphrc-dsp
+                   0        156
+                   1         32
+                   NA         0
+
+$output.list$TABLES.COMBINED_all.sources_proportions
+postpartum_depression
+   0    1   NA 
+0.83 0.17 0.00 
+
+$output.list$TABLES.COMBINED_all.sources_counts
+postpartum_depression
+  0   1  NA 
+156  32   0 
+
+
+$validity.message
+[1] "Data in all studies were valid"
+
+
+
+==================================================
+EXERCISE 7: Visualize and explore the data
+==================================================
+
+Edinburgh score distribution:
+Warning: aphrc-dsp: 2 invalid cells
+$breaks
+ [1]  0.000000  2.639393  5.278785  7.918178 10.557570 13.196963 15.836356
+ [8] 18.475748 21.115141 23.754533 26.393926
+
+$counts
+ [1] 22 42 23 49 23 12  6  8  0  0
+
+$density
+ [1] 0.04433644 0.08464230 0.04635173 0.09874935 0.04635173 0.02418351
+ [7] 0.01209176 0.01612234 0.00000000 0.00000000
+
+$mids
+ [1]  1.319696  3.959089  6.598481  9.237874 11.877267 14.516659 17.156052
+ [8] 19.795444 22.434837 25.074230
+
+$xname
+[1] "xvect"
+
+$equidist
+[1] TRUE
+
+attr(,"class")
+[1] "histogram"
+
+Edinburgh score statistics:
+Mean: 
+Variance: 
+Quantiles:
+ Quantiles of the pooled data
+       5%       10%       25%       50%       75%       90%       95%      Mean 
+ 1.000000  2.000000  4.750000  8.000000 11.000000 15.000000 20.000000  8.382979 
+
+Cross-tabulation of depression types:
+Error:
+! There are some DataSHIELD errors, list them with datashield.errors()
+Backtrace:
+    ▆
+ 1. └─dsBaseClient::ds.table(...)
+ 2.   └─dsBaseClient:::isDefined(datasources, rvar)
+ 3.     └─DSI::datashield.aggregate(datasources, cally)
+ 4.       └─DSI:::.handle_errors(errors.print)
+ 5.         └─DSI:::.checkLastErrors()
+ 6.           └─cli::cli_abort(...)
+ 7.             └─rlang::abort(...)
+Execution halted

@@ -1,5 +1,8 @@
 ---
 title: "Getting Started"
+format: 
+  html:
+    code-copy: false
 ---
 
 ## Setup Instructions

@@ -67,6 +67,31 @@ datashield.logout(conns)
 
 Please refer to the [Omic data analysis resource](https://isglobal-brge.github.io/resource_bookdown/Omic.html).
 
+# Survival analysis
+
+Survival analysis can be performed in DataSHIELD using `dsSurvival` package 
+(paper [https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06085-1](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06085-1))
+
+Install the package which allows you to perform survival analysis in DataSHIELD
+
+```{r install_dsSurvivalClient, eval=FALSE}
+devtools::install_github("neelsoumya/dsSurvivalClient")
+```
+
+Login to the Opal server which is having CORDELIA data. 
+IMPORTANT: In order to have an Opal instance with dsSurvival package available, 
+use the profile "lemon-donkey"
+
+Now, read how to perform surival analysis using DataSHIELD in this vignette
+
+[https://neelsoumya.github.io/dsSurvivalbookdown/](https://neelsoumya.github.io/dsSurvivalbookdown/)
+  
+TASK: Perform survival analysis of CORDELIA dataset where the time until death 
+is in the variable called "todeath" and censoring variable is in the variable 
+"death" to investigate whether smoking (variable "fumador") is associated or not
+with mortality after adjusting for age (variable "edad")
+NOTE: follow all steps in the vignette.
+
 # Exercise: CORDELIA Project Analysis
 
 We have a database from the CORDELIA Project (https://cordeliaproject.net/), which collects clinical, demographic, and laboratory information about participants in order to study cardiovascular and metabolic risk factors. The dataset contains the following variables:

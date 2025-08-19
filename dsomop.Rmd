@@ -3,6 +3,8 @@ title: "dsOMOP Workshop"
 format: 
   html:
     code-copy: false
+execute:
+  warning: false
 ---
 
 <a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_DSWB/main/dsomop.Rmd').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'dsomop.Rmd'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
@@ -225,7 +227,7 @@ ds.summary("mimiciv$systolic_blood_pressure.value_as_number")
 
 Let's now use the `renameVars` from the `dsHelper` package, which we have seen before, to rename the variable to `sbp` for convenience:
 
-```{r rename_sbp}
+```{r rename_sbp, warning=FALSE}
 dh.renameVars(
 	df = "mimiciv", 
   current_names = c("systolic_blood_pressure.value_as_number"),
@@ -321,7 +323,7 @@ Those were also numerical concept IDs in the database that were matched to their
 
 Let's start by renaming the `gender_concept_id` column to `gender` for convenience:
 
-```{r rename_gender}
+```{r rename_gender, warning=FALSE}
 dh.renameVars(
 	df = "mimiciv", 
   current_names = c("gender_concept_id"),

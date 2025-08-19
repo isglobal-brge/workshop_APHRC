@@ -1,7 +1,5 @@
 ---
 title: "OMOP CDM Presentation"
-execute:
-  warning: false
 ---
 
 ## Introduction to the OMOP Common Data Model

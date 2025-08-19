@@ -5,8 +5,6 @@ format:
     code-copy: false
 ---
 
-# Practical Exercises: OMOP CDM with DataSHIELD {#omop-exercises}
-
 ## Introduction
 
 In this practical exercise, you will learn how to work with OMOP CDM (Observational Medical Outcomes Partnership Common Data Model) data using DataSHIELD. 

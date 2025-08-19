@@ -456,7 +456,7 @@ ds.cbind(
 
 ---
 
-### Challenge: Create Your Own Research Question
+## Challenge: Create Your Own Research Question
 
 Based on what you've observed about the data, formulate and test your own hypothesis:
 

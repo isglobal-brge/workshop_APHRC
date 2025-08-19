@@ -45,19 +45,7 @@ For this tutorial, you'll connect to:
 - **Project**: omop
 - **Resource**: omop.study_1
 
-::: {.callout-warning}
 This server uses a self-signed certificate. You'll need to configure your R session to accept it.
-:::
-
----
-
-## Need Help? 
-
-<a href="omop_exercises_solution.html" target="_blank" class="btn btn-success btn-lg">
-<i class="bi bi-lightbulb"></i> View Complete Solution!
-</a>
-
-The solution file contains all the code with detailed explanations and outputs to help you understand each step of the analysis.
 
 ---
 
@@ -85,17 +73,6 @@ httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-You need to:
-
-1. Create a builder with `newDSLoginBuilder()`
-2. Add server details with `builder$append()`
-3. Build the login data
-4. Connect with `datashield.login()`
-:::
-
 ### Task 1.2: Create dsOMOPHelper Instance
 
 Create a helper object to interact with the OMOP data:
@@ -104,11 +81,6 @@ Create a helper object to interact with the OMOP data:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.omop.helper()` with the resource "omop.study_1"
-:::
 
 ### Task 1.3: Explore Initial Data
 
@@ -117,12 +89,6 @@ Check what data is available:
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.summary()` on your data symbol
-:::
 
 ---
 
@@ -138,12 +104,6 @@ Check the gender distribution:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.table()` on the gender_concept_id column
-:::
-
 **Question**: What do you notice about the gender distribution? What might this tell you about the study?
 
 ### Task 2.2: Second Clue - Age Distribution
@@ -153,13 +113,6 @@ Calculate the participants' ages and examine the distribution:
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-1. Create age = 2025 - year_of_birth
-2. Then get mean and quantiles
-:::
 
 **Question**: What is the age range? Combined with the gender information, what type of study might this be?
 
@@ -171,19 +124,11 @@ Check how many participants we have:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.dim()`
-:::
-
-::: {.callout-note}
 **Detective Work**: Based on what you've discovered so far:
 
 - All participants share a specific characteristic
 - They're in a particular age range
 - What life event might they be experiencing?
-:::
 
 ---
 
@@ -199,12 +144,6 @@ Start with medical conditions:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `o$concepts("condition_occurrence")`
-:::
-
 **Question**: What conditions are tracked? What does this reveal about the study focus?
 
 ### Task 3.2: Explore Measurements
@@ -214,12 +153,6 @@ Check what clinical measurements were taken:
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `o$concepts("measurement")`
-:::
 
 **Question**: What scale is being used? What is it designed to measure?
 
@@ -231,15 +164,8 @@ Finally, look at other observations (social/demographic factors):
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `o$concepts("observation")`
-:::
-
 **Question**: What social and demographic factors were collected? Why might these be relevant?
 
-::: {.callout-important}
 **The Big Reveal**: By now you should have figured out:
 
 - This is a study of women
@@ -248,7 +174,6 @@ Use `o$concepts("observation")`
 - During a particular life period
 
 Can you name the specific focus of this study?
-:::
 
 ---
 
@@ -264,13 +189,6 @@ Retrieve the main clinical measurement:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-- Use `o$auto()` with concept 4164838
-- Get the `value_as_number` column
-:::
-
 After retrieval, check the data structure with `ds.summary()`.
 
 ### Task 4.2: Add Social Determinants
@@ -280,17 +198,6 @@ Mental health is influenced by social factors. Retrieve all relevant social vari
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Retrieve these concepts from observation table:
-- Employment status (44804285)
-- Marital status (4053609)
-- Number in household (4075500)
-- Religious affiliation (4052017)
-- Education level (42528763)
-:::
 
 **Question**: Why might these social factors be important for mental health research?
 
@@ -302,16 +209,8 @@ Get the depression diagnoses:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-- Get both conditions you discovered earlier
-- Remember: you need the `condition_occurrence_id` column
-:::
-
 Check your final data structure. How many variables do you have now?
 
-::: {.callout-tip}
 **Expected Variables**: By the end of Exercise 4, you should have:
 
 - Original person table columns (11)
@@ -319,7 +218,6 @@ Check your final data structure. How many variables do you have now?
 - Social factors (5)
 - Depression diagnoses (2)
 - Total: 19 variables
-:::
 
 ---
 
@@ -373,12 +271,6 @@ Convert both depression conditions to boolean:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Convert both `antenatal_depression` and `postpartum_depression` using the provided function
-:::
-
 ### Task 6.2: Explore Prevalence
 
 Now check the prevalence of each condition:
@@ -386,12 +278,6 @@ Now check the prevalence of each condition:
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.table()` on each boolean variable
-:::
 
 **Question**: What percentage of women experienced each type of depression? Is there an overlap?
 
@@ -409,14 +295,6 @@ First, examine the Edinburgh Scale scores:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-1. Create a simpler variable name for Edinburgh scores
-2. Create a histogram
-3. Get summary statistics
-:::
-
 **Question**: What's the typical score? Note that scores ≥10 often indicate possible depression.
 
 ### Task 7.2: The Timeline Question
@@ -426,12 +304,6 @@ Create a cross-tabulation to understand the relationship between antenatal and p
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Use `ds.table()` with `rvar="antenatal_depression"` and `cvar="postpartum_depression"`
-:::
 
 **Key Questions**:
 
@@ -454,24 +326,11 @@ Create a dataset for correlation analysis:
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-- Include: edinburgh_score, age, antenatal_depression, postpartum_depression
-- Create a data frame with these variables
-:::
-
 ### Task 8.2: Explore Correlations
 
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Calculate correlation matrix using `ds.cor()`
-:::
 
 **Research Questions**:
 
@@ -518,12 +377,6 @@ ds.cbind(
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Build a linear model: `edinburgh_score ~ employment + household_size + marital_status`
-:::
-
 ### Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression
 
 **Hypothesis**: Depression during pregnancy is the strongest predictor of postpartum depression.
@@ -531,12 +384,6 @@ Build a linear model: `edinburgh_score ~ employment + household_size + marital_s
 ```r
 # YOUR CODE HERE:
 ```
-
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Build a logistic model: `postpartum_depression ~ antenatal_depression + age + social factors`
-:::
 
 ### Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk
 
@@ -546,15 +393,7 @@ Build a logistic model: `postpartum_depression ~ antenatal_depression + age + so
 # YOUR CODE HERE:
 ```
 
-::: {.callout-tip collapse="true"}
-## Need a hint?
-
-Test if age predicts Edinburgh scores or depression diagnoses
-:::
-
-::: {.callout-note}
 **Reality Check**: In this dataset, we may not find statistically significant results for all hypotheses. This is normal in real research! The important thing is understanding the methodology.
-:::
 
 ---
 

@@ -34,6 +34,9 @@ install.packages("DSI", repos = c("https://cran.obiba.org", "https://cloud.r-pro
 install.packages("DSOpal", repos = c("https://cran.obiba.org", "https://cloud.r-project.org"))
 devtools::install_github("datashield/dsBaseClient", force = TRUE)
 
+# Opal administration packages
+install.packages("opalr")
+
 # DataSHIELD helper packages
 devtools::install_github("timcadman/ds-helper")
 

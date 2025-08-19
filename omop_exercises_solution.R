@@ -466,6 +466,9 @@ model1 <- ds.glm(
   datasources = conns
 )
 
+# NOTE: we use gaussian for the linear regression because edinburgh_score 
+# is a continuous variable
+
 cat("Model 1 Results:\n")
 print(model1$coefficients[, c("Estimate", "Std. Error", "p-value")])
 
@@ -484,6 +487,9 @@ model2 <- ds.glm(
   family = "binomial",
   datasources = conns
 )
+
+# NOTE: we use binomial for the logistic regression because postpartum_depression 
+# is a binary variable
 
 cat("Model 2 Results (with Odds Ratios):\n")
 coef2 <- as.data.frame(model2$coefficients)
@@ -507,29 +513,22 @@ model3 <- ds.glm(
 
 cat("Model 3 Results:\n")
 coef3 <- as.data.frame(model3$coefficients)
-significant <- coef3[coef3$`p-value` < 0.05, ]
-if(nrow(significant) > 0) {
-  cat("\nSignificant predictors (p < 0.05):\n")
-  print(significant[, c("Estimate", "Std. Error", "p-value")])
-} else {
-  cat("\nNo significant predictors at p < 0.05\n")
-}
+print(coef3[, c("Estimate", "Std. Error", "p-value")])
 
 ################################################################################
-# EXERCISE 10: Advanced Analysis - Interaction Effects
+# CHALLENGE: Create Your Own Research Question
 ################################################################################
 
 cat("\n\n==================================================\n")
-cat("EXERCISE 10: Test for interaction effects\n")
+cat("CHALLENGE: Create Your Own Research Question\n")
 cat("==================================================\n\n")
 
-# Task 10.1: Test if the effect of antenatal depression on Edinburgh scores
-# differs by employment status (interaction effect)
+# This is just an example of how you can create your own research question
 
 # YOUR CODE HERE:
 
 # SOLUTION:
-cat("Testing interaction: Does employment modify the effect of antenatal depression?\n\n")
+cat("Research question: Does employment modify the effect of antenatal depression?\n\n")
 
 model4 <- ds.glm(
   formula = "edinburgh_score ~ antenatal_depression * employment + age",
@@ -542,8 +541,7 @@ model4 <- ds.glm(
 coef4 <- as.data.frame(model4$coefficients)
 interaction_terms <- grep(":", rownames(coef4), value = TRUE)
 if(length(interaction_terms) > 0) {
-  cat("Interaction effects:\n")
-  print(coef4[interaction_terms, c("Estimate", "Std. Error", "p-value")])
+  coef4[interaction_terms, c("Estimate", "Std. Error", "p-value")]
 }
 
 ################################################################################

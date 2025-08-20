@@ -518,9 +518,9 @@ ds.cbind(
 )
 ```
 
-### Task 9.1: Hypothesis 1 - Social Support Matters
+### Task 9.1: Hypothesis 1 - Age and Employment
 
-**Hypothesis**: Women with better social support (employment, larger households) have lower depression scores.
+**Research question**: Do age and employment affect depression severity?
 
 ```r
 # YOUR CODE HERE:
@@ -529,12 +529,12 @@ ds.cbind(
 ::: {.callout-tip collapse="true"}
 ## Need a hint?
 
-Build a linear model: `edinburgh_score ~ employment + household_size + marital_status`
+Build a linear model: `edinburgh_score ~ age + employment`.
 :::
 
-### Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression
+### Task 9.2: Hypothesis 2 - Postpartum Depression Prediction
 
-**Hypothesis**: Depression during pregnancy is the strongest predictor of postpartum depression.
+**Research question**: What predicts postpartum depression?
 
 ```r
 # YOUR CODE HERE:
@@ -543,12 +543,12 @@ Build a linear model: `edinburgh_score ~ employment + household_size + marital_s
 ::: {.callout-tip collapse="true"}
 ## Need a hint?
 
-Build a logistic model: `postpartum_depression ~ antenatal_depression + age + social factors`
+Build a logistic model with `postpartum_depression` as the outcome and relevant predictors (age, employment, marital status, household size, religion, antenatal depression).
 :::
 
-### Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk
+### Task 9.3: Hypothesis 3 - Impact of Social Factors
 
-**Hypothesis**: Younger mothers are at higher risk for depression.
+**Research question**: How do social factors influence depression severity?
 
 ```r
 # YOUR CODE HERE:
@@ -557,7 +557,7 @@ Build a logistic model: `postpartum_depression ~ antenatal_depression + age + so
 ::: {.callout-tip collapse="true"}
 ## Need a hint?
 
-Test if age predicts Edinburgh scores or depression diagnoses
+Build a linear model with `edinburgh_score` as the outcome and social factors (employment, marital status, household size, religion) as predictors.
 :::
 
 ::: {.callout-note}

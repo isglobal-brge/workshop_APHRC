@@ -369,25 +369,25 @@ ds.cbind(
 )
 ```
 
-### Task 9.1: Hypothesis 1 - Social Support Matters
+### Task 9.1: Hypothesis 1 - Age and Employment
 
-**Hypothesis**: Women with better social support (employment, larger households) have lower depression scores.
-
-```r
-# YOUR CODE HERE:
-```
-
-### Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression
-
-**Hypothesis**: Depression during pregnancy is the strongest predictor of postpartum depression.
+**Research question**: Do age and employment affect depression severity?
 
 ```r
 # YOUR CODE HERE:
 ```
 
-### Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk
+### Task 9.2: Hypothesis 2 - Postpartum Depression Prediction
 
-**Hypothesis**: Younger mothers are at higher risk for depression.
+**Research question**: What predicts postpartum depression?
+
+```r
+# YOUR CODE HERE:
+```
+
+### Task 9.3: Hypothesis 3 - Impact of Social Factors
+
+**Research question**: How do social factors influence depression severity?
 
 ```r
 # YOUR CODE HERE:

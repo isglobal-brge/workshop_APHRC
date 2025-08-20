@@ -272,9 +272,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#exercise-9-testing-hypotheses-with-statistical-models" id="toc-exercise-9-testing-hypotheses-with-statistical-models" class="nav-link" data-scroll-target="#exercise-9-testing-hypotheses-with-statistical-models">Exercise 9: Testing Hypotheses with Statistical Models</a>
   <ul class="collapse">
   <li><a href="#prepare-the-modeling-dataset" id="toc-prepare-the-modeling-dataset" class="nav-link" data-scroll-target="#prepare-the-modeling-dataset">Prepare the Modeling Dataset</a></li>
-  <li><a href="#task-9.1-hypothesis-1---social-support-matters" id="toc-task-9.1-hypothesis-1---social-support-matters" class="nav-link" data-scroll-target="#task-9.1-hypothesis-1---social-support-matters">Task 9.1: Hypothesis 1 - Social Support Matters</a></li>
-  <li><a href="#task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression" id="toc-task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression" class="nav-link" data-scroll-target="#task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression">Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression</a></li>
-  <li><a href="#task-9.3-hypothesis-3---young-mothers-at-higher-risk" id="toc-task-9.3-hypothesis-3---young-mothers-at-higher-risk" class="nav-link" data-scroll-target="#task-9.3-hypothesis-3---young-mothers-at-higher-risk">Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk</a></li>
+  <li><a href="#task-9.1-hypothesis-1---age-and-employment" id="toc-task-9.1-hypothesis-1---age-and-employment" class="nav-link" data-scroll-target="#task-9.1-hypothesis-1---age-and-employment">Task 9.1: Hypothesis 1 - Age and Employment</a></li>
+  <li><a href="#task-9.2-hypothesis-2---postpartum-depression-prediction" id="toc-task-9.2-hypothesis-2---postpartum-depression-prediction" class="nav-link" data-scroll-target="#task-9.2-hypothesis-2---postpartum-depression-prediction">Task 9.2: Hypothesis 2 - Postpartum Depression Prediction</a></li>
+  <li><a href="#task-9.3-hypothesis-3---impact-of-social-factors" id="toc-task-9.3-hypothesis-3---impact-of-social-factors" class="nav-link" data-scroll-target="#task-9.3-hypothesis-3---impact-of-social-factors">Task 9.3: Hypothesis 3 - Impact of Social Factors</a></li>
   </ul></li>
   <li><a href="#challenge-create-your-own-research-question" id="toc-challenge-create-your-own-research-question" class="nav-link" data-scroll-target="#challenge-create-your-own-research-question">Challenge: Create Your Own Research Question</a></li>
   </ul>
@@ -951,9 +951,9 @@ Need a hint?
 <span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> conns</span>
 <span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </section>
-<section id="task-9.1-hypothesis-1---social-support-matters" class="level3">
-<h3 data-anchor-id="task-9.1-hypothesis-1---social-support-matters">Task 9.1: Hypothesis 1 - Social Support Matters</h3>
-<p><strong>Hypothesis</strong>: Women with better social support (employment, larger households) have lower depression scores.</p>
+<section id="task-9.1-hypothesis-1---age-and-employment" class="level3">
+<h3 data-anchor-id="task-9.1-hypothesis-1---age-and-employment">Task 9.1: Hypothesis 1 - Age and Employment</h3>
+<p><strong>Research question</strong>: Do age and employment affect depression severity?</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span></code></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
@@ -967,14 +967,14 @@ Need a hint?
 </div>
 <div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Build a linear model: <code>edinburgh_score ~ employment + household_size + marital_status</code></p>
+<p>Build a linear model: <code>edinburgh_score ~ age + employment</code>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression" class="level3">
-<h3 data-anchor-id="task-9.2-hypothesis-2---pregnancy-depression-predicts-postpartum-depression">Task 9.2: Hypothesis 2 - Pregnancy Depression Predicts Postpartum Depression</h3>
-<p><strong>Hypothesis</strong>: Depression during pregnancy is the strongest predictor of postpartum depression.</p>
+<section id="task-9.2-hypothesis-2---postpartum-depression-prediction" class="level3">
+<h3 data-anchor-id="task-9.2-hypothesis-2---postpartum-depression-prediction">Task 9.2: Hypothesis 2 - Postpartum Depression Prediction</h3>
+<p><strong>Research question</strong>: What predicts postpartum depression?</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span></code></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
@@ -988,14 +988,14 @@ Need a hint?
 </div>
 <div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Build a logistic model: <code>postpartum_depression ~ antenatal_depression + age + social factors</code></p>
+<p>Build a logistic model with <code>postpartum_depression</code> as the outcome and relevant predictors (age, employment, marital status, household size, religion, antenatal depression).</p>
 </div>
 </div>
 </div>
 </section>
-<section id="task-9.3-hypothesis-3---young-mothers-at-higher-risk" class="level3">
-<h3 data-anchor-id="task-9.3-hypothesis-3---young-mothers-at-higher-risk">Task 9.3: Hypothesis 3 - Young Mothers at Higher Risk</h3>
-<p><strong>Hypothesis</strong>: Younger mothers are at higher risk for depression.</p>
+<section id="task-9.3-hypothesis-3---impact-of-social-factors" class="level3">
+<h3 data-anchor-id="task-9.3-hypothesis-3---impact-of-social-factors">Task 9.3: Hypothesis 3 - Impact of Social Factors</h3>
+<p><strong>Research question</strong>: How do social factors influence depression severity?</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE:</span></span></code></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
@@ -1009,7 +1009,7 @@ Need a hint?
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Test if age predicts Edinburgh scores or depression diagnoses</p>
+<p>Build a linear model with <code>edinburgh_score</code> as the outcome and social factors (employment, marital status, household size, religion) as predictors.</p>
 </div>
 </div>
 </div>

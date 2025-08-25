@@ -682,7 +682,7 @@ Server 1:
 - Table: ega_phenotypes_1  
 
 Server 2:  
-- URL: https://opal.isglobal.org/repo (user: invited, pwd: P@12345678Aa@)  
+- URL: https://opal.isglobal.org/repo (user: invited, pwd: 12345678Aa@)  
 - Project: EGA  
 - Table: ega_phenotypes_2  
   

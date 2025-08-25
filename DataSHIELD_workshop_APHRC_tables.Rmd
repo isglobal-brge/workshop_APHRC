@@ -687,7 +687,7 @@ Server 2:
 - Table: ega_phenotypes_2  
   
 
-Then, load the resources in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 
+Then, load the tables in R as data.frame’s using the functions available in the DSI library and answer the next questions using the  functions available at dsBaseClient package. 
 
 
 - Check that your loaded objects are of class data.frame

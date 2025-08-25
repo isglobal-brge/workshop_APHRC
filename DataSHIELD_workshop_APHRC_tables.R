@@ -28,12 +28,6 @@ library(metafor)
 ## ----------------------------------------------------------------------------
 devtools::session_info()
 
-
-## ----insert_table_variables, echo=FALSE--------------------------------------
-vars <- readr::read_delim("fig/table_variables_cnsim.txt", delim=",")
-knitr::kable(vars)
-
-
 ## ----------------------------------------------------------------------------
 builder <- DSI::newDSLoginBuilder()
 

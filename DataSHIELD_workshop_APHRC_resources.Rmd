@@ -153,27 +153,3 @@ Complete the following tasks:
 3. Create a histogram of the variable `trig`
 4. Assess whether `diabetes` is associated with `hipercol`, `IMC`, `hdl` and `col_tot` in separate univariate models
 5. Estimate a multivariate model for the variable `diabetes`, including only those variables that were significant in the univariate models
-
-# Exercise: UKBiobank Meta-Analysis
-
-We have access to 3 datasets corresponding to simulated data from UKBiobank available through CINECA study. This data reproduce the exact associations found at UKBiobank. The datasets are accessed in three Opal servers:
-
-**Server 1:**
-
-- URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)
-- Project: GWAS
-- Table: ega_phenotypes_1
-
-**Server 2:**
-
-- URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)
-- Project: GWAS
-- Table: ega_phenotypes_1
-
-**Server 3:**
-
-- URL: https://opal-demo.obiba.org/ (user: administrator, pwd: password)
-- Project: GWAS
-- Table: ega_phenotypes_1
-
-Fit a regression model between diabetes (variable diabetes_diagnosed_doctor) and cholesterol level (variable cholesterol) using meta-analysis approach and compute the pooled effect.

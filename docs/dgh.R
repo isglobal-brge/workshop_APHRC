@@ -25,7 +25,19 @@ o <- ds.omop.helper(
   symbol = "data"
 )
 
+# Check the current state of your dataset
 ds.summary("data")
+
+# Explore the database
+o$tables()
+o$columns("measurement")
+o$concepts("measurement")
+
+# Usually: 
+# - value_as_number for numerical values, 
+# - value_as_concept_id for categorical values,
+# - get the xxx_id then transform to boolean for presence of a certain variable registry 
+#   for a person (below is the function to do that)
 
 # Function to transform presence of variable to boolean
 convert_to_boolean <- function(table, variable_name, id_type, conns) {

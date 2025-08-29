@@ -404,9 +404,3 @@ Based on what you've observed about the data, formulate and test your own hypoth
 ```r
 # YOUR CODE HERE:
 ```
-
-# Douala General Hospital exercise
-
-<a href="#" onclick="event.preventDefault(); fetch('https://raw.githubusercontent.com/isglobal-brge/workshop_APHRC/main/dgh.R').then(response => response.blob()).then(blob => { const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.style.display = 'none'; a.href = url; a.download = 'dgh.R'; document.body.appendChild(a); a.click(); window.URL.revokeObjectURL(url); }); return false;" class="btn btn-primary btn-sm">
-<i class="bi bi-download"></i> Download dgh.R
-</a>
